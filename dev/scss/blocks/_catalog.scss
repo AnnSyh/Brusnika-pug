@@ -361,10 +361,14 @@
   font-weight: normal;
 }
 
-.catalog-items--slider.mlr--20px {
-  margin-left: -20px;
-  margin-right: -20px;
+@media screen and (max-width:480px) { 
+  
+  .catalog-items--slider.mlr-sm--20px { 
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+  }
 }
+
 
 .catalog-items--slider {
   margin-bottom: 0;
@@ -565,7 +569,7 @@
 /*** //Catalog ***/
 // ---------------------------------
 
-.catalog {
+.catalog { 
   position: relative;
 
   .slider-arrows-wrap {
@@ -573,15 +577,15 @@
     max-width: calc(100% + 100px);
     top: calc(50% - 20px);
     z-index: 1;
-    left: -50px;
-    right: -50px;
+    left: -20px;
+    right: -20px;
 
     @media screen and (max-width:1660px) {
       max-width: calc(100% + 60px);
       top: calc(50% - 20px);
       z-index: 1;
-      left: -30px;
-      right: -30px;
+      left: -20px;
+      right: -20px;
       padding: 0;
     }
   }

@@ -5,7 +5,7 @@
 @import '../scss/blocks/catalog-menu';
 @import'../scss/blocks/basket-menu';
 @import '../scss/blocks/size-menu';
-@import '../scss/blocks/catalog';
+@import '../scss/blocks/catalog';  
 @import '../scss/blocks/page-note';
 @import'../scss/blocks/filter';
 @import '../scss/blocks/mobile-menu-filter';
@@ -17,7 +17,7 @@
 @import '../scss/blocks/btns';
 @import '../scss/blocks/form';
 @import '../scss/blocks/page-popup';
-// /переиспользуемые компоненты
+// /переиспользуемые компоненты 
 
 @import '../scss/blocks/footer';
 @import '../scss/blocks/search';
@@ -27,7 +27,7 @@
 @import '../scss/blocks/product-photos'; //для слайдера на стр товаров
 @import '../scss/blocks/sliders-style'; //для слайдеров
 
-@import '../scss/blocks/complete-look';
+@import '../scss/blocks/complete-look'; 
 @import '../scss/blocks/look';
 
 @import '../scss/blocks/tables';
@@ -43,6 +43,18 @@
 /* Личный кабинет */
 @import '../scss/blocks/loyalty-card';
 @import '../scss/blocks/big-grid';
+
+
+
+.slider-prev-watched .title-block {
+  margin-left: 15px;
+}
+
+@media screen and (max-width:960px) {
+  .slider-you-also-like .title-block {
+    margin-left: 15px;
+  } 
+}
 
 
 .section {

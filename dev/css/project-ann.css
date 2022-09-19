@@ -1227,6 +1227,7 @@ a.basket-menu__link_lowercase {
   .catalog-items--slider.mlr-sm--20px {
     margin-left: -20px !important;
     margin-right: -20px !important;
+    padding-left: 20px;
   }
 }
 .catalog-items--slider {

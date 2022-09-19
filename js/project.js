@@ -593,11 +593,11 @@
 						$s.on("init", function (e, s) {
 
 						}).slick($.extend({}, {
-							slidesToShow: 5,
-							slidesToScroll: 2,
+							slidesToShow: 6,
+							slidesToScroll: 1,
 							dots: false,
 							arrows: true,
-							infinite: false,
+							infinite: true,
 							autoplay: false,
 							speed: 500,
 							prevArrow: $prevArr,
@@ -616,6 +616,7 @@
 									breakpoint: 480,
 									settings: {
 										slidesToShow: 1.5,
+										infinite: false,
 										slidesToScroll: 1,
 										arrows: false,
 										speed: 200

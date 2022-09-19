@@ -1,22 +1,22 @@
 //- данные для brand.html
 - 
   const items = [
-    {image: 'c24.jpg', price: '3000', name: 'Жакет 4321', label: 'Хит'},
-    {image: 'c22.jpg', price: '345', name: '1Жакет 2', label: 'Хит'},
-    {image: 'c23.jpg', price: '2329', name: '1Жакет 3', label: 'Хит'},
-    {image: 'c24.jpg', price: '2329', name: '1Жакет 4', label: 'Хит'}
+    {image: 'c21.jpg', price: '3000', name: 'Жакет 4321', label: 'Хит'},
+    {image: 'c22.jpg', price: '345', name: 'Жакет 2', label: 'Хит'},
+    {image: 'c23.jpg', price: '2329', name: 'Жакет 3', label: 'Хит'},
+    {image: 'c24.jpg', price: '2329', name: 'Жакет 4', label: 'Хит'}
     ]
 
 - 
   const tovars = [
-        {image: 'c1.jpg', price: 'etrt', name: '2Жакет 3331', label: 'Хит',  colors: {name: 'color-beg'} },
-        {image: 'c22.jpg', price: '345', name: '2Жакет 2', label: 'Хит'},
-        {image: 'c23.jpg', price: '2329', name: '2Жакет 3'},
-        {image: 'c24.jpg', price: '2329', name: '2Жакет 4', label: 'Хит'},
-        {image: 'c1.jpg', price: '1999', name: '2Жакет 1'},
-        {image: 'c22.jpg', price: '345', name: '2Жакет 2', label: 'Хит'},
-        {image: 'c23.jpg', price: '2329', name: '2Жакет 3'},
-        {image: 'c24.jpg', price: '2329', name: '2Жакет 44', label: 'Хит'}
+        {image: 'c1.jpg', price: 'etrt', name: 'Жакет 3331', label: 'Хит',  colors: {name: 'color-beg'} },
+        {image: 'c22.jpg', price: '345', name: 'Жакет 2', label: 'Хит'},
+        {image: 'c23.jpg', price: '2329', name: 'Жакет 3'},
+        {image: 'c24.jpg', price: '2329', name: 'Жакет 4', label: 'Хит'},
+        {image: 'c1.jpg', price: '1999', name: 'Жакет 1'},
+        {image: 'c22.jpg', price: '345', name: 'Жакет 2', label: 'Хит'},
+        {image: 'c23.jpg', price: '2329', name: 'Жакет 3'},
+        {image: 'c24.jpg', price: '2329', name: 'Жакет 44', label: 'Хит'}
         ]
 
 //-  данные для card.html
@@ -65,7 +65,7 @@
 //- данные для favorites.html 
 - 
   const favorites = [
-        {image: 'c1.png', price: '1999', name: '22Жакет 1', label: 'Хит'},
+        {image: 'c1.png', price: '1999', name: 'Жакет 1', label: 'Хит'},
         {image: 'c2.png', price: '345', name: 'Жакет 2', label: 'Хит'},
         {image: 'c3.png', price: '2329', name: 'Жакет 3', label: 'Хит'},
         {image: 'c4.png', price: '2329', name: 'Жакет 4', label: 'Хит'},
@@ -131,7 +131,7 @@
 //- - данные для фильтра размеры стр brand.html    
 - 
   const sizes = [
-    {name: '1One size', growth1: 'Рост H1', growth2: 'Рост H1'},
+    {name: 'One size', growth1: 'Рост H1', growth2: 'Рост H1'},
     {name: 'XS(RU36-38)', growth1: 'XS(RU36-38)', growth2: 'XS(RU36-38)'},
     {name: 'S(RU40-42)', growth1: 'S(RU40-42)', growth2: 'S(RU40-42)'},
     {name: 'M(RU44-46)', growth1: 'M(RU44-46)', growth2: 'M(RU44-46)'},
@@ -165,16 +165,38 @@
     {image: 'c23.jpg', price: '2329', name: 'Жакет 3', label: 'Хит'},
     {image: 'c24.jpg', price: '2329', name: 'Жакет 4', label: 'Хит'}
   ]
-   
+
+//- - данные для слайдера 'Ранее вы смотрели' 
+//- стр: brand.html, search.html,
+- 
+  const prevWatched = [
+    {image: 'c21.jpg', price: '1999', name: 'ПЛАТЬЕ 1', label: 'Хит'},
+    {image: 'c22.jpg', price: '345', name: 'ПЛАТЬЕ 2', label: 'Хит'},
+    {image: 'c23.jpg', price: '2329', name: 'ПЛАТЬЕ 3', label: 'Хит'},
+    {image: 'c24.jpg', price: '2329', name: 'ПЛАТЬЕ 4', label: 'Хит'},
+    {image: 'c25.jpg', price: '1999', name: 'ПЛАТЬЕ 5', label: 'Хит'},
+    {image: 'c26.jpg', price: '345', name: 'ПЛАТЬЕ 6', label: 'Хит'},
+    {image: 'c24.jpg', price: '1999', name: 'ПЛАТЬЕ 1', label: 'Хит'},
+  ]
 //- - данные для слайдера 'Вам также может понравиться' 
 //- стр: card.html
 - 
-    const likedItems = [
-        {image: 'c21.jpg', price: '1999', name: 'Жакет 1', label: 'Хит'},
-        {image: 'c22.jpg', price: '345', name: 'Жакет 2', label: 'Хит'},
-        {image: 'c23.jpg', price: '2329', name: 'Жакет 3', label: 'Хит'},
-        {image: 'c24.jpg', price: '2329', name: 'Жакет 4', label: 'Хит'}
-        ]
+  const fourCards = [
+    {image: 'c21.jpg', price: '1999', name: 'Жакет 1', label: 'Хит'},
+    {image: 'c22.jpg', price: '345', name: 'Жакет 2', label: 'Хит'},
+    {image: 'c23.jpg', price: '2329', name: 'Жакет 3', label: 'Хит'},
+    {image: 'c24.jpg', price: '2329', name: 'Жакет 4', label: 'Хит'},
+  ]
+   
+//- //- - данные для слайдера 'Вам также может понравиться' 
+//- //- стр: card.html
+//- - 
+//-     const likedItems = [
+//-         {image: 'c21.jpg', price: '1999', name: 'Жакет 1', label: 'Хит'},
+//-         {image: 'c22.jpg', price: '345', name: 'Жакет 2', label: 'Хит'},
+//-         {image: 'c23.jpg', price: '2329', name: 'Жакет 3', label: 'Хит'},
+//-         {image: 'c24.jpg', price: '2329', name: 'Жакет 4', label: 'Хит'}
+//-         ]
 
 //- - данные для списка 'Товары в корзине' -выезжает с права
 //- стр: card.html        
@@ -399,6 +421,42 @@
     const dataTableColorItem1 = [
         {name: 'color-red'},
         {name: 'color-yellow'},
+        //- {name: 'color-green'},
+        //- {name: 'color-braun'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-yellow'},
+        //- {name: 'color-green'},
+        //- {name: 'color-braun'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+        //- {name: 'color-violet'},
+
+        ] 
+
+        //- 2 цвета для слайдеров на стр brand-large.html 
+    const dataTableColorItem2 = [
+        {name: 'color-red'},
+        {name: 'color-yellow'},
+
+        ]   
+        //- 3 цвета для слайдеров на стр brand-large.html 
+    const dataTableColorItem3 = [
+        {name: 'color-beg'},
+        {name: 'color-violet'},
+        {name: 'color-green'},
+
+        ]   
+        //- 4 цвета для слайдеров на стр brand-large.html 
+    const dataTableColorItem4 = [
+        {name: 'color-beg'},
+        {name: 'color-violet'},
+        {name: 'color-green'},
         {name: 'color-braun'},
 
         ]   

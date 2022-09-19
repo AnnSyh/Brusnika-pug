@@ -487,10 +487,6 @@ body .mobile-nav-menu-item-holder.open:before {
 }
 
 /* .size-open, */
-.search-open {
-  overflow: hidden;
-}
-
 .search-open .header-toolbar .header-toolbar-item--search img {
   display: none;
 }

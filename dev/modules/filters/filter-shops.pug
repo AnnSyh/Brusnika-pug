@@ -3,10 +3,13 @@ block variables
   - var mainPage = false
 
 .filters-block
+  //- мобилка
   .filters-row.d-block.d-lg-none
+    //- .filters-row__list
     .filter-items.filters-list(data-params='{"slidesToShow": 10}')
         +listShopFiltersMobile(shopsFilters)
-          
+
+  //- десктоп        
   .filters-row
     .d-none.d-lg-block
       +listShopFiltersDesktop('filters-list', shopsFilters)

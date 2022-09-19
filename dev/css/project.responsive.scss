@@ -497,9 +497,9 @@ body .mobile-nav-menu-item-holder.open:before {
 }
 
 /* .size-open, */
-.search-open {
-  overflow: hidden;
-}
+// .search-open {
+//   overflow: hidden;
+// }
 .search-open .header-toolbar .header-toolbar-item--search img {
   display: none;
 }
@@ -707,7 +707,7 @@ body .mobile-nav-menu-item-holder.open:before {
   .catalog-links .col-auto {
     display: inline-block;
   }
-  .catalog-items {
+  .catalog-items { 
     margin-bottom: -40px;
     margin-left: 0;
     margin-right: 0;

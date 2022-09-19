@@ -72,15 +72,42 @@ mixin menu(classname, data, activeLink)
 					a(href=`${item.url}` class=`link link--black`)= item.name  
 
 mixin color(data, activeLink, count)
-	.order-table__color
-		each item in data
-			if (activeLink === item.name)
-				a(href='#' class=`order-table__color-link color-active`)  
-					span(class=`${item.name}`)
-			else 
-				a(href='#' class=`order-table__color-link`) 
-					span(class=`${item.name}`)
-		if (count === '')
-			div.order-table__color-link.order-table__color-link_last.d-none
-		else
-			div.order-table__color-link.order-table__color-link_last= '+' + count
+	//- console.log('count = ',count);
+
+	if (count <= 4)
+
+		.order-table__color(style=`width: calc(${count} * 19px);`)
+			each item in data
+				if (activeLink === item.name)
+					a(href='#' class=`order-table__color-link color-active`)  
+						span(class=`${item.name}`) 
+				else 
+					a(href='#' class=`order-table__color-link`) 
+						span(class=`${item.name}`)
+			if (count === '')
+				div.order-table__color-link.order-table__color-link_last.d-none
+
+	else if (4 < count <= 8)	
+
+		.order-table__color(style=`width: 75px; ${count}`)
+			each item in data
+				if (activeLink === item.name)
+					a(href='#' class=`order-table__color-link color-active`)  
+						span(class=`${item.name}`) 
+				else 
+					a(href='#' class=`order-table__color-link`) 
+						span(class=`${item.name}`)
+
+	//- else 	
+	//- 	.order-table__color(style=`${count}`)
+	//- 		each item in data
+	//- 			if (activeLink === item.name)
+	//- 				a(href='#' class=`order-table__color-link color-active`)  
+	//- 					span(class=`${item.name}`)
+	//- 			else 
+	//- 				a(href='#' class=`order-table__color-link`) 
+	//- 					span(class=`${item.name}`)
+
+			
+	//- 			div.order-table__color-link.order-table__color-link_last= '+' + count
+

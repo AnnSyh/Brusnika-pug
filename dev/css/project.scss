@@ -309,6 +309,8 @@ body {
 .header-logo img {
   display: block;
   width: 100%;
+  position: relative;
+  z-index: 10000;
 }
 
 .header-search-holder {

@@ -19,6 +19,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        @media screen and (max-width:480px) {
+            font-size: 12px;
+        }
+
     }
 
     &__by-all {

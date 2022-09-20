@@ -922,7 +922,7 @@ hr {
   object-fit: scaledown;
 }
 
-.breadcrumbs {
+.breadcrumbs { 
   margin-bottom: 0;
   color: #666;
   font-size: 14px;
@@ -2600,9 +2600,7 @@ span.form-item--error {
 /*** Note ***/
 .page-note {
   position: relative;
-  z-index: 500;
   padding: 10px 0;
-  background-color: $color-black;
 }
 
 .page-note .page-note-inner {

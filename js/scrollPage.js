@@ -1,7 +1,8 @@
 
-window.addEventListener('scroll', function () {
   const cardNav = $('.card-nav');
-  cardNav.hide(); // убрать меню при загрузке стр
+  $('.card-nav').hide(); // убрать меню при загрузке стр
+  
+window.addEventListener('scroll', function () {
 
   // найти расстояние до заголовка 'Завершите свой образ'
   // скрол должен появлятся с порокруткой до этого заголовка

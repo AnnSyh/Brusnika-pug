@@ -1996,9 +1996,7 @@ span.form-item--error {
 /*** Note ***/
 .page-note {
   position: relative;
-  z-index: 500;
   padding: 10px 0;
-  background-color: #1D1D1D;
 }
 
 .page-note .page-note-inner {

@@ -124,9 +124,13 @@
   right: 0;
 }
 
-.jcf-number .jcf-btn-inc:after {
-  content: "+";
-  line-height: 30px;
+
+  .jcf-number .jcf-btn-inc:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url('../../svg/plus.svg');
+  background-position: center;
 }
 
 .jcf-number .jcf-btn-dec {
@@ -134,8 +138,11 @@
 }
 
 .jcf-number .jcf-btn-dec:after {
-  content: "–";
-  line-height: 30px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url('../../svg/minus.svg');
+  background-position: center;
 }
 
 

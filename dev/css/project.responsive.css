@@ -606,10 +606,6 @@ body .mobile-nav-menu-item-holder.open:before {
     display: block;
     padding-top: 15px;
   }
-  .breadcrumbs {
-    margin-top: -30px;
-    margin-bottom: 40px;
-  }
   .page-section {
     padding: 50px 0;
   }
@@ -783,6 +779,11 @@ body .mobile-nav-menu-item-holder.open:before {
   .product .product-info {
     padding: 25px 8px 0 8px;
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 960px) and (max-width: 480px) {
+  .product .product-info {
+    padding: 25px 0 0 0;
   }
 }
 @media screen and (max-width: 960px) {

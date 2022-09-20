@@ -5087,13 +5087,15 @@ ul.footer-top__list {
     right: 15px;
   }
 }
-.slider-prev-watched .title-block {
-  margin-left: 15px;
-}
-
-@media screen and (max-width: 960px) {
-  .slider-you-also-like .title-block {
+@media screen and (min-width: 960px) {
+  .slider-prev-watched .title-block {
     margin-left: 15px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .slider-prev-watched .title-block,
+.slider-you-also-like .title-block {
+    margin-left: 5px;
   }
 }
 .section {

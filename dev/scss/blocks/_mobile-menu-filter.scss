@@ -99,11 +99,7 @@
     font-family: "SFProDisplay";
     line-height: 1;
   }
-  .mobile-filter-item {
-    position: relative;
-    padding: 5px 20px;
-    border-bottom: 1px solid #1d1d1d;
-  }
+
   .mobile-filter-item:first-child {
     border-top: 1px solid #1d1d1d;
   }
@@ -315,9 +311,13 @@
   margin-top: auto;
 }
 
-.mobile-filter-items {
+.mobile-filter-items { 
   display: flex;
   flex-direction: column;
+
+  .mobile-filter-item:last-child {
+    border: 1px solid red;
+  }
 }
 
 .mobile-filter-holder {
@@ -387,8 +387,8 @@
   left: 0;
   top: 0;
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 26px;
   background: url(../../svg/plus.svg) no-repeat center center;
   /* transform: rotate(45deg); */
 }
@@ -405,7 +405,7 @@
 
 .mobile-filter-item {
   position: relative;
-  padding: 5px 20px;
+  padding: 5px 0x;
   border-bottom: 1px solid $color-gray-two;
 }
 
@@ -431,7 +431,9 @@
 }
 
 .mobile-filter-item-content .filter-price {
-  max-width: initial;
+  // max-width: initial;
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 .mobile-filter-item-content {

@@ -37,7 +37,7 @@
 				$sizeMenu: null,
 				$links: null,
 				$blocks: null,
-				$pageNote:  null,
+				$pageNote: null,
 
 				opened: false,
 				openedSearchMenu: false,
@@ -56,7 +56,8 @@
 					self.$simplebar = $(".simplebar", $sel.page);
 
 					self.$catalogItemSlider = $(".catalog-items--slider", $sel.page);
-					
+					self.$catalogItemSliderPrevWatched = $(".slider-prev-watched .catalog-items--slider", $sel.page);
+
 					self.$sizeOpenBtn = $(".size-open", $sel.page);
 					self.$sizeMenu = $("#catalog-size", $sel.page);
 
@@ -84,37 +85,37 @@
 
 					self.$searchBtn.on("click", function (e) { //раскрытие меню при клике
 						var $block = $(this);
-						console.log('block = ', $block);						
+						console.log('block = ', $block);
 
 						e.preventDefault();
 						e.stopPropagation();
 						self.openedSearchMenu ? self.closeSearchMenu() : self.openSearchMenu();
 						self.openedSearchMenu ? $block.addClass("open-search") : $block.removeClass("open-search");
 						// (self.openedSearchMenu & self.$pageNote) ? $block.addClass("open-search") : $block.removeClass("open-search");
-					
+
 						// реинициализация слайдера 
 						self.$catalogItemSlider.slick('unslick');
 						// self.$catalogItemSlider.remove(); /* Remove current slides elements, in case that you want to show new slides. */
 						// -------------------------- /* Initialize the slick again */
-						self.$catalogItemSlider.slick( {
-								slidesToShow: 4,
-								slidesToScroll: 2,
-								dots: false,
-								arrows: true,
-								infinite: true,
-								autoplay: false,
-								speed: 500,
-								arrows: false,
+						self.$catalogItemSlider.slick({
+							slidesToShow: 4,
+							slidesToScroll: 2,
+							dots: false,
+							arrows: true,
+							infinite: true,
+							autoplay: false,
+							speed: 500,
+							arrows: false,
 
-								responsive: [
-									{
-										breakpoint: 480,
-										settings: {
-											slidesToShow: 3,
-										}
+							responsive: [
+								{
+									breakpoint: 480,
+									settings: {
+										slidesToShow: 3,
 									}
-								]
-							});
+								}
+							]
+						});
 						// --------------------------
 					});
 
@@ -136,11 +137,11 @@
 						console.log('popupBasketOpenBtn');
 						e.preventDefault();
 						e.stopPropagation();
-						self.openedBasketMenu ? self.closeBasketMenu() : self.openBasketMenu();						
+						self.openedBasketMenu ? self.closeBasketMenu() : self.openBasketMenu();
 					});
 
 					self.$sizeOpenBtn.on("click", function (e) { //раскрытие меню при клике
-						console.log('sizeOpenBtn');						
+						console.log('sizeOpenBtn');
 
 						e.preventDefault();
 						e.stopPropagation();
@@ -149,7 +150,7 @@
 
 					$sel.window.on("click", function (e) {
 
-						if (!$('.only-desktop_header-menu .open-search').length){
+						if (!$('.only-desktop_header-menu .open-search').length) {
 							const searchIcon = $('.only-desktop_header-menu');
 							searchIcon.removeClass("open-search");
 						}
@@ -163,7 +164,7 @@
 						if (!$(e.target).closest("#catalog-search-menu").length) {
 							if (self.openedSearchMenu) {
 								self.closeSearchMenu();
-							} 
+							}
 
 						}
 
@@ -318,7 +319,7 @@
 					self.$sizeMenu.addClass("size-menu_visible");
 					self.$sizeOpenBtn.addClass("active");
 
-					
+
 					// new SimpleBar(self.$simplebar, { autoHide: false });
 					// console.log('self.$simplebar = ',self.$simplebar);
 					// const  scrool = self.$simplebar;
@@ -327,7 +328,7 @@
 					// 	  autoHide: false,
 					// 	});
 					//   })
-					
+
 
 					// очистить класы менюшек у боди т.е.закрыть их
 					// self.$buyerMenu.hide();
@@ -457,25 +458,25 @@
 					console.log('product slider');
 					// ------------------------------
 
-					$(".product-photos-gallery").slick( {
-							slidesToShow: 1,
-							slidesToScroll: 1,
-							dots: true,
-							centerMode: true,
-							arrows: false,
-							variableWidth:false,
+					$(".product-photos-gallery").slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						dots: true,
+						centerMode: true,
+						arrows: false,
+						variableWidth: false,
 
-							responsive: [
-								{
-									breakpoint: 820,
-									settings: {
-										dots: true,
-										vertical: false,
-									}
+						responsive: [
+							{
+								breakpoint: 820,
+								settings: {
+									dots: true,
+									vertical: false,
 								}
-							]							
-						});
-				
+							}
+						]
+					});
+
 
 					// -----------------------------
 
@@ -584,6 +585,8 @@
 							nextArrow: $nextArr,
 						}, params));
 					});
+
+
 					$(".catalog-items--slider", $sel.body).each(function () {
 						var $s = $(this),
 							params = $s.data("params"),
@@ -625,6 +628,7 @@
 							]
 						}, params));
 					});
+
 					$(".filter-items", $sel.body).each(function () {
 						var $s = $(this),
 							params = $s.data("params"),
@@ -665,6 +669,42 @@
 							]
 						}, params));
 					});
+
+					$(".catalog-items--slider-watched", $sel.body).each(function () {
+						var $s = $(this),
+							params = $s.data("params"),
+							$h = $s.closest(".slider-prev-watched");
+							$prevArr = $h.find(".slider-arrow.prev"),
+							$nextArr = $h.find(".slider-arrow.next");
+						$s.on("init", function (e, s) {
+
+						}).slick($.extend({}, {
+							slidesToShow: 6,
+							slidesToScroll: 1,
+							dots: false,
+							arrows: true,
+							infinite: true,
+							autoplay: false,
+							speed: 500,
+							prevArrow: $prevArr,
+							nextArrow: $nextArr,
+							responsive: [
+								{
+									breakpoint: 1000,
+									settings: {
+										slidesToShow: 3,
+										slidesToScroll: 1,
+										arrows: false,
+										speed: 200
+									}
+								}
+							]
+						}, params));
+					});
+
+
+
+
 				},
 			},
 
@@ -1069,7 +1109,7 @@
 							productSizeTooltip.click();//открываю tooltip о макс кол-ве товаров
 						}
 					});
-		
+
 					// ------------shops.html---------------------	
 					const shopLinks = document.querySelectorAll('.show-on--map');
 
@@ -1104,8 +1144,8 @@
 					tooltipCloses.forEach((item) => {
 						console.log('forEach');
 						item.addEventListener('click', (e) => {
-								console.log('addEventListener click');
-							});
+							console.log('addEventListener click');
+						});
 					});
 
 					$(window).keypress(function () {
@@ -1274,16 +1314,16 @@
 
 			searchForm: {
 				init: function () {
-					$(".search-form input", $sel.page).on("input",function(ev){
+					$(".search-form input", $sel.page).on("input", function (ev) {
 						$(ev.target).next().addClass('input__clear_visibility_visible');
-					  });
+					});
 
-					  $(".search-form__clear").on("click", function (e) {
+					$(".search-form__clear").on("click", function (e) {
 						e.preventDefault();
 						const parent = e.target.parentNode;
-						const input =  parent.querySelector('.search-form__input');
+						const input = parent.querySelector('.search-form__input');
 						input.value = '';
-					  });
+					});
 				}
 			},
 
@@ -1470,15 +1510,17 @@
 
 				filter: function () {
 					$(".mobile-filter-open", $sel.body).on("click", function (e) {
+						console.log('!!! mobile-filter-open click !!!!');
+
 						e.preventDefault();
 						$sel.body.addClass("show-filter");
 
-console.log('simplebar1');
+						console.log('simplebar1');
 
 						const simplebar1 = document.querySelector('.basket-mobile-menu__body.test.simplebar');
-						new SimpleBar(simplebar1, { autoHide: false });
+						// new SimpleBar(simplebar1, { autoHide: false });
 
-						$sel.body.toggleClass("show-filter");
+						// $sel.body.toggleClass("show-filter");
 						// bodyScrollLock.disableBodyScroll($(".mobile-filter-scroll-holder", $sel.body)[0]);
 						// bodyScrollLock.disableBodyScroll($(".mobile-filter-scroll-inner", $sel.body)[0]);
 					});

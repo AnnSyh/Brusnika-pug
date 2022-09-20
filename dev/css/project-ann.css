@@ -1243,24 +1243,29 @@ a.basket-menu__link_lowercase {
 }
 
 @media screen and (max-width: 480px) {
-  .catalog-items--slider.mlr-sm--20px {
+  .catalog-items--slider-watched.mlr-sm--20px,
+.catalog-items--slider.mlr-sm--20px {
     margin-left: -20px !important;
     margin-right: -20px !important;
     padding-left: 20px;
   }
 }
+.catalog-items--slider-watched,
 .catalog-items--slider {
   margin-bottom: 0;
 }
 
+.catalog-items--slider-watched .catalog-item,
 .catalog-items--slider .catalog-item {
   margin: 0 10px;
 }
 
+.catalog-items--slider-watched .catalog-item.brand,
 .catalog-items--slider .catalog-item.brand {
   margin: 0 30px;
 }
 
+.catalog-items--slider-watched .catalog-item.popup,
 .catalog-items--slider .catalog-item.popup {
   margin: 0 20px;
 }
@@ -1526,6 +1531,7 @@ a.basket-menu__link_lowercase {
   padding-top: 150%;
 }
 
+.catalog-items--slider-watched .catalog-item-price,
 .catalog-items--slider .catalog-item-price {
   /* margin-top: 15px; */
   justify-content: center;
@@ -1942,12 +1948,6 @@ a.basket-menu__link_lowercase {
   line-height: 1;
 }
 
-.mobile-filter-item {
-  position: relative;
-  padding: 5px 20px;
-  border-bottom: 1px solid #1d1d1d;
-}
-
 .mobile-filter-item:first-child {
   border-top: 1px solid #1d1d1d;
 }
@@ -2144,6 +2144,9 @@ a.basket-menu__link_lowercase {
   display: flex;
   flex-direction: column;
 }
+.mobile-filter-items .mobile-filter-item:last-child {
+  border: 1px solid red;
+}
 
 .mobile-filter-holder {
   display: block;
@@ -2210,8 +2213,8 @@ a.basket-menu__link_lowercase {
   left: 0;
   top: 0;
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 26px;
   background: url(../../svg/plus.svg) no-repeat center center;
   /* transform: rotate(45deg); */
 }
@@ -2227,7 +2230,7 @@ a.basket-menu__link_lowercase {
 
 .mobile-filter-item {
   position: relative;
-  padding: 5px 20px;
+  padding: 5px 0x;
   border-bottom: 1px solid #E1E1E1;
 }
 
@@ -2252,7 +2255,8 @@ a.basket-menu__link_lowercase {
 }
 
 .mobile-filter-item-content .filter-price {
-  max-width: initial;
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 .mobile-filter-item-content {

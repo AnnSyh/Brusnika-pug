@@ -225,7 +225,8 @@ const linkMore = document.querySelector('.link-more-js');
 if (linkMore) {
   linkMore.addEventListener('click', (evt) => {
     evt.preventDefault();
-    evt.target.nextElementSibling.classList.toggle('d-none');
+    // evt.target.nextElementSibling.classList.toggle('d-none');
+    evt.target.nextElementSibling.classList.toggle('v-hidden');
 
   });
 }

@@ -75,7 +75,10 @@
 					self.$menu = $("#catalog-menu", $sel.page);
 
 
-					self.$searchBtn = $(".catalog-search-open", $sel.page);
+					self.$searchBtn = $(".catalog-search-open", $sel.page); // берет 1-ый эл-т с соот классом 
+					// self.$searchBtn = $(".catalog-search-open.only-desktop_header-menu", $sel.page);
+					// self.$searchBtnMobile = $(".catalog-search-open.only-mobile_header-menu", $sel.page);
+
 					self.$searchMenu = $("#catalog-search-menu", $sel.page);
 
 					self.$links = $(".catalog-menu-section-item.submenu", self.$menu);
@@ -152,7 +155,9 @@
 
 						if (!$('.only-desktop_header-menu .open-search').length) {
 							const searchIcon = $('.only-desktop_header-menu');
+							const searchIconMobile = $('.only-mobile_header-menu');
 							searchIcon.removeClass("open-search");
+							searchIconMobile.removeClass("open-search");
 						}
 
 						if (!$(e.target).closest("#catalog-menu").length) {
@@ -195,6 +200,8 @@
 						e.preventDefault();
 						e.stopPropagation();
 						var $link = $(this);
+						// убрать меню поиска .search-open
+						self.closeSizeMenu();
 						self.openBuyerMenu();
 					});
 
@@ -1515,9 +1522,9 @@
 						e.preventDefault();
 						$sel.body.addClass("show-filter");
 
-						console.log('simplebar1');
-
-						const simplebar1 = document.querySelector('.basket-mobile-menu__body.test.simplebar');
+						
+						const simplebar1 = document.querySelector('.basket-mobile-menu__body.simplebar');
+						console.log('simplebar1 = ', simplebar1);
 						// new SimpleBar(simplebar1, { autoHide: false });
 
 						// $sel.body.toggleClass("show-filter");

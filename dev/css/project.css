@@ -292,7 +292,11 @@ body {
   display: block;
   width: 100%;
   position: relative;
-  z-index: 10000;
+  z-index: 100;
+}
+
+header .header-logo img {
+  z-index: 100000;
 }
 
 .header-search-holder {

@@ -316,8 +316,8 @@ div.pswp__img--placeholder,
 .pswp__button--arrow .pswp__icn {
   top: 50%;
   margin-top: -30px;
-  width: 60px;
-  height: 60px;
+  /* width: 60px;
+  height: 60px; */
   background: none;
   border-radius: 0;
 }

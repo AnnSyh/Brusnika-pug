@@ -219,19 +219,29 @@ a.catalog-menu__link_lowercase {
     z-index: 1000;
 }
 
-#catalog-search-menu .menu-sections {
+#catalog-search-menu .menu-sections { 
     top: 104px;
     // top: 130px;
     flex-direction: column;
 
     @media screen and (max-width: 480px) {
-        top: 77px;
+        top: 70px;
+        padding: 15px;
+    }
+
+}
+
+@media screen and(max-width:480px) {
+    
+    .menu-sections-top {
+        top: 40px !important;
     }
 }
 
+
 #catalog-buyer-menu .menu-sections {
     top: 104px;
-    z-index: 1000;
+    z-index: 10000;
     padding: 50px 53px;
 }
 #catalog-buyer-menu .page-inner {

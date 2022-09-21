@@ -37,7 +37,8 @@ block variables
                     +color(dataTableColorItem3, activeLink1, 3)
 
                   a.catalog-item-link(href='card.html')
-                  button.catalog-item-like(type='button')   
+                  .product-like(type='button')   
+                  //- button.catalog-item-like(type='button')   
                 //- картинка без слайдера         
                 //- .catalog-item.wo-holder
                 //-         img.cover(src=`../../dummy/catalog/${item.image}`)
@@ -49,6 +50,8 @@ block variables
                 //-     button.catalog-item-like(type='button')  
 
         include catalog/search-static-dress-for-new-season
+
+        //-  span.tooltip.product-add-favorites(data-tooltip-content='#tooltip_content')
 
         each tovar in tovars
             .col-6.col-lg-3

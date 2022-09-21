@@ -17,6 +17,10 @@
     @media screen and (max-width:768px) {
         flex-direction: column;
     }
+
+    @media screen and (max-width:480px) {
+        margin-top: 30px;
+    }
 }
 
 .search-results__not-found {
@@ -87,22 +91,30 @@
     line-height: 20px;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media screen and (max-width:480px) {
+        font-size: 10px; 
+    }
 }
 
-.search-history__list {
+.search-history__list { 
     margin-bottom: 30px;
+
 }
 
 .search-history__list li {
     margin-bottom: 8px;
 }
 
-.search-history__link {
+.search-history__link { 
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     text-decoration: none;
     color: #1d1d1d;
+    @media screen and (max-width:480px) {
+        font-size: 12px; 
+    }
 
 }
 

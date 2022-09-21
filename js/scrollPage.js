@@ -1,5 +1,7 @@
 
 const cardNav = $('.card-nav');
+const menuSections = $('#catalog-search-menu .menu-sections');
+
 $('.card-nav').hide(); // убрать меню при загрузке стр
 
 window.addEventListener('scroll', function () {
@@ -28,10 +30,15 @@ window.addEventListener('scroll', function () {
 
   const mainNav = $('.page-header');
 
-  if ($(window).scrollTop() > 0) {
+  if ($(window).scrollTop() > 0) { 
+
     mainNav.addClass('page-header-fixed');
+    menuSections.addClass('menu-sections-top');
+
   } else {
     mainNav.removeClass('page-header-fixed');
+    menuSections.removeClass('menu-sections-top');
+
   }
 
 });
@@ -42,14 +49,29 @@ $(".order-table-delete").on("click", function (e) {
   parent.classList.toggle('d-none');
 });
 
-const checkList = document.querySelectorAll('.check-list a');
+const checkListLinks = document.querySelectorAll('.check-list a');
 
-checkList.forEach((item) => {
+checkListLinks.forEach((item) => {
   item.addEventListener('click', (e) => {
     console.log('click dimensionsList');
     e.preventDefault();
     const item = e.target
+    const parentList = item.parentNode.parentNode;
+    const parentListLinks = parentList.querySelectorAll('a');
+
+    parentListLinks.forEach((item) => {
+      item.classList.remove('active');
+    });
     item.classList.toggle('active');
+
+   const sizePopupLinks = document.querySelector('#size-popup');
+   const countLinks = sizePopupLinks.querySelectorAll('.active').length;
+
+    if( countLinks === 3 ) {
+      const changeButtton = document.querySelector('.basket-open');
+      changeButtton.innerHTML = 'ДОБАВИТЬ В КОРЗИНУ'
+    }
+
   });
 
 });

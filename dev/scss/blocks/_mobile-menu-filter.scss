@@ -407,6 +407,28 @@
   position: relative;
   padding: 5px 0x;
   border-bottom: 1px solid $color-gray-two;
+
+  &--size {
+    @media screen and (max-width:480px) {
+      
+      .form-checkbox-title {
+        font-size: 11px;
+        white-space: nowrap;
+      }
+
+      .jcf-checkbox {
+        min-width: 14px;
+        min-height: 14px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+  }
+}
+
+.mobile-filter-item--size {
+  border: 1px solid green !important;
 }
 
 .mobile-filter-btns {

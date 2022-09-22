@@ -47,17 +47,17 @@
 
 
 // выравнивание заголовков блоков 'Вам также может понравиться' и 'Ранее вы смотрели' на стр card.html
-@media screen and (min-width:960px) {
-  .slider-prev-watched .title-block { 
-    margin-left: 15px;
-  } 
-}
-@media screen and (max-width:960px) {
-  .slider-prev-watched .title-block,
-  .slider-you-also-like .title-block { 
-    margin-left: 5px;
-  }  
-}
+// @media screen and (min-width:960px) {
+//   .slider-prev-watched .title-block { 
+//     margin-left: 15px;
+//   } 
+// }
+// @media screen and (max-width:960px) {
+//   .slider-prev-watched .title-block,
+//   .slider-you-also-like .title-block { 
+//     margin-left: 5px;
+//   }  
+// }
 
 
 .section {

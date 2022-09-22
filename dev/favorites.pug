@@ -5,20 +5,15 @@ block variables
   - var title = 'favorites'
   - var mainPage = false
 
-  //- <a class="header-toolbar-item" 
-  //- href="#auth-form" 
-  //- data-popup="{&quot;type&quot;:&quot;inline&quot;}">
-  //- Вход</a>
-
 
 block content
   main.page-content.page-favorites
       .page-inner.page-inner--w2 
         .favorites__share
           .favorites__count-title Избранное (8)
-          a.favorites__link(href='#message-log-in' data-popup='{"type":"inline"}') Поделиться
+          //- a.favorites__link(href='#message-log-in' data-popup='{"type":"inline"}') Поделиться
         include modules/favorites 
-        section.page-inner
-          .page-inner.page-inner--w2
+        section
+          .page-inner--w2
             .catalog
               include modules/slider-prev-watched

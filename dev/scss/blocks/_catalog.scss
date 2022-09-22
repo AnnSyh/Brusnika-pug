@@ -579,20 +579,30 @@
 .catalog { 
   position: relative;
 
-  .slider-arrows-wrap {
+  .slider-arrows-wrap { border: 1px solid green;
     position: absolute;
-    max-width: calc(100% + 100px);
+    max-width: calc(100% + 80px);
     top: calc(50% - 20px);
     z-index: 1;
-    left: -20px;
+    left: -40px;
     right: -20px;
+    padding: 0;
 
     @media screen and (max-width:1660px) {
-      max-width: calc(100% + 60px);
+      max-width: calc(100% + 40px);
       top: calc(50% - 20px);
       z-index: 1;
-      left: -20px;
+      left: -30px;
       right: -20px;
+      padding: 0;
+    }
+
+    @media screen and (max-width:1630px) {
+      max-width: calc(100% + 30px);
+      top: calc(50% - 20px);
+      z-index: 1;
+      left: -25px;
+      right: -10px;
       padding: 0;
     }
   }

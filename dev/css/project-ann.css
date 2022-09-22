@@ -3703,6 +3703,10 @@ ul.footer-top__list {
   margin-bottom: 10px;
 }
 
+.order-table__name {
+  margin-bottom: 0px;
+}
+
 .order-table__price {
   font-weight: 600;
   font-size: 12px;
@@ -3870,10 +3874,7 @@ ul.footer-top__list {
   line-height: 20px;
 }
 .order-aside__list {
-  margin-top: 15px;
-}
-.order-aside__list p {
-  margin-bottom: 15px;
+  margin-top: 20px;
 }
 .order-aside__to-pay {
   display: flex;
@@ -3952,22 +3953,13 @@ ul.footer-top__list {
     border-top: 1px solid #E1E1E1 !important;
   }
 }
-@media screen and (min-width: 960px) {
-  .basket__body .order-table__row {
-    border-top: 1px solid #E1E1E1;
-    padding: 15px 0;
-  }
-  .basket__body .order-table__row.last {
-    border-bottom: 1px solid #E1E1E1;
-  }
-}
 .order-table .order-table-delete {
   position: relative;
   top: 5px;
   margin: 0 0 0 auto;
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 24px;
+  height: 24px;
   background: url("../../svg/basket_remove.svg") no-repeat center center;
   background-size: contain;
   transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);

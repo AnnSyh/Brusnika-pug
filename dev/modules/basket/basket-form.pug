@@ -1,16 +1,19 @@
 form.form.basket-form 
   div(style="max-width: 718px;")
-    .basket-form__title 1.Доставка
+    .basket-form__title 1.Ваш город
     .form-row
       label.form-item-label(for='city') Ваш город
       input#city.form-item.form-item--text(type='text' name='city' data-validation='{"message": "Обязательное поле"}' required='' value='Ростов-на-Дону')
-
-    .filter-row.filter-row-basket
+    
+    .basket-form__title 2. Доставка
+      //- .basket-form__title 2. Доставка
+    .filter-row.filter-row-basket 
+    
       .simplebar
         .filter-row__inner
           label.form-radio
             input.form-item.form-item--radio(type='radio' name='pickup')
-            | Самовывоз из магазина  
+            | Из магазина  
             br
             | Бесплатно
           ul.basket__pickup
@@ -22,7 +25,7 @@ form.form.basket-form
                     .basket__pickup-metro= item.metro
                     .basket__pickup-address= item.address
                     .basket__pickup-data= item.data
-          a.link.link--gray_border.small.ml-30px(href='#show-on-map-popup' data-popup='{"type":"inline"}') Показать на карте
+          //- a.link.link--gray_border.small.ml-30px(href='#show-on-map-popup' data-popup='{"type":"inline"}') Показать на карте
 
           //- include ../map
 
@@ -39,7 +42,8 @@ form.form.basket-form
   .form-row__title
     .basket-form__title 2. Контактные данные
     span
-        a.link.link--black_border(href="#") Уже зарегистрированы?
+        //- a.btn.btn--black.btn--medium.btn--fullwidth(href='#size-popup' data-popup='{"type":"inline"}')
+        a.link.link--black_border(href='#auth-form' data-popup='{"type":"inline"}') Уже зарегистрированы?
   .form-row
     .form-group
       .form-group-inner

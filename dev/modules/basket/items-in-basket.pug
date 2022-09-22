@@ -1,5 +1,3 @@
-
-
 each item in BasketProducts
   .order-table__row
     .order-table__item
@@ -9,7 +7,7 @@ each item in BasketProducts
       .order-table__info
         .order-table__name= item.title 
         .order-table__price= item.price + ' Р'
-        .order-table__size= `2Размер: ${item.size} RU`
+        .order-table__size= `Размер: ${item.size} RU`
         .order-table__color= `Цвет: ${item.color}` 
         .order-table__counter.only-mobile
             input.form-item.form-item--number(type='number' min='1' max='100' step='1' value='1')

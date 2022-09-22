@@ -91,6 +91,10 @@
     line-height: 20px;
     margin-bottom: 10px;
 }
+.order-table__name {
+    margin-bottom: 0px;
+
+}
 
 .order-table__price {
     font-weight: 600;
@@ -257,11 +261,7 @@
     }
 
     &__list {
-        margin-top: 15px;
-
-        p {
-            margin-bottom: 15px;
-        }
+        margin-top: 20px;
 
     }
 
@@ -356,26 +356,14 @@
     }
 }
 
-// basket.html
-@media screen and (min-width: 960px) {
-    .basket__body .order-table__row {
-        border-top: 1px solid $color-gray-two;
-        padding: 15px 0;
-    }
-
-   .basket__body .order-table__row.last {
-        border-bottom: 1px solid $color-gray-two;
-    }
-}
-
 
 .order-table .order-table-delete {
     position: relative;
     top: 5px;
     margin: 0 0 0 auto;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 24px;
+    height: 24px;
     background: url("../../svg/basket_remove.svg") no-repeat center center;
     background-size: contain;
     transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);

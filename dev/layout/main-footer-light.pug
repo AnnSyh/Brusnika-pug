@@ -11,7 +11,7 @@ include ../utils/mixins
 
 html.no-js(lang='ru' prefix='og:http://ogp.me/ns#')
   include ../modules/head
-  body(class={'body-main':mainPage,
+  body.overflow-x(class={'body-main':mainPage,
 				'body-inner':innerPage})
 
     .page
@@ -20,14 +20,14 @@ html.no-js(lang='ru' prefix='og:http://ogp.me/ns#')
 
       block content
 
-      include ../modules/footer
+      include ../modules/footer-light
+
     include ../modules/footer-popups
     include ../modules/footer-scripts 
 
-//- блок для вспл окошек на отдельной стр
-//- не работает на dev\basket.pug ???
-block footer-popups 
+    //- блок для вспл окошек на отдельной стр
+    block footer-popups 
 
-//- блок для скриптов на отдельной стр
-block script 
+    //- блок для скриптов на отдельной стр
+    block script 
   

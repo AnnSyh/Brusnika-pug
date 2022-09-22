@@ -704,7 +704,7 @@
 										arrows: false,
 										speed: 200
 									}
-								}
+								},
 							]
 						}, params));
 					});

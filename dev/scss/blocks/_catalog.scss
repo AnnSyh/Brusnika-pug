@@ -579,7 +579,7 @@
 .catalog { 
   position: relative;
 
-  .slider-arrows-wrap { border: 1px solid green;
+  .slider-arrows-wrap { 
     position: absolute;
     max-width: calc(100% + 80px);
     top: calc(50% - 20px);

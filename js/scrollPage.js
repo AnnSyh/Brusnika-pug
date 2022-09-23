@@ -30,7 +30,7 @@ window.addEventListener('scroll', function () {
 
   const mainNav = $('.page-header');
 
-  if ($(window).scrollTop() > 0) { 
+  if ($(window).scrollTop() > 0) {
 
     mainNav.addClass('page-header-fixed');
     menuSections.addClass('menu-sections-top');
@@ -64,10 +64,10 @@ checkListLinks.forEach((item) => {
     });
     item.classList.toggle('active');
 
-   const sizePopupLinks = document.querySelector('#size-popup');
-   const countLinks = sizePopupLinks.querySelectorAll('.active').length;
+    const sizePopupLinks = document.querySelector('#size-popup');
+    const countLinks = sizePopupLinks.querySelectorAll('.active').length;
 
-    if( countLinks === 3 ) {
+    if (countLinks === 3) {
       const changeButtton = document.querySelector('.basket-open');
       changeButtton.innerHTML = 'ДОБАВИТЬ В КОРЗИНУ'
     }
@@ -142,11 +142,21 @@ console.log('radiosList = ', radiosList);
 radiosList.forEach((item) => {
   item.addEventListener('click', (e) => {
     const row = e.target.parentNode.parentNode.parentNode.parentNode;
+    const eTarget = e.target
+    const textCard = document.querySelector('.text-card')
+    const textReceipt = document.querySelector('.text-receipt')
 
     // очистить от класса .black-border   все эл-ты списка
+    // console.log('item3 = ', row.classList.add('black-border'));
 
-    console.log('item3 = ', row.classList.add('black-border'));
-    // console.log('item3 = ', row.classList.toggle('black-border'));
+    if (eTarget.value == 'card') {
+      textCard.classList.toggle('d-none');
+      textReceipt.classList.add('d-none');
+    }
+    if (eTarget.value == 'receipt') {
+      textCard.classList.add('d-none');
+      textReceipt.classList.toggle('d-none');
+    }
   });
 })
 
@@ -255,3 +265,16 @@ if (linkMore) {
 //   ]
 // });
 
+//
+
+$(".filter-row-click input").on("click", function (e) {
+
+  const parent = e.target.parentNode.parentNode.parentNode.parentNode;
+  const content = parent.querySelector('.filter-row__content');
+
+  console.log('parent = ', parent);
+  console.log('content = ', content);
+
+  content.classList.toggle('d-none');
+
+});

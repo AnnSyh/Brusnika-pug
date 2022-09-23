@@ -170,6 +170,27 @@
   margin-top: 60px;
 }
 
+.mt-40px {
+  margin-top: 40px;
+}
+.mb-40px {
+  margin-bottom: 40px;
+}
+
+.mt-30px {
+  margin-top: 30px;
+}
+.mb-30px {
+  margin-bottom: 30px;
+}
+
+.mt-10px {
+  margin-top: 10px;
+}
+.mb-10px {
+  margin-bottom: 10px;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -180,8 +201,8 @@
 
 
 
-.order-aside-sticky {
-  top: 20px;
+.order-aside-sticky { 
+  top: 140px; //высота закрепленной при прокрутке шапки
   position: sticky;
 }
 

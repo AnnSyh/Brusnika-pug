@@ -12,6 +12,11 @@
         margin-bottom: 50px;
         flex-wrap: wrap;
 
+        @media screen and (max-width: 480px) { 
+            flex-direction: column;
+            gap: 10px;
+        }
+
         .order-aside {
             padding: 40px;
             background: #F7F5F5;
@@ -19,8 +24,8 @@
             min-width: 526px;
 
             @media screen and (max-width: 530px) {
-                border: 1px solid red;
                 min-width: auto;
+                padding: 15px;
             }
         }
     }
@@ -73,6 +78,10 @@
         display: flex;
         align-items: baseline;
         gap: 8px;
+
+        @media screen and (max-width:480px) {
+            flex-direction: column;
+        }
     }
 
     .form-radio .jcf-radio {
@@ -89,8 +98,13 @@
     }
 
 }
-
+.basket__pickup-metro {
+    font-weight: bold;
+}
 .basket__pickup-data {
+    margin-top: 5px;
+}
+.basket__pickup-payment {
     margin-top: 15px;
 }
 
@@ -100,13 +114,33 @@
 
 .basket-form {
 
+    @media screen and (max-width:480px) {
+        font-size: 12px;
+    }
+
 
     &__title {
         font-weight: 600;
         font-size: 18px;
+
         line-height: 25px;
         margin-bottom: 30px;
+
+        @media screen and (max-width:480px) { 
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
     }
+
+    &__text {
+        font-size: 16px; 
+
+        @media screen and (max-width:480px) { 
+            font-size: 12px;
+        }
+    }
+
 
     .filter-row,
     .simplebar {
@@ -118,6 +152,9 @@
     .filter-row {
         border: 1px solid $color-gray-two;
         margin-bottom: 10px;
+
+
+        
     }
 
     .form-row-payment {
@@ -125,6 +162,11 @@
 
         label {
             margin-right: 23px;
+        }
+
+        @media screen and (max-width:480px) {
+            flex-direction: column;
+            gap: 15px;
         }
     }
 }
@@ -137,6 +179,11 @@
 
     &__form-radio {
         display: flex;
+
+        @media screen and (max-width:480px) {
+            flex-direction: column;
+            gap: 15px;
+        }
     }
 
     &__radio-coll,

@@ -6,6 +6,15 @@
     max-width: 430px;
     padding: 55px 45px;
 
+    &--auth-form { 
+        min-width:430px; 
+        padding: 20px !important;
+
+        @media screen and(max-width:480px) {
+            min-width:100%; 
+        }
+    }
+
     &-heading {
         margin-bottom: 20px;
     }

@@ -506,10 +506,10 @@
             <div class="row align-items-end justify-content-between">
               <div class="col-md-6">
                 <div class="d-md-none mb-3"><a class="link link--black" href="#">Вернуться в корзину</a></div>
-                <h1 class="h1">Оформление заказа</h1>
-                <p class="mt-2 fs16"> Обработка заказов ежедневно
+                <div class="basket-form__title">Оформление заказа</div>
+                <div class="basket-form__text">   Обработка заказов ежедневно
                   <nobr>09:00 — 21:00</nobr>
-                </p>
+                </div>
               </div>
               <div class="col-auto d-none d-md-block"><span> <a class="link link--black" href="#">Вернуться в корзину</a></span></div>
             </div>
@@ -566,121 +566,79 @@
                     </div>
                   </div>
                 </div>
-                <div class="d-md-none mobile-table-summary center"><b>К оплате: 14 760 Р</b></div>
-                <div class="d-none d-md-block"><a class="link link--gray_border small" href="basket_empty.html">
-                    Очистить
-                    корзину</a></div>
               </div>
               <form class="form basket-form"> 
-                <div style="max-width: 718px;">
+                <div style="max-width: 718px;border: 1px solid red;">
                   <div class="basket-form__title">1.Ваш город</div>
                   <div class="form-row">
                     <label class="form-item-label" for="city">Ваш город</label>
-                    <input class="form-item form-item--text" id="city" type="text" name="city" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Ростов-на-Дону">
+                    <div class="search-form search-form--basket">
+                      <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Ростов-на-Дону">
+                      <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                    </div>
                   </div>
                   <div class="basket-form__title">2. Доставка</div>
-                  <div class="filter-row filter-row-basket"> 
+                  <div class="filter-row filter-row-click">
                     <div class="simplebar">
                       <div class="filter-row__inner">
                         <label class="form-radio">
                           <input class="form-item form-item--radio" type="radio" name="pickup">Из магазина  <br>Бесплатно
                         </label>
-                        <ul class="basket__pickup">
-                          <li>
-                            <label class="form-radio">
-                              <input class="form-item form-item--radio" type="radio" name="product">
-                              <div class="form-radio__item">
-                                <div class="basket__pickup-metro">ТРЦ Горизонт</div>
-                                <div class="basket__pickup-address">пр-т Михаила Нагибина, д. 32/2, ТРЦ «Горизонт», «Премиум-галерея» 1 этаж (с 10:00 до 22:00) </div>
-                                <div class="basket__pickup-data">Можно забрать 1 июня, в субботу</div>
-                              </div>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="form-radio">
-                              <input class="form-item form-item--radio" type="radio" name="product">
-                              <div class="form-radio__item">
-                                <div class="basket__pickup-metro">Проспект Чехова, д. 51–53 </div>
-                                <div class="basket__pickup-address">проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
-                                <div class="basket__pickup-data">Можно забрать 1 июня, в субботу</div>
-                              </div>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="form-radio">
-                              <input class="form-item form-item--radio" type="radio" name="product">
-                              <div class="form-radio__item">
-                                <div class="basket__pickup-metro">Проспект Чехова, д. 51–53 </div>
-                                <div class="basket__pickup-address">проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
-                                <div class="basket__pickup-data">Можно забрать 1 июня, в субботу</div>
-                              </div>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="form-radio">
-                              <input class="form-item form-item--radio" type="radio" name="product">
-                              <div class="form-radio__item">
-                                <div class="basket__pickup-metro">Проспект Чехова, д. 51–53 </div>
-                                <div class="basket__pickup-address">проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
-                                <div class="basket__pickup-data">Можно забрать 1 июня, в субботу</div>
-                              </div>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="form-radio">
-                              <input class="form-item form-item--radio" type="radio" name="product">
-                              <div class="form-radio__item">
-                                <div class="basket__pickup-metro">Проспект Чехова, д. 51–53 </div>
-                                <div class="basket__pickup-address">проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
-                                <div class="basket__pickup-data">Можно забрать 1 июня, в субботу</div>
-                              </div>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="form-radio">
-                              <input class="form-item form-item--radio" type="radio" name="product">
-                              <div class="form-radio__item">
-                                <div class="basket__pickup-metro">Проспект Чехова, д. 51–53 </div>
-                                <div class="basket__pickup-address">проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
-                                <div class="basket__pickup-data">Можно забрать 1 июня, в субботу</div>
-                              </div>
-                            </label>
-                          </li>
-                        </ul>
+                        <div class="filter-row__content d-none">
+                          <ul class="basket__pickup">
+                            <li>
+                              <label class="form-radio">
+                                <input class="form-item form-item--radio" type="radio" name="product">
+                                <div class="form-radio__item">
+                                  <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, пр-т Михаила Нагибина</div>
+                                  <div class="basket__pickup-address">г. Ростов-на-Дону, пр-т Михаила Нагибина, д. 32/2, ТРЦ «Горизонт»</div>
+                                  <div class="basket__pickup-data">«Премиум-галерея», 1 этаж (с 10:00 до 22:00)</div>
+                                  <div class="basket__pickup-payment">Бесплатно</div>
+                                </div>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="form-radio">
+                                <input class="form-item form-item--radio" type="radio" name="product">
+                                <div class="form-radio__item">
+                                  <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, проспект Чехова, д. 51-53</div>
+                                  <div class="basket__pickup-address">г. Ростов-на-Дону, проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
+                                  <div class="basket__pickup-data"></div>
+                                  <div class="basket__pickup-payment">Бесплатно</div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="filter-row">
-                    <div class="filter-row__inner">
-                      <label class="filter-row__form-radio">
-                        <div class="filter-row__radio-coll">
-                          <input class="form-item form-item--radio" type="radio" name="pickup">
-                          <div>Курьерска служба СДЭК с бесплатной примеркойот 160  Р</div>
+                  <div class="filter-row filter-row-click">
+                    <div class="simplebar">
+                      <div class="filter-row__inner">
+                        <label class="form-radio">
+                          <div class="filter-row__radio-coll">
+                            <input class="form-item form-item--radio" type="radio" name="pickup">
+                            <div>Курьерска служба СДЭК с бесплатной примеркойот 160  Р</div>
+                          </div>
+                          <div class="filter-row__text-coll">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. </div>
+                        </label>
+                        <div class="filter-row__content d-none"> 
+                          <div class="mt-40px">
+                            <div class="mb-30px">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.</div>
+                            <div class="bold mb-10px"> Куда доставить заказ?</div>
+                            <div class="mb-30px">
+                              <div class="search-form search-form--basket">
+                                <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
+                                <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                              </div>
+                            </div><a class="link link--black_border basket-add-comment" href="#">Добавить комментарий к заказу</a>
+                            <div class="mt-30px"> 
+                              <textarea class="form-item--textarea w-100 d-none" name="" cols="30" rows="10"> </textarea>
+                            </div>
+                          </div>
                         </div>
-                        <div class="filter-row__text-coll">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру.</div>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="filter-row">
-                    <div class="filter-row__inner">
-                      <label class="filter-row__form-radio">
-                        <div class="filter-row__radio-coll">
-                          <input class="form-item form-item--radio" type="radio" name="pickup">
-                          <div>Пункты выдачи СДЭК от 238 Р</div>
-                        </div>
-                        <div class="filter-row__text-coll">Доставка заказа в один из пунктов самовывоза компании СДЭК.</div>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="filter-row">
-                    <div class="filter-row__inner">
-                      <label class="filter-row__form-radio">
-                        <div class="filter-row__radio-coll">
-                          <input class="form-item form-item--radio" type="radio" name="pickup">
-                          <div>Пункты выдачи Via Delivery от 193 Р</div>
-                        </div>
-                        <div class="filter-row__text-coll">Доставка заказов с выдачей на кассе в Пятерочке или в отделениях СберБанка.</div>
-                      </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -708,13 +666,19 @@
                 <div class="basket-form__title">3. Оплата</div>
                 <div class="form-row">
                   <div class="form-row-payment">
-                    <label class="form-radio">
-                      <input class="form-item form-item--radio" type="radio" name="ord_payment" value="1"><span class="form-radio-title">Банковской картой на сайте</span>
+                    <label class="form-radio" id="payment">
+                      <input class="form-item form-item--radio" type="radio" id="payment-card" name="ord_payment" value="card"><span class="form-radio-title">Банковской картой на сайте</span>
                     </label>
                     <label class="form-radio">
-                      <input class="form-item form-item--radio" type="radio" name="ord_payment" value="4"><span class="form-radio-title">Оплата при получении</span>
+                      <input class="form-item form-item--radio" type="radio" id="payment-receipt" name="ord_payment" value="receipt"><span class="form-radio-title">Оплата при получении</span>
                     </label>
                   </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-row-saile text-card d-none"> *Скидка 2% при фактической оплате заказа на сайте.   </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-row-saile text-receipt d-none"> Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)   </div>
                 </div>
               </form>
             </div>
@@ -736,7 +700,7 @@
                       <input class="form-item form-item--text" id="card" type="text">
                     </div>
                     <div class="promocode-block__col">
-                      <button class="btn btn--medium btn--black_border mx-auto" type="button">Применить</button>
+                      <button class="btn btn--medium btn--black_border mx-auto w-100" type="button">Применить</button>
                     </div>
                   </div>
                 </label>
@@ -747,7 +711,7 @@
                       <input class="form-item form-item--text" id="promocode" type="text">
                     </div>
                     <div class="promocode-block__col">
-                      <button class="btn btn--medium btn--black_border mx-auto" type="button">Применить</button>
+                      <button class="btn btn--medium btn--black_border mx-auto w-100" type="button">Применить</button>
                     </div>
                   </div>
                 </div><a class="btn btn--large btn--black btn--fullwidth" href="#checkout-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ОФОРМИТЬ ЗАКАЗ</a>
@@ -775,7 +739,7 @@
         </div>
       </footer>
     </div>
-    <div class="page-popup mfp-hide" id="auth-form">
+    <div class="page-popup page-popup--auth-form mfp-hide" id="auth-form">
       <div class="page-popup-inner">
         <div class="page-popup-title">Войти</div>
         <div class="page-popup-title--small">Введите свою почту и пароль, чтобы войти.</div>
@@ -799,7 +763,7 @@
                   <button class="btn btn--black btn--medium w100 max-w100" type="submit">ВЫСЛАТЬ КОД</button>
                 </div>
                 <div class="form-row">
-                  <div class="form-group-inner"><a class="link link--black_simple" href="#"><span>Я забыл пароль  </span></a><a class="link link--black_simple" href="#"><span>Регистрация</span></a></div>
+                  <div class="form-group-inner"><a class="link link--black_border" href="#"><span>Я забыл пароль  </span></a><a class="link link--black_border" href="#"><span>Регистрация</span></a></div>
                 </div>
               </div>
               <div class="tab-content-item auth-tab active form-tab-content-item" id="auth-form_email">
@@ -819,7 +783,7 @@
                   <button class="btn btn--black btn--medium w100 max-w100" type="submit">Войти</button>
                 </div>
                 <div class="form-row">
-                  <div class="form-group-inner"><a class="link link--black_simple" href="#"><span>Я забыл пароль  </span></a><a class="link link--black_simple" href="#"><span>Регистрация</span></a></div>
+                  <div class="form-group-inner"><a class="link link--black_border" href="#"><span>Я забыл пароль  </span></a><a class="link link--black_border" href="#"><span>Регистрация</span></a></div>
                 </div>
               </div>
             </div>

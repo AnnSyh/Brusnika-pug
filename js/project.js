@@ -414,6 +414,7 @@
 						e.preventDefault();
 						$("#promocode-block").toggle();
 					});
+
 				}
 			},
 
@@ -681,7 +682,7 @@
 						var $s = $(this),
 							params = $s.data("params"),
 							$h = $s.closest(".slider-prev-watched");
-							$prevArr = $h.find(".slider-arrow.prev"),
+						$prevArr = $h.find(".slider-arrow.prev"),
 							$nextArr = $h.find(".slider-arrow.next");
 						$s.on("init", function (e, s) {
 
@@ -1321,8 +1322,11 @@
 
 			searchForm: {
 				init: function () {
+
 					$(".search-form input", $sel.page).on("input", function (ev) {
-						$(ev.target).next().addClass('input__clear_visibility_visible');
+						if (ev.target.value !== '')
+							$(ev.target).next().addClass('input__clear_visibility_visible');
+
 					});
 
 					$(".search-form__clear").on("click", function (e) {
@@ -1522,7 +1526,7 @@
 						e.preventDefault();
 						$sel.body.addClass("show-filter");
 
-						
+
 						const simplebar1 = document.querySelector('.basket-mobile-menu__body.simplebar');
 						console.log('simplebar1 = ', simplebar1);
 						// new SimpleBar(simplebar1, { autoHide: false });

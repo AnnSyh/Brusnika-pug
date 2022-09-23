@@ -1,14 +1,16 @@
 form.form.basket-form 
-  div(style="max-width: 718px;")
+  div(style="max-width: 718px;border: 1px solid red;")
     .basket-form__title 1.Ваш город
     .form-row
       label.form-item-label(for='city') Ваш город
-      input#city.form-item.form-item--text(type='text' name='city' data-validation='{"message": "Обязательное поле"}' required='' value='Ростов-на-Дону')
-    
+
+      .search-form.search-form--basket
+        input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Ростов-на-Дону')
+        button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
+
     .basket-form__title 2. Доставка
       //- .basket-form__title 2. Доставка
-    .filter-row.filter-row-basket 
-    
+    .filter-row.filter-row-click
       .simplebar
         .filter-row__inner
           label.form-radio
@@ -16,34 +18,64 @@ form.form.basket-form
             | Из магазина  
             br
             | Бесплатно
-          ul.basket__pickup
-            each item in pickupItems
-              li
-                label.form-radio
-                  input.form-item.form-item--radio(type='radio' name='product')
-                  .form-radio__item
-                    .basket__pickup-metro= item.metro
-                    .basket__pickup-address= item.address
-                    .basket__pickup-data= item.data
+          .filter-row__content.d-none
+            ul.basket__pickup
+              each item in pickupItems
+                li
+                  label.form-radio
+                    input.form-item.form-item--radio(type='radio' name='product')
+                    .form-radio__item
+                      .basket__pickup-metro= item.metro
+                      .basket__pickup-address= item.address
+                      .basket__pickup-data= item.data
+                      .basket__pickup-payment= item.payment
           //- a.link.link--gray_border.small.ml-30px(href='#show-on-map-popup' data-popup='{"type":"inline"}') Показать на карте
-
           //- include ../map
 
-    each item in dostavkaItems
-      .filter-row
+    //- each item in dostavkaItems
+    //-   .filter-row.filter-row-click
+    //-    .simplebar
+    //-     .filter-row__inner
+    //-       label.form-radio
+    //-         .filter-row__radio-coll
+    //-           input.form-item.form-item--radio(type='radio' name='pickup')
+    //-           div= item.item 
+    //-         .filter-row__text-coll= item.text 
+    //-       .filter-row__content.d-none 
+    //-         div(style="margin-top: 30px")
+    //-           div.bold(style="margin-bottom: 25px;") Выбранный адрес доставки
+    //-           div.bold(style="margin-bottom: 10px;")  Постамат в Пятерочке
+    //-           div ул. Евдокимова, 102 Б, Ростов-на-Дону
+    //-           div(style="margin-bottom: 30px") Ежедневно, с 10:00 до 21:00
+    //-           a.link.link--black_border(href="#") Изменить
+
+    .filter-row.filter-row-click
+       .simplebar
         .filter-row__inner
-          label.filter-row__form-radio
+          label.form-radio
             .filter-row__radio-coll
               input.form-item.form-item--radio(type='radio' name='pickup')
-              div= item.item 
-            .filter-row__text-coll= item.text 
+              div Курьерска служба СДЭК с бесплатной примеркойот 160  Р
+            .filter-row__text-coll Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. 
+          .filter-row__content.d-none 
+            div.mt-40px
+              div.mb-30px
+                | Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.
+              div.bold.mb-10px  Куда доставить заказ?
+              div.mb-30px
+                .search-form.search-form--basket
+                  input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Москва, ул. Ленина, 44, кв. 23')
+                  button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
+              a.link.link--black_border.basket-add-comment(href="#") Добавить комментарий к заказу
+              div.mt-30px 
+                textarea.form-item--textarea.w-100.d-none(name="", cols="30", rows="10") 
 
 
   .form-row__title
     .basket-form__title 2. Контактные данные
     span
-        //- a.btn.btn--black.btn--medium.btn--fullwidth(href='#size-popup' data-popup='{"type":"inline"}')
-        a.link.link--black_border(href='#auth-form' data-popup='{"type":"inline"}') Уже зарегистрированы?
+      //- a.btn.btn--black.btn--medium.btn--fullwidth(href='#size-popup' data-popup='{"type":"inline"}')
+      a.link.link--black_border(href='#auth-form' data-popup='{"type":"inline"}') Уже зарегистрированы?
   .form-row
     .form-group
       .form-group-inner
@@ -61,12 +93,18 @@ form.form.basket-form
   .basket-form__title 3. Оплата
   .form-row
     .form-row-payment
-      label.form-radio
-        input.form-item.form-item--radio(type='radio' name='ord_payment' value='1')
+      label.form-radio#payment
+        input.form-item.form-item--radio(type='radio' id="payment-card" name='ord_payment' value='card')
         span.form-radio-title Банковской картой на сайте
       label.form-radio
-        input.form-item.form-item--radio(type='radio' name='ord_payment' value='4')
+        input.form-item.form-item--radio(type='radio' id='payment-receipt' name='ord_payment' value='receipt')
         span.form-radio-title Оплата при получении
+
+
+  .form-row
+    .form-row-saile.text-card.d-none  *Скидка 2% при фактической оплате заказа на сайте.   
+  .form-row
+    .form-row-saile.text-receipt.d-none  Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)   
 
 
 

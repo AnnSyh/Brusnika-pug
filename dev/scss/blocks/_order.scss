@@ -67,7 +67,8 @@
 }
 
 .order-table__img {
-    width: 127px;
+    width: 100%;
+    max-width: 127px;
 }
 
 .order-table__info {
@@ -90,6 +91,10 @@
     font-size: 12px;
     line-height: 20px;
     margin-bottom: 10px;
+
+    @media screen and (max-width:480px) { 
+        font-size: 10px;
+    }
 }
 .order-table__name {
     margin-bottom: 0px;
@@ -200,8 +205,10 @@
     }
 }
 
-.order-table__item > .order-table__img {
-    width: 175px;
+.order-table__item > .order-table__img { 
+    width: 100%;
+    max-width: 175px;
+
 }
 
 .order-table__item > .order-table__item-delete {
@@ -269,6 +276,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+
+        @media screen and (max-width:480px) {
+            flex-direction: column;
+        }
     }
 
     &__price {

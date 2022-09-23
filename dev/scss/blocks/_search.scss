@@ -59,6 +59,13 @@
 
 .search-form {
     position: relative;
+
+    &--basket { 
+       .search-form__clear {
+        right: 0;
+        visibility: visible;
+       } 
+    }
 }
 
 .search-form:before {

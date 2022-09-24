@@ -2992,7 +2992,9 @@ span.form-item--error {
     }
   }
 
-  .accordion-item-content {
+  .accordion-item-content--footer,
+  .accordion-item-content 
+  {
     display: none;
     padding: 10px 0 20px 0;
     opacity: 0;

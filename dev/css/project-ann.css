@@ -3231,6 +3231,9 @@ ul.footer-top__list {
 .search-form {
   position: relative;
 }
+.search-form--basket {
+  max-width: 518px;
+}
 .search-form--basket .search-form__clear {
   right: 0;
   visibility: visible;
@@ -4667,26 +4670,6 @@ ul.footer-top__list {
   top: 3px;
 }
 
-.basket__pickup {
-  margin-left: 30px;
-  margin-top: 63px;
-}
-.basket__pickup li {
-  margin-bottom: 43px;
-}
-
-.basket__pickup-metro {
-  font-weight: bold;
-}
-
-.basket__pickup-data {
-  margin-top: 5px;
-}
-
-.basket__pickup-payment {
-  margin-top: 15px;
-}
-
 .ml-30px {
   margin-left: 30px;
 }
@@ -4743,6 +4726,62 @@ ul.footer-top__list {
   border: 1px solid #1D1D1D;
 }
 
+.form-row__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-page-form {
+  max-width: 718px;
+}
+
+.search-form--basket:before {
+  content: none;
+}
+.search-form--basket .search-form__input {
+  padding-left: 15px !important;
+}
+
+.accordion--basket-page {
+  padding: 0 24px;
+  border: 1px solid #E1E1E1;
+}
+.accordion--basket-page .accordion-item {
+  border: none;
+}
+.accordion--basket-page .accordion-item-heading {
+  text-transform: none;
+}
+.accordion--basket-page .accordion-item-heading::after, .accordion--basket-page .accordion-item-heading::before {
+  content: none;
+}
+
+.basket__pickup li {
+  margin-bottom: 43px;
+}
+.basket__pickup .form-radio {
+  align-items: flex-start;
+}
+.basket__pickup .form-radio > span {
+  top: 2px;
+}
+
+.basket__pickup-metro {
+  font-weight: bold;
+}
+
+.basket__pickup-data {
+  margin-top: 5px;
+}
+
+.basket__pickup-payment {
+  margin-top: 15px;
+}
+
+.filter-row {
+  border: 1px solid #E1E1E1;
+  margin: 10px 0;
+}
 .filter-row__form-radio {
   display: flex;
 }
@@ -4757,9 +4796,10 @@ ul.footer-top__list {
   flex: 1;
 }
 
-.form-row__title {
-  display: flex;
-  justify-content: space-between;
+.filter-row__content {
+  border: 1px solid red;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .message {

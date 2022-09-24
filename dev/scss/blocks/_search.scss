@@ -60,11 +60,15 @@
 .search-form {
     position: relative;
 
-    &--basket { 
+    &--basket {  
+        max-width: 518px;
+
        .search-form__clear {
         right: 0;
         visibility: visible;
-       } 
+       }
+       
+
     }
 }
 

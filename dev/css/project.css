@@ -2325,6 +2325,7 @@ span.form-item--error {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   filter: alpha(opacity=70);
 }
+.accordion-item .accordion-item-content--footer,
 .accordion-item .accordion-item-content {
   display: none;
   padding: 10px 0 20px 0;

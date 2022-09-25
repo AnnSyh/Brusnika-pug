@@ -12,36 +12,58 @@ form.form.basket-page-form
       .basket-form__title 2. Доставка
         //- .basket-form__title 2. Доставка
 
-      .accordion.accordion--basket-page
-        .accordion-item
-          .accordion-item-heading
-            | Из магазина  
-            br
-            | Бесплатно
-          .accordion-item-content
-            ul.basket__pickup
-              each item in pickupItems
-                li
-                  label.form-radio
-                    input.form-item.form-item--radio(type='radio' name='product')
-                    .form-radio__item
-                      .basket__pickup-metro= item.metro
-                      .basket__pickup-address= item.address
-                      .basket__pickup-data= item.data
-                      .basket__pickup-payment= item.payment
+      //- .accordion1.accordion--basket-page
+      //-   .accordion-item
+      //-     .accordion-item-heading
+      //-       | Из магазина  
+      //-       br
+      //-       | Бесплатно
+      //-     .accordion-item-content1.show(style="display: block; opacity: 1;")
+      //-       ul.basket__pickup
+      //-         each item in pickupItems
+      //-           li
+      //-             label.form-radio
+      //-               input.form-item.form-item--radio(type='radio' name='product')
+      //-               .form-radio__item
+      //-                 .basket__pickup-metro= item.metro
+      //-                 .basket__pickup-address= item.address
+      //-                 .basket__pickup-data= item.data
+      //-                 .basket__pickup-payment= item.payment
           //- a.link.link--gray_border.small.ml-30px(href='#show-on-map-popup' data-popup='{"type":"inline"}') Показать на карте
           //- include ../map
 
 
       .filter-row.filter-row-click
-        .simplebar
+          .filter-row__inner.filter-row__inner--first
+            label.form-radio
+              .filter-row__radio-coll
+                input.form-item.form-item--radio.hidden-radio(type='radio' name='pickup')
+                div 
+                  | Из магазина  
+                  br
+                  | Бесплатно
+              
+              
+            .filter-row__content(style='display: block;')
+                ul.basket__pickup
+                  each item in pickupItems
+                    li
+                      label.form-radio
+                        input.form-item.form-item--radio(type='radio' name='product')
+                        .form-radio__item
+                          .basket__pickup-metro= item.metro
+                          .basket__pickup-address= item.address
+                          .basket__pickup-data= item.data
+                          .basket__pickup-payment= item.payment
+
+      .filter-row.filter-row-click
           .filter-row__inner
             label.form-radio
               .filter-row__radio-coll
                 input.form-item.form-item--radio(type='radio' name='pickup')
                 div Курьерска служба СДЭК с бесплатной примеркойот 160  Р
               .filter-row__text-coll Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. 
-            .filter-row__content.d-none 
+            .filter-row__content 
                 div.mb-30px
                   | Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.
                 div.bold.mb-10px  Куда доставить заказ?
@@ -56,7 +78,6 @@ form.form.basket-page-form
                     textarea.form-item--textarea.w-100(name="" cols="30" rows="10") 
 
       .filter-row.filter-row-click
-        .simplebar
           .filter-row__inner
             label.form-radio
               .filter-row__radio-coll
@@ -65,7 +86,7 @@ form.form.basket-page-form
                   br 
                   |  от 238 Р
               .filter-row__text-coll Доставка заказа в один из пунктов самовывоза компании СДЭК.
-            .filter-row__content.d-none 
+            .filter-row__content
                 div.mb-30px
                   | Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.
                 div.bold.mb-10px  Куда доставить заказ?
@@ -80,7 +101,7 @@ form.form.basket-page-form
                     textarea.form-item--textarea.w-100(name="" cols="30" rows="10") 
 
       .filter-row.filter-row-click
-        .simplebar
+        
           .filter-row__inner
             label.form-radio
               .filter-row__radio-coll
@@ -89,14 +110,14 @@ form.form.basket-page-form
                   br 
                   |  от 193 Р
               .filter-row__text-coll Доставка заказов с выдачей на кассе в Пятерочке или в отделениях СберБанка.
-            .filter-row__content.d-none 
+            .filter-row__content 
                 div.bold.mb-10px  Куда доставить заказ?
                 div.mb-30px
                   button.btn.btn--medium(type='button') ВЫБРАТЬ ПУНКТ ВЫДАЧИ
 
     .form-row
       .form-row__title
-        .basket-form__title 2. Контактные данные
+        .basket-form__title 12. Контактные данные
         span
           //- a.btn.btn--black.btn--medium.btn--fullwidth(href='#size-popup' data-popup='{"type":"inline"}')
           a.link.link--black_border(href='#auth-form' data-popup='{"type":"inline"}') Уже зарегистрированы?
@@ -105,28 +126,28 @@ form.form.basket-page-form
           .form-group-inner
             .form-group-item.form-group-item--w32
               label.form-label(for='ord_name') Фамилия/Имя/Отчество
-              input#ord_name.form-item.form-item--text.form-item--middle(type='text' name='ord_name' required='' data-validation='')
+              input#ord_name.form-item.form-item--text.form-item--middle(type='text' name='ord_name' required=''  data-validation='{"message": "Обязательное поле"}' placeholder='Фамилия/Имя/Отчество' value1='Фамилия/Имя/Отчество')
             .form-group-item.form-group-item--w32
               label.form-label(for='ord_phone') Телефон
-              input#ord_phone.form-item.form-item--text.form-item--middle(type='text' name='ord_phone' required='' data-validation='{"pattern": "phoneRU", "mask": "+7 (999) 999-99-99"}')
+              input#ord_phone.form-item.form-item--text.form-item--middle(type='text' name='ord_phone' required='' data-validation='{"pattern": "phoneRU", "mask": "+7 (999) 999-99-99"}'  placeholder='+7-___-___-___'  )
             .form-group-item.form-group-item--w32
               label.form-label(for='ord_email') Почта
-              input#ord_email.form-item.form-item--text.form-item--middle(type='email' name='ord_email' required='' data-validation='{"message": "Пользователь с таким именем  зарегистрирован"}')
+              input#ord_email.form-item.form-item--text.form-item--middle(type='email' name='ord_email' required='' data-validation='{"message": "Укажите корректный e-mail"}', placeholder='petrov@gmail.com' value1='petrov@gmail.com')
 
     .form-row
       .basket-form__title 3. Оплата
-      .form-row
-        .form-group
-          .form-group-inner
-            div
-              label.form-radio#payment.filter-row-click
-                input.form-item.form-item--radio(type='radio' id="payment-card" name='ord_payment' value='card')
-                span.form-radio-title Банковской картой на сайте
-              .filter-row__content.d-none
-                | *Скидка 2% при фактической оплате заказа на сайте.
-            div
-              label.form-radio.filter-row-click
-                input.form-item.form-item--radio(type='radio' id='payment-receipt' name='ord_payment' value='receipt')
-                span.form-radio-title Оплата при получении
-              .filter-row__content.d-none
-                | Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)
+    .form-row.payment-list(style="display: flex;")
+        div
+          label.form-radio.filter-row-click
+            input.form-item.form-item--radio(type='radio' id="payment-card" name='ord_payment' value='card')
+            span Банковской картой на сайте
+          .v-hidden
+              | *Скидка 2% при фактической оплате заказа на сайте.
+        div
+          label.form-radio.filter-row-click
+            input.form-item.form-item--radio(type='radio' id='payment-receipt' name='ord_payment' value='receipt')
+            span Оплата при получении
+          .v-hidden
+              | Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)
+    
+    button.btn.btn--large.btn--black.btn--fullwidth(type='submit') ОФОРМИТЬ ЗАКАЗ

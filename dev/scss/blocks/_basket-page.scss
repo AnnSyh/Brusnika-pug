@@ -15,6 +15,11 @@
   }
 }
 
+.accordion--basket-page:has( .opened){
+  border: 1px solid #000;
+}
+
+
 .accordion--basket-page {
   padding: 0 24px;
   border: 1px solid $color-gray-two;
@@ -22,6 +27,7 @@
   .accordion-item {
     border: none;
   }
+
 
   .accordion-item-heading {
     text-transform: none;
@@ -84,8 +90,30 @@
 
 }
 
+
+.filter-row:has( .opend){
+  border: 1px solid #000;
+}
+
 .filter-row__content {
-  border: 1px solid red;
   margin-top: 20px;
   margin-left: 20px;
 }
+
+.filter-row__inner .filter-row__content {
+  display: none;
+}
+.filter-row__inner.opend .filter-row__content {
+  display: block;
+}
+
+// ---------прячем чекбокс у раскрытогопункта с  адресами самовывоза------------------------------
+.jcf-radio:has( .hidden-radio){
+  display: none;
+}
+
+.opend .v-hidden {
+  visibility: visible; 
+}
+
+

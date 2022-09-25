@@ -230,16 +230,20 @@ sizeGuideLink.addEventListener('click', (evt) => {
 
 });
 // ---кнопка 'Подробнее'------------------------------
-const linkMore = document.querySelector('.link-more-js');
+const linksMore = document.querySelectorAll('.link-more-js');
 
-if (linkMore) {
-  linkMore.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    // evt.target.nextElementSibling.classList.toggle('d-none');
-    evt.target.nextElementSibling.classList.toggle('v-hidden');
+linksMore.forEach((item) => {
 
-  });
-}
+  if (item) {
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      // evt.target.nextElementSibling.classList.toggle('d-none');
+      // console.log('evt.target.nextElementSibling = ',evt.target.nextElementSibling);
+      evt.target.nextElementSibling.classList.toggle('v-hidden');
+    });
+  }
+});
+
 
 
 // $(".catalog-items--slider-watched").slick({
@@ -267,14 +271,77 @@ if (linkMore) {
 
 //
 
-$(".filter-row-click input").on("click", function (e) {
 
-  const parent = e.target.parentNode.parentNode.parentNode.parentNode;
-  const content = parent.querySelector('.filter-row__content');
+// аккардион-обычный  без чекбокса
+$('.accordion--basket-page .accordion-item-heading').on("click", function (e) {
+  const parent = e.target.parentNode.parentNode.parentNode;
+  const check = parent.querySelector('input');
 
-  console.log('parent = ', parent);
-  console.log('content = ', content);
-
-  content.classList.toggle('d-none');
+  if (check.checked) {
+    check.checked = false;
+  } else {
+    check.checked = true;
+  }
 
 });
+
+// аккардион с чекбоксом
+const filterInputs = document.querySelectorAll('input[name="pickup"]');
+
+filterInputs.forEach((item) => {
+
+  item.addEventListener('click', (e) => {
+    const parent = e.target.parentNode.parentNode.parentNode.parentNode;
+    const content = parent.querySelector('.filter-row__content');
+    const input = parent.querySelector('input');
+
+    // закрыть все item если они не выбраны (нет checked)
+    filterInputs.forEach((item) => {
+      const contentCurrent = item.parentNode.parentNode.parentNode.parentNode; // выбираем .filter-row__inner
+
+      if (item.checked) {
+        contentCurrent.classList.add('opend');
+      } else {
+        contentCurrent.classList.remove('opend');
+      }
+
+    });
+
+  });
+});
+
+const paymentList = document.querySelectorAll('.payment-list input[type="radio"]');
+
+paymentList.forEach((item) => {
+
+  item.addEventListener('click', (e) => {
+    paymentList.forEach((item) => {
+      const contentCurrent = item.parentNode.parentNode.parentNode; // выбираем .filter-row__inner
+      if (item.checked) {
+        contentCurrent.classList.add('opend');
+      } else {
+        contentCurrent.classList.remove('opend');
+      }
+    });
+
+  });
+
+
+});
+
+// const paymentCard = document.querySelector('#payment-card');
+// paymentCard.addEventListener('click', (e) => {
+
+//   radiosListPayment.forEach((item) => {
+//     item.parentNode.parentNode.classList.add('.v-hidden')
+//   });
+
+//   e.target.parentNode.parentNode.parentNode.querySelector('.v-hidden').classList.remove('v-hidden');
+// });
+// const paymentReceipt = document.querySelector('#payment-receipt');
+// paymentReceipt.addEventListener('click', (e) => {
+
+
+
+//   e.target.parentNode.parentNode.parentNode.querySelector('.v-hidden').classList.remove('v-hidden');
+// });

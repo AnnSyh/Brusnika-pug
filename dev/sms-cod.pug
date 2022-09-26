@@ -15,11 +15,11 @@ block content
             .page-popup-title--small Мы отправили код подтверждения на номер 
                 br
                 | +7 900-456-98-88. 
-                a.link.link--black_border(href="#") Изменить номер
+                a.link.link--black_border(href="login.html") Изменить номер
           .form-row
             .form-item-holder
               input#auth_sms.form-item.form-item--text(type='text' name='auth_sms' required='' placeholder='6643' data-validation='{"message": "Укажите код из смс", "mask": "9999"}')
-          .form-row
+          .form-row(style='margin-bottom: 10px;')
             a.btn.btn--black.btn--medium.w100.max-w100(href='sms-cod.html') Войти
           .form-row 
             .new-code Получить новый код можно через 0:30
@@ -27,5 +27,7 @@ block content
             .form-group-inner.forgot-password
               a.link.link--black_simple(href='login.html')
                 span Войти по E-mail  
-              a.link.link--black_simple.sms-not-coming(href='#')
+              //- a.link.link--black_simple.sms-not-coming(href='#nosms-popup' data-popup='{"type":"inline"}')
+              a.link.link--black_border(href='#nosms-popup' data-popup='{"type":"inline"}') 
                 span Не приходит смс?
+                

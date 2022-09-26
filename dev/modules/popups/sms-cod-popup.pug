@@ -1,0 +1,59 @@
+#sms-cod-popup.page-popup.mfp-hide
+
+      .page-popup-title.uppercase Введите код
+      form.form
+        #auth-form_phone.tab-content-item.auth-tab.show.form-tab-content-item
+          .form-row                
+            .page-popup-title--small Мы отправили код подтверждения на номер 
+                br
+                | +7 900-456-98-88. 
+                a.link.link--black_border(href="login.html") Изменить номер
+          .form-row
+            .form-item-holder
+              input#auth_sms.form-item.form-item--text(type='text' name='auth_sms' required='' placeholder='6643' data-validation='{"message": "Укажите код из смс", "mask": "9999"}')
+          .form-row(style='margin-bottom: 10px;')
+            a.btn.btn--black.btn--medium.w100.max-w100(href='sms-cod.html') Войти
+          .form-row 
+            .new-code Получить новый код можно через 0:30
+          .form-row
+            .form-group-inner.forgot-password
+              a.link.link--black_simple(href='login.html')
+                span Войти по E-mail  
+              //- a.link.link--black_simple.sms-not-coming(href='#nosms-popup' data-popup='{"type":"inline"}')
+              a.link.link--black_border(href='#nosms-popup' data-popup='{"type":"inline"}') 
+                span Не приходит смс?
+
+
+//- extends layout/main
+
+//- block variables
+//-   - var title = 'отправили код sms'
+//-   - var mainPage = false
+
+
+//- block content
+//-   main
+//-     #auth-form.page-popup.page-popup_login
+//-       .page-popup-title ВХОД
+//-       form.form
+//-         #auth-form_phone.tab-content-item.auth-tab.show.form-tab-content-item
+//-           .form-row                
+//-             .page-popup-title--small Мы отправили код подтверждения на номер 
+//-                 br
+//-                 | +7 900-456-98-88. 
+//-                 a.link.link--black_border(href="login.html") Изменить номер
+//-           .form-row
+//-             .form-item-holder
+//-               input#auth_sms.form-item.form-item--text(type='text' name='auth_sms' required='' placeholder='6643' data-validation='{"message": "Укажите код из смс", "mask": "9999"}')
+//-           .form-row(style='margin-bottom: 10px;')
+//-             a.btn.btn--black.btn--medium.w100.max-w100(href='sms-cod.html') Войти
+//-           .form-row 
+//-             .new-code Получить новый код можно через 0:30
+//-           .form-row
+//-             .form-group-inner.forgot-password
+//-               a.link.link--black_simple(href='login.html')
+//-                 span Войти по E-mail  
+//-               //- a.link.link--black_simple.sms-not-coming(href='#nosms-popup' data-popup='{"type":"inline"}')
+//-               a.link.link--black_border(href='#nosms-popup' data-popup='{"type":"inline"}') 
+//-                 span Не приходит смс?
+                

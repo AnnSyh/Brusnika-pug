@@ -9,28 +9,6 @@ div.basket-page-form
 
     .form-row
       .basket-form__title 2. Доставка
-        //- .basket-form__title 2. Доставка
-
-      //- .accordion1.accordion--basket-page
-      //-   .accordion-item
-      //-     .accordion-item-heading
-      //-       | Из магазина  
-      //-       br
-      //-       | Бесплатно
-      //-     .accordion-item-content1.show(style="display: block; opacity: 1;")
-      //-       ul.basket__pickup
-      //-         each item in pickupItems
-      //-           li
-      //-             label.form-radio
-      //-               input.form-item.form-item--radio(type='radio' name='product')
-      //-               .form-radio__item
-      //-                 .basket__pickup-metro= item.metro
-      //-                 .basket__pickup-address= item.address
-      //-                 .basket__pickup-data= item.data
-      //-                 .basket__pickup-payment= item.payment
-          //- a.link.link--gray_border.small.ml-30px(href='#show-on-map-popup' data-popup='{"type":"inline"}') Показать на карте
-          //- include ../map
-
 
       .filter-row.filter-row-click
           .filter-row__inner.filter-row__inner--first
@@ -68,7 +46,7 @@ div.basket-page-form
                   | Бесплатно
               
               
-            .filter-row__content(style1='display: block;')
+            .filter-row__content
                 ul.basket__pickup
                   each item in pickupItems
                     li

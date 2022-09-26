@@ -28,12 +28,12 @@ block content
                 .form-item-holder
                   input#auth_sms.form-item.form-item--text(type='tel' name='auth_sms' required='' placeholder='+7-___-___-___' data-validation='{"message": "Укажите номер телефона", "mask": "+7 999-999-999"}')
               .form-row
-                a.btn.btn--black.btn--medium.w100.max-w100(href='sms-cod.html') ВЫСЛАТЬ КОД
+                a.btn.btn--black.btn--medium.w100.max-w100(href='#sms-cod-popup' data-popup='{"type":"inline"}') ВЫСЛАТЬ КОД
               .form-row
                 .form-group-inner.forgot-password
-                  a.link.link--black_simple(href='#change-password-popup' data-popup='{"type":"inline"}')
+                  a.link.link--black_border(href='#change-password-popup' data-popup='{"type":"inline"}')
                     span Я забыл пароль  
-                  a.link.link--black_simple(href='registration.html')
+                  a.link.link--black_border(href='registration.html')
                     span Регистрация
 
             #auth-form_email.tab-content-item.auth-tab.active.form-tab-content-item
@@ -54,7 +54,7 @@ block content
 
               .form-row
                 .form-group-inner.forgot-password
-                  a.link.link--black_simple(href='#change-password-popup' data-popup='{"type":"inline"}')
+                  a.link.link--black_border(href='#change-password-popup' data-popup='{"type":"inline"}')
                     span Я забыл пароль  
-                  a.link.link--black_simple(href='registration.html')
+                  a.link.link--black_border(href='registration.html')
                     span Регистрация               

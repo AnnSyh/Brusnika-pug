@@ -6,6 +6,10 @@
     max-width: 430px;
     padding: 55px 45px;
 
+    @media screen and (max-width:480px) {
+        font-size: 12px;
+    }
+
     #map {
         width: auto;
         height: 550px;
@@ -18,10 +22,10 @@
     &--checked {
         position: relative;
         background: #fff;
-        padding: 0px;
+        padding: 0px !important;
         max-width: 800px;
         max-height: 630px;
-        overflow: hidden;
+        overflow-x: hidden;
         margin: auto;
 
         .page-popup-title {
@@ -39,6 +43,19 @@
         .page-popup-body__text-block {
             padding: 0 15px;
             width: 50%;
+        }
+
+        @media screen and (max-width:600px) {
+
+            .page-popup-body {
+                flex-direction: column;
+            }
+
+            .page-popup-body__card-block,
+            .page-popup-body__text-block { 
+                width: 100%;
+            }
+            
         }
 
     }

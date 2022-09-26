@@ -4,9 +4,32 @@
   .page-popup-body
     .page-popup-body__card-block
       #map
-    .page-popup-body__text-block Выбор магазина BRUSNIKA
+    .page-popup-body__text-block 
+      .order-aside__title Выбор магазина BRUSNIKA
 
 
-//- block script
-//-   //- script(type='text/javascript' src='../js/shops-map.js')  
-//-   script(type='text/javascript' src='shops-map.js')  
+      .search-form.search-form--basket
+        input.search-form__input.form-item.form-item--text(type='text' name='city' value='Ростов-на-Дону')
+        button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')     
+
+      .filter-row__content(style='margin-left: 0px;')
+        ul.basket__pickup
+          li
+            .form-radio__item
+              .basket__pickup-metro ТРЦ Горизонт
+              .basket__pickup-address пр-т Михаила Нагибина, д. 32/2, ТРЦ «Горизонт», «Премиум-галерея» 1 этаж 
+              .basket__pickup-data (с 10:00 до 22:00)
+              .basket__pickup-payment 
+                b Бесплатно 
+                | — можно забрать 1 июня, в субботу
+          li
+            .form-radio__item
+              .basket__pickup-metro Проспект Чехова, д. 51–53
+              .basket__pickup-address  проспект Чехова, д. 51-53
+              .basket__pickup-data (с 09:00 до 21:00)
+              .basket__pickup-payment 
+                b Бесплатно 
+                | — можно забрать 1 июня, в субботу
+                br
+                | Срок хранения заказа — 30 дней
+

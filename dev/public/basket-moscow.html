@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>отправили код sms</title>
+    <title>basket</title>
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Брусника">
@@ -500,107 +500,299 @@
           </div>
         </div>
       </header>
-      <main>
-        <div class="page-popup page-popup_login" id="auth-form">
-          <div class="page-popup-title">ВХОД</div>
-          <form class="form">
-            <div class="tab-content-item auth-tab show form-tab-content-item" id="auth-form_phone">
-              <div class="form-row">               
-                <div class="page-popup-title--small">Мы отправили код подтверждения на номер <br>+7 900-456-98-88. <a class="link link--black_border" href="login.html">Изменить номер</a></div>
-              </div>
-              <div class="form-row">
-                <div class="form-item-holder">
-                  <input class="form-item form-item--text" id="auth_sms" type="text" name="auth_sms" required="" placeholder="6643" data-validation="{&quot;message&quot;: &quot;Укажите код из смс&quot;, &quot;mask&quot;: &quot;9999&quot;}">
+      <main class="page-content">
+        <div class="page-inner page-inner--w2">
+          <div class="basket__header">
+            <div class="row align-items-end justify-content-between">
+              <div class="col-md-6">
+                <div class="d-md-none mb-3"><a class="link link--black" href="#">Вернуться в корзину</a></div>
+                <div class="basket-form__title">Оформление заказа</div>
+                <div class="basket-form__text">   Обработка заказов ежедневно
+                  <nobr>09:00 — 21:00</nobr>
                 </div>
               </div>
-              <div class="form-row" style="margin-bottom: 10px;"><a class="btn btn--black btn--medium w100 max-w100" href="sms-cod.html">Войти</a></div>
-              <div class="form-row"> 
-                <div class="new-code">Получить новый код можно через 0:30</div>
+              <div class="col-auto d-none d-md-block"><span> <a class="link link--black" href="#">Вернуться в корзину</a></span></div>
+            </div>
+          </div>
+          <form class="form basket__body" novalidate="novalidate">
+            <div class="basket__body-left">
+              <div class="order-content">
+                <div class="order__title">Товары в заказе</div>
+                <div class="order-table order-table_basket">
+                  <div class="order-table__row">
+                    <div class="order-table__item">
+                      <div class="order-table__img">
+                        <div class="order-photo-holder"><img class="cover" src="../dummy/orders/1.jpg"></div>
+                      </div>
+                      <div class="order-table__info">
+                        <div class="order-table__name">БРЮКИ</div>
+                        <div class="order-table__price">15 900 Р</div>
+                        <div class="order-table__size">Размер: 41 RU</div>
+                        <div class="order-table__color">Цвет: коричневый</div>
+                        <div class="order-table__counter only-mobile">
+                          <input class="form-item form-item--number" type="number" min="1" max="100" step="1" value="1">
+                        </div>
+                      </div>
+                      <div class="order-table__count">
+                        <div class="order-table__counter only-desktop">
+                          <input class="form-item form-item--number" type="number" min="1" max="100" step="1" value="1">
+                        </div>
+                      </div>
+                      <div class="order-table__price">15 900 РУБ.</div>
+                      <div class="order-table__item-delete"><a class="order-table-delete" href="#"> </a></div>
+                    </div>
+                  </div>
+                  <div class="order-table__row">
+                    <div class="order-table__item">
+                      <div class="order-table__img">
+                        <div class="order-photo-holder"><img class="cover" src="../dummy/orders/2.jpg"></div>
+                      </div>
+                      <div class="order-table__info">
+                        <div class="order-table__name">БРЮКИ</div>
+                        <div class="order-table__price">16 900 Р</div>
+                        <div class="order-table__size">Размер: 42 RU</div>
+                        <div class="order-table__color">Цвет: синий</div>
+                        <div class="order-table__counter only-mobile">
+                          <input class="form-item form-item--number" type="number" min="1" max="100" step="1" value="1">
+                        </div>
+                      </div>
+                      <div class="order-table__count">
+                        <div class="order-table__counter only-desktop">
+                          <input class="form-item form-item--number" type="number" min="1" max="100" step="1" value="1">
+                        </div>
+                      </div>
+                      <div class="order-table__price">16 900 РУБ.</div>
+                      <div class="order-table__item-delete"><a class="order-table-delete" href="#"> </a></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="form-row">
-                <div class="form-group-inner forgot-password"><a class="link link--black_simple" href="login.html"><span>Войти по E-mail  </span></a><a class="link link--black_border" href="#nosms-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}"> <span>Не приходит смс?</span></a></div>
+              <div class="basket-page-form">
+                <div class="basket-form__title">1.Ваш город</div>
+                <div class="form-row">
+                  <div class="search-form search-form--basket">
+                    <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Ростов-на-Дону">
+                    <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                  </div>
+                  <label class="form-item-label" for="city">Выберите свой город в списке</label>
+                </div>
+                <div class="form-row">
+                  <div class="basket-form__title">2. Доставка</div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner filter-row__inner--first">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio hidden-radio" type="radio" name="pickup">
+                          <div> <b>Доставка по Москве</b><br>Бесплатно</div>
+                        </div>
+                        <div class="filter-row__text-coll">Примерка 15 минут, позволяет определиться с выбором, пока курьер ожидает.</div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="mb-30px">Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней. Доставка за пределы МКАД только по 100% предоплате всей стоимости заказа на сайте. Сроки доставки 1-3 дня (при наличии изделий в Москве). Максимум 6 позиций в одном заказе.</div>
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px">
+                          <div class="search-form search-form--basket">
+                            <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
+                            <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                          </div>
+                        </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
+                        <div class="v-hidden">
+                          <div class="mt-30px"> 
+                            <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner filter-row__inner--first">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio hidden-radio" type="radio" name="pickup">
+                          <div> <b>Из магазина  </b><br>Бесплатно</div>
+                        </div>
+                      </label>
+                      <div class="filter-row__content">
+                        <ul class="basket__pickup">
+                          <li>
+                            <label class="form-radio">
+                              <input class="form-item form-item--radio" type="radio" name="product">
+                              <div class="form-radio__item">
+                                <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, пр-т Михаила Нагибина</div>
+                                <div class="basket__pickup-address">г. Ростов-на-Дону, пр-т Михаила Нагибина, д. 32/2, ТРЦ «Горизонт»</div>
+                                <div class="basket__pickup-data">«Премиум-галерея», 1 этаж (с 10:00 до 22:00)</div>
+                                <div class="basket__pickup-payment">Бесплатно</div>
+                              </div>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="form-radio">
+                              <input class="form-item form-item--radio" type="radio" name="product">
+                              <div class="form-radio__item">
+                                <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, проспект Чехова, д. 51-53</div>
+                                <div class="basket__pickup-address">г. Ростов-на-Дону, проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
+                                <div class="basket__pickup-data"></div>
+                                <div class="basket__pickup-payment">Бесплатно</div>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio" type="radio" name="pickup">
+                          <div> <b>Курьерска служба СДЭК </b><br>с бесплатной примеркойот 160  Р</div>
+                        </div>
+                        <div class="filter-row__text-coll">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. </div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="mb-30px">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.</div>
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px">
+                          <div class="search-form search-form--basket">
+                            <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
+                            <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                          </div>
+                        </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
+                        <div class="v-hidden">
+                          <div class="mt-30px"> 
+                            <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio" type="radio" name="pickup">
+                          <div> <b>Пункты выдачи СДЭК</b><br> от 238 Р</div>
+                        </div>
+                        <div class="filter-row__text-coll">Доставка заказа в один из пунктов самовывоза компании СДЭК.</div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px"><a class="btn btn--medium" href="#checkout-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ВЫБРАТЬ ПУНКТ ВЫДАЧИ</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio" type="radio" name="pickup">
+                          <div> <b>Пункты выдачи Via Delivery </b><br> от 193 Р</div>
+                        </div>
+                        <div class="filter-row__text-coll">Доставка заказов с выдачей на кассе в Пятерочке или в отделениях СберБанка.</div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px"><a class="btn btn--medium" href="#checkout-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ВЫБРАТЬ ПУНКТ ВЫДАЧИ</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-row__title">
+                    <div class="basket-form__title">12. Контактные данные</div><span><a class="link link--black_border" href="#auth-form" data-popup="{&quot;type&quot;:&quot;inline&quot;}">Уже зарегистрированы?</a></span>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <div class="form-group-inner">
+                        <div class="form-group-item form-group-item--w32">
+                          <label class="form-label" for="ord_name">Фамилия/Имя/Отчество</label>
+                          <input class="form-item form-item--text form-item--middle" id="ord_name" type="text" name="ord_name" required="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" placeholder="Фамилия/Имя/Отчество" value1="Фамилия/Имя/Отчество">
+                        </div>
+                        <div class="form-group-item form-group-item--w32">
+                          <label class="form-label" for="ord_phone">Телефон</label>
+                          <input class="form-item form-item--text form-item--middle" id="ord_phone" type="text" name="ord_phone" required="" data-validation="{&quot;pattern&quot;: &quot;phoneRU&quot;, &quot;mask&quot;: &quot;+7 (999) 999-99-99&quot;}" placeholder="+7-___-___-___">
+                        </div>
+                        <div class="form-group-item form-group-item--w32">
+                          <label class="form-label" for="ord_email">Почта</label>
+                          <input class="form-item form-item--text form-item--middle" id="ord_email" type="email" name="ord_email" required="" data-validation="{&quot;message&quot;: &quot;Укажите корректный e-mail&quot;}" placeholder="petrov@gmail.com" value1="petrov@gmail.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="basket-form__title">3. Оплата</div>
+                </div>
+                <div class="form-row payment-list">
+                  <div>
+                    <label class="form-radio filter-row-click">
+                      <input class="form-item form-item--radio" type="radio" id="payment-card" name="ord_payment" value="card"><span>Банковской картой на сайте</span>
+                    </label>
+                    <div class="v-hidden">*Скидка 2% при фактической оплате заказа на сайте.</div>
+                  </div>
+                  <div>
+                    <label class="form-radio filter-row-click">
+                      <input class="form-item form-item--radio" type="radio" id="payment-receipt" name="ord_payment" value="receipt"><span>Оплата при получении</span>
+                    </label>
+                    <div class="v-hidden">Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__body-right">
+              <div class="order-aside order-aside-sticky">
+                <div class="order-aside__title">Общая стоимость 14 760 Р</div>
+                <div class="order-aside__text">Вы получаете бесплатную доставку курьером</div>
+                <div class="order-aside__list">
+                  <p>Товары на сумму — 11 792 Р</p>
+                  <p>Доставка — Бесплатно</p>
+                  <p>Скидка — 2 940 Р</p>
+                </div>
+                <div class="order-aside__to-pay">
+                  <div class="order-aside__price">К оплате: 14 760 Р</div><span><a class="link link--black_border open-promocode" href="#">Есть промо-код</a></span>
+                </div>
+                <label class="form-item-label" for="card">Карта лояльности
+                  <div class="promocode-block__row">
+                    <div class="promocode-block__col">
+                      <input class="form-item form-item--text" id="card" type="text">
+                    </div>
+                    <div class="promocode-block__col">
+                      <button class="btn btn--medium btn--black_border mx-auto w-100" type="button">Применить</button>
+                    </div>
+                  </div>
+                </label>
+                <div class="promocode-block1" id="promocode-block">
+                  <label class="form-item-label" for="promocode">Промо-код</label>
+                  <div class="promocode-block__row">
+                    <div class="promocode-block__col">
+                      <input class="form-item form-item--text" id="promocode" type="text">
+                    </div>
+                    <div class="promocode-block__col">
+                      <button class="btn btn--medium btn--black_border mx-auto w-100" type="button">Применить</button>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--large btn--black btn--fullwidth" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+                <div class="form-policy">
+                  <div class="page-text">
+                    <div class="small">Нажимая кнопку «Оформить заказ», вы соглашаетесь с <a href="#">условиями оферты </a>и <a href="#">политикой конфиденциальности     </a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
         </div>
       </main>
       <footer class="page-footer" itemscope="" itemtype="http://schema.org/WPFooter">
-        <div class="page-inner page-inner--w2">
-          <div>
-            <div class="footer-top">
-              <ul class="footer-top__list">
-                <li class="footer-top__item"><a href="#">VKONTAKTE</a></li>
-                <li class="footer-top__item"><a href="#">Telegram</a></li>
-                <li class="footer-top__item"><a href="#">WHATSAPP</a></li>
+        <div class="page-inner page-inner--w2"> 
+          <div class="footer-bottom">
+            <div class="footer-bottom__left">
+              <ul class="footer-bottom__list">
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Оферта</a></li>
               </ul>
             </div>
-            <div class="footer-content">
-              <div class="footer-content__left">
-                <div class="accordion d-block d-lg-none w-100">
-                  <div class="accordion-item">
-                    <div class="accordion-item-heading">Покупателю</div>
-                    <div class="accordion-item-content">
-                      <ul class="footer-content__list">
-                        <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="#">Гарантия и возврат</a></li>
-                        <li><a href="#">Руководство по покупке</a></li>
-                        <li><a href="#">Система лояльности</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-item-heading">Компания</div>
-                    <div class="accordion-item-content">
-                      <ul class="footer-content__list">
-                        <li><a href="shops.html">Магазины</a></li>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Работа у нас</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-none d-lg-flex w-100">
-                  <ul class="footer-content__list">
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">Гарантия и возврат</a></li>
-                    <li><a href="#">Руководство по покупке</a></li>
-                    <li><a href="#">Система лояльности</a></li>
-                  </ul>
-                  <ul class="footer-content__list">
-                    <li><a href="shops.html">Магазины</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Работа у нас</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="footer-content__center"><a class="header-logo" href="#"><img src="../svg/header_logo.svg" alt=""></a></div>
-              <div class="footer-content__right">
-                <div class="footer-content__right-content">
-                  <div class="footer-text only-desktop">Подпишитесь на рассылку с новостями о тенденциях, специальных предложениях и новинках!</div>
-                  <div class="footer-form only-desktop">
-                    <form action="">
-                      <div class="footer-form__form">
-                        <input type="text" placeholder="Введите свой E-mail">
-                        <button class="btn btn--white">ok</button>
-                      </div>
-                      <div class="privacy-policy">Подписываясь на расслыку, вы соглашаетесь<br>с <a href="#">политикой конфиденциальности</a></div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <div class="footer-bottom__left only-desktop">
-                <ul class="footer-bottom__list">
-                  <li><a href="#">Политика конфиденциальности</a></li>
-                  <li><a href="#">Оферта</a></li>
-                </ul>
-              </div>
-              <div class="footer-bottom__center"><a href="#">©2022 Brusnika</a></div>
-              <div class="footer-bottom__right only-desktop">© 1999-2022 Интернет-магазин «Brusnika»    </div>
-            </div>
+            <div class="footer-bottom__right">Разработка сайта — RUFORMAT®</div>
           </div>
         </div>
       </footer>
@@ -1412,5 +1604,18 @@
     <script type="text/javascript" src="../../js/project.js?v=31-01-22"></script>
     <script type="module" src="../../js/plugins/swipe.js"></script>
     <script type="text/javascript" src="../../js/scrollPage.js"></script>
+    <div class="page-popup mfp-hide" id="show-on-map-popup">
+      <div class="page-popup-heading">
+        <div class="page-popup-title uppercase">Выбор магазина BRUSNIKA</div>
+      </div>
+      <div class="delivery-map">
+        <div class="delivery-map-title">
+          отложила на по позже
+          1111111
+        </div>
+        <div class="delivery-map-selected"><strong>Выбран: </strong><span class="delivery-map-selected-value"> </span></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../js/shops-map.js">       </script>
   </body>
 </html>

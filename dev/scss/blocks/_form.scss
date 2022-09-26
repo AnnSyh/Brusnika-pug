@@ -2,78 +2,117 @@
 
 .mobile-filter label,
 .mobile-filter input {
-    /* label */
-    font-weight: lighter;
+  /* label */
+  font-weight: lighter;
 }
 
 
 // -------#auth-form_email----------------------
 
 .forgot-password {
-    padding: 0 45px;
+  padding: 0 45px;
 }
 
-
+ul.disc {
+  list-style: disc;
+  padding-left: 30px;
+}
 
 #auth-form {
-    padding-top: 100px;
+  padding-top: 100px;
 
-    .page-popup-title {
-        margin-bottom: 20px;
-    }
-
-    .page-popup-title--small {
-        margin-bottom: 50px;
-    }
+  @media screen and (max-width:480px) {
+    padding: 20px 15px;
 
     .form-row {
-        margin-bottom: 33px;
+      margin-bottom: 10px;
     }
 
-    .new-code {
-      color: #7C7C7C;
-      text-align: center;
+    .forgot-password {
+      padding: 0;
     }
+
+
+  }
+
+  .tabs-heading .tab-heading-item {
+    padding: 0 20px 10px 20px;
+  }
+
+  .page-popup-title {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .page-popup-title--small {
+    margin-bottom: 20px;
+  }
+
+
+  .new-code {
+    color: #7C7C7C;
+    text-align: center;
+  }
+}
+
+#change-password-popup {
+
+  @media screen and (max-width:480px) {
+
+    .page-popup-title {
+      font-size: 14px;
+    }
+  }
+
 }
 
 
 .reg-form {
-    &__width {
-        max-width: 500px;
-        margin: auto;
+  &__width {
+    max-width: 500px;
+    margin: auto;
 
-        @media screen and (max-width: 768px) {
-            max-width: calc(100% - 2*30px); 
-        }
-    }   
+    @media screen and (max-width: 768px) {
+      max-width: calc(100% - 2*30px);
+    }
+  }
 
 }
 
 // jsf элементы
 
 .jcf-number {
-    position: relative;
-    top: -5px;
-    display: block;
-    width: 106px;
-    height: 55px;
-    padding: 0 28px;
-    border: 1px solid $color-border-input;
-    border-radius: 5px;
-  }
+  position: relative;
+  top: -5px;
+  display: block;
+  width: 106px;
+  height: 55px;
+  padding: 0 28px;
+  border: 1px solid $color-border-input;
+  border-radius: 5px;
+}
 
-  .jcf-number input {
-    font-family: 'SFProDisplay', 'Arial', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    padding: 15px 0;
-    text-align: center;
-  }
+.jcf-number input {
+  font-family: 'SFProDisplay', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 15px 0;
+  text-align: center;
+}
 
 
 
-  .jcf-number .jcf-btn-inc,
+.jcf-number .jcf-btn-inc,
 .jcf-number .jcf-btn-dec {
   position: absolute;
   top: 50%;
@@ -125,7 +164,7 @@
 }
 
 
-  .jcf-number .jcf-btn-inc:after {
+.jcf-number .jcf-btn-inc:after {
   content: "";
   width: 30px;
   height: 30px;

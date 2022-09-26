@@ -12,7 +12,7 @@
         margin-bottom: 50px;
         flex-wrap: wrap;
 
-        @media screen and (max-width: 480px) { 
+        @media screen and (max-width: 1300px) { 
             flex-direction: column;
             gap: 10px;
         }
@@ -36,6 +36,15 @@
 
     &__body-right {
         flex: 1;
+    }
+}
+
+.payment-list {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (max-width:768px) {
+       flex-direction: column; 
     }
 }
 

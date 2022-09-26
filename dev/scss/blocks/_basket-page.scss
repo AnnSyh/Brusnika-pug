@@ -108,9 +108,9 @@
 }
 
 // ---------прячем чекбокс у раскрытогопункта с  адресами самовывоза------------------------------
-.jcf-radio:has( .hidden-radio){
-  display: none;
-}
+// .filter-row__inner.opend .jcf-radio:has( .hidden-radio){
+//   display: none;
+// }
 
 .opend .v-hidden {
   visibility: visible; 

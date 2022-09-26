@@ -514,7 +514,7 @@
               <div class="col-auto d-none d-md-block"><span> <a class="link link--black" href="#">Вернуться в корзину</a></span></div>
             </div>
           </div>
-          <div class="basket__body">
+          <form class="form basket__body" novalidate="novalidate">
             <div class="basket__body-left">
               <div class="order-content">
                 <div class="order__title">Товары в заказе</div>
@@ -567,168 +567,177 @@
                   </div>
                 </div>
               </div>
-              <form class="form basket-page-form">
-                <div>
-                  <div class="basket-form__title">1.Ваш город</div>
-                  <div class="form-row">
-                    <div class="search-form search-form--basket">
-                      <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Ростов-на-Дону">
-                      <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
-                    </div>
-                    <label class="form-item-label" for="city">Ваш город</label>
+              <div class="basket-page-form">
+                <div class="basket-form__title">1.Ваш город</div>
+                <div class="form-row">
+                  <div class="search-form search-form--basket">
+                    <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Ростов-на-Дону">
+                    <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
                   </div>
-                  <div class="form-row">
-                    <div class="basket-form__title">2. Доставка</div>
-                    <div class="filter-row filter-row-click">
-                      <div class="filter-row__inner filter-row__inner--first">
-                        <label class="form-radio">
-                          <div class="filter-row__radio-coll">
-                            <input class="form-item form-item--radio hidden-radio" type="radio" name="pickup">
-                            <div>
-                               Из магазина  <br>Бесплатно</div>
-                          </div>
-                        </label>
-                        <div class="filter-row__content" style="display: block;">
-                          <ul class="basket__pickup">
-                            <li>
-                              <label class="form-radio">
-                                <input class="form-item form-item--radio" type="radio" name="product">
-                                <div class="form-radio__item">
-                                  <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, пр-т Михаила Нагибина</div>
-                                  <div class="basket__pickup-address">г. Ростов-на-Дону, пр-т Михаила Нагибина, д. 32/2, ТРЦ «Горизонт»</div>
-                                  <div class="basket__pickup-data">«Премиум-галерея», 1 этаж (с 10:00 до 22:00)</div>
-                                  <div class="basket__pickup-payment">Бесплатно</div>
-                                </div>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="form-radio">
-                                <input class="form-item form-item--radio" type="radio" name="product">
-                                <div class="form-radio__item">
-                                  <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, проспект Чехова, д. 51-53</div>
-                                  <div class="basket__pickup-address">г. Ростов-на-Дону, проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
-                                  <div class="basket__pickup-data"></div>
-                                  <div class="basket__pickup-payment">Бесплатно</div>
-                                </div>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filter-row filter-row-click">
-                      <div class="filter-row__inner">
-                        <label class="form-radio">
-                          <div class="filter-row__radio-coll">
-                            <input class="form-item form-item--radio" type="radio" name="pickup">
-                            <div>Курьерска служба СДЭК с бесплатной примеркойот 160  Р</div>
-                          </div>
-                          <div class="filter-row__text-coll">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. </div>
-                        </label>
-                        <div class="filter-row__content"> 
-                          <div class="mb-30px">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.</div>
-                          <div class="bold mb-10px"> Куда доставить заказ?</div>
-                          <div class="mb-30px">
-                            <div class="search-form search-form--basket">
-                              <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
-                              <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
-                            </div>
-                          </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
-                          <div class="v-hidden">
-                            <div class="mt-30px"> 
-                              <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filter-row filter-row-click">
-                      <div class="filter-row__inner">
-                        <label class="form-radio">
-                          <div class="filter-row__radio-coll">
-                            <input class="form-item form-item--radio" type="radio" name="pickup">
-                            <div>Пункты выдачи СДЭК<br> от 238 Р</div>
-                          </div>
-                          <div class="filter-row__text-coll">Доставка заказа в один из пунктов самовывоза компании СДЭК.</div>
-                        </label>
-                        <div class="filter-row__content">
-                          <div class="mb-30px">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.</div>
-                          <div class="bold mb-10px"> Куда доставить заказ?</div>
-                          <div class="mb-30px">
-                            <div class="search-form search-form--basket">
-                              <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
-                              <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
-                            </div>
-                          </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
-                          <div class="v-hidden">
-                            <div class="mt-30px"> 
-                              <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filter-row filter-row-click">
-                      <div class="filter-row__inner">
-                        <label class="form-radio">
-                          <div class="filter-row__radio-coll">
-                            <input class="form-item form-item--radio" type="radio" name="pickup">
-                            <div>Пункты выдачи Via Delivery <br> от 193 Р</div>
-                          </div>
-                          <div class="filter-row__text-coll">Доставка заказов с выдачей на кассе в Пятерочке или в отделениях СберБанка.</div>
-                        </label>
-                        <div class="filter-row__content"> 
-                          <div class="bold mb-10px"> Куда доставить заказ?</div>
-                          <div class="mb-30px">
-                            <button class="btn btn--medium" type="button">ВЫБРАТЬ ПУНКТ ВЫДАЧИ</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-row__title">
-                      <div class="basket-form__title">12. Контактные данные</div><span><a class="link link--black_border" href="#auth-form" data-popup="{&quot;type&quot;:&quot;inline&quot;}">Уже зарегистрированы?</a></span>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group">
-                        <div class="form-group-inner">
-                          <div class="form-group-item form-group-item--w32">
-                            <label class="form-label" for="ord_name">Фамилия/Имя/Отчество</label>
-                            <input class="form-item form-item--text form-item--middle" id="ord_name" type="text" name="ord_name" required="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" placeholder="Фамилия/Имя/Отчество" value1="Фамилия/Имя/Отчество">
-                          </div>
-                          <div class="form-group-item form-group-item--w32">
-                            <label class="form-label" for="ord_phone">Телефон</label>
-                            <input class="form-item form-item--text form-item--middle" id="ord_phone" type="text" name="ord_phone" required="" data-validation="{&quot;pattern&quot;: &quot;phoneRU&quot;, &quot;mask&quot;: &quot;+7 (999) 999-99-99&quot;}" placeholder="+7-___-___-___">
-                          </div>
-                          <div class="form-group-item form-group-item--w32">
-                            <label class="form-label" for="ord_email">Почта</label>
-                            <input class="form-item form-item--text form-item--middle" id="ord_email" type="email" name="ord_email" required="" data-validation="{&quot;message&quot;: &quot;Укажите корректный e-mail&quot;}" placeholder="petrov@gmail.com" value1="petrov@gmail.com">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="basket-form__title">3. Оплата</div>
-                  </div>
-                  <div class="form-row payment-list" style="display: flex;">
-                    <div>
-                      <label class="form-radio filter-row-click">
-                        <input class="form-item form-item--radio" type="radio" id="payment-card" name="ord_payment" value="card"><span>Банковской картой на сайте</span>
-                      </label>
-                      <div class="v-hidden">*Скидка 2% при фактической оплате заказа на сайте.</div>
-                    </div>
-                    <div>
-                      <label class="form-radio filter-row-click">
-                        <input class="form-item form-item--radio" type="radio" id="payment-receipt" name="ord_payment" value="receipt"><span>Оплата при получении</span>
-                      </label>
-                      <div class="v-hidden">Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)</div>
-                    </div>
-                  </div>
-                  <button class="btn btn--large btn--black btn--fullwidth" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+                  <label class="form-item-label" for="city">Выберите свой город в списке</label>
                 </div>
-              </form>
+                <div class="form-row">
+                  <div class="basket-form__title">2. Доставка</div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner filter-row__inner--first">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio hidden-radio" type="radio" name="pickup">
+                          <div> <b>Доставка по Москве</b><br>Бесплатно</div>
+                        </div>
+                        <div class="filter-row__text-coll">Примерка 15 минут, позволяет определиться с выбором, пока курьер ожидает.</div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="mb-30px">Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней. Доставка за пределы МКАД только по 100% предоплате всей стоимости заказа на сайте. Сроки доставки 1-3 дня (при наличии изделий в Москве). Максимум 6 позиций в одном заказе.</div>
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px">
+                          <div class="search-form search-form--basket">
+                            <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
+                            <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                          </div>
+                        </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
+                        <div class="v-hidden">
+                          <div class="mt-30px"> 
+                            <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner filter-row__inner--first">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio hidden-radio" type="radio" name="pickup">
+                          <div> <b>Из магазина  </b><br>Бесплатно</div>
+                        </div>
+                      </label>
+                      <div class="filter-row__content" style1="display: block;">
+                        <ul class="basket__pickup">
+                          <li>
+                            <label class="form-radio">
+                              <input class="form-item form-item--radio" type="radio" name="product">
+                              <div class="form-radio__item">
+                                <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, пр-т Михаила Нагибина</div>
+                                <div class="basket__pickup-address">г. Ростов-на-Дону, пр-т Михаила Нагибина, д. 32/2, ТРЦ «Горизонт»</div>
+                                <div class="basket__pickup-data">«Премиум-галерея», 1 этаж (с 10:00 до 22:00)</div>
+                                <div class="basket__pickup-payment">Бесплатно</div>
+                              </div>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="form-radio">
+                              <input class="form-item form-item--radio" type="radio" name="product">
+                              <div class="form-radio__item">
+                                <div class="basket__pickup-metro">Самовывоз — г. Ростов-на-Дону, проспект Чехова, д. 51-53</div>
+                                <div class="basket__pickup-address">г. Ростов-на-Дону, проспект Чехова, д. 51-53 (с 09:00 до 21:00)</div>
+                                <div class="basket__pickup-data"></div>
+                                <div class="basket__pickup-payment">Бесплатно</div>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio" type="radio" name="pickup">
+                          <div> <b>Курьерска служба СДЭК </b><br>с бесплатной примеркойот 160  Р</div>
+                        </div>
+                        <div class="filter-row__text-coll">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. </div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="mb-30px">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.</div>
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px">
+                          <div class="search-form search-form--basket">
+                            <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
+                            <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                          </div>
+                        </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
+                        <div class="v-hidden">
+                          <div class="mt-30px"> 
+                            <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio" type="radio" name="pickup">
+                          <div> <b>Пункты выдачи СДЭК</b><br> от 238 Р</div>
+                        </div>
+                        <div class="filter-row__text-coll">Доставка заказа в один из пунктов самовывоза компании СДЭК.</div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px"><a class="btn btn--medium" href="#checkout-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ВЫБРАТЬ ПУНКТ ВЫДАЧИ</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-row filter-row-click">
+                    <div class="filter-row__inner">
+                      <label class="form-radio">
+                        <div class="filter-row__radio-coll">
+                          <input class="form-item form-item--radio" type="radio" name="pickup">
+                          <div> <b>Пункты выдачи Via Delivery </b><br> от 193 Р</div>
+                        </div>
+                        <div class="filter-row__text-coll">Доставка заказов с выдачей на кассе в Пятерочке или в отделениях СберБанка.</div>
+                      </label>
+                      <div class="filter-row__content"> 
+                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="mb-30px"><a class="btn btn--medium" href="#checkout-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ВЫБРАТЬ ПУНКТ ВЫДАЧИ</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-row__title">
+                    <div class="basket-form__title">12. Контактные данные</div><span><a class="link link--black_border" href="#auth-form" data-popup="{&quot;type&quot;:&quot;inline&quot;}">Уже зарегистрированы?</a></span>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <div class="form-group-inner">
+                        <div class="form-group-item form-group-item--w32">
+                          <label class="form-label" for="ord_name">Фамилия/Имя/Отчество</label>
+                          <input class="form-item form-item--text form-item--middle" id="ord_name" type="text" name="ord_name" required="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" placeholder="Фамилия/Имя/Отчество" value1="Фамилия/Имя/Отчество">
+                        </div>
+                        <div class="form-group-item form-group-item--w32">
+                          <label class="form-label" for="ord_phone">Телефон</label>
+                          <input class="form-item form-item--text form-item--middle" id="ord_phone" type="text" name="ord_phone" required="" data-validation="{&quot;pattern&quot;: &quot;phoneRU&quot;, &quot;mask&quot;: &quot;+7 (999) 999-99-99&quot;}" placeholder="+7-___-___-___">
+                        </div>
+                        <div class="form-group-item form-group-item--w32">
+                          <label class="form-label" for="ord_email">Почта</label>
+                          <input class="form-item form-item--text form-item--middle" id="ord_email" type="email" name="ord_email" required="" data-validation="{&quot;message&quot;: &quot;Укажите корректный e-mail&quot;}" placeholder="petrov@gmail.com" value1="petrov@gmail.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="basket-form__title">3. Оплата</div>
+                </div>
+                <div class="form-row payment-list">
+                  <div>
+                    <label class="form-radio filter-row-click">
+                      <input class="form-item form-item--radio" type="radio" id="payment-card" name="ord_payment" value="card"><span>Банковской картой на сайте</span>
+                    </label>
+                    <div class="v-hidden">*Скидка 2% при фактической оплате заказа на сайте.</div>
+                  </div>
+                  <div>
+                    <label class="form-radio filter-row-click">
+                      <input class="form-item form-item--radio" type="radio" id="payment-receipt" name="ord_payment" value="receipt"><span>Оплата при получении</span>
+                    </label>
+                    <div class="v-hidden">Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="basket__body-right">
               <div class="order-aside order-aside-sticky">
@@ -762,7 +771,8 @@
                       <button class="btn btn--medium btn--black_border mx-auto w-100" type="button">Применить</button>
                     </div>
                   </div>
-                </div><a class="btn btn--large btn--black btn--fullwidth" type="submit">1ОФОРМИТЬ ЗАКАЗ</a>
+                </div>
+                <button class="btn btn--large btn--black btn--fullwidth" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
                 <div class="form-policy">
                   <div class="page-text">
                     <div class="small">Нажимая кнопку «Оформить заказ», вы соглашаетесь с <a href="#">условиями оферты </a>и <a href="#">политикой конфиденциальности     </a></div>
@@ -770,7 +780,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </main>
       <footer class="page-footer" itemscope="" itemtype="http://schema.org/WPFooter">
@@ -1455,9 +1465,15 @@
         </form>
       </div>
     </div>
-    <div class="page-popup mfp-hide" id="checkout-popup">
+    <div class="page-popup page-popup--checked mfp-hide" id="checkout-popup">
       <div class="page-popup-heading">
-        <div class="page-popup-title uppercase">ОФОРМИТЬ ЗАКАЗ</div>
+        <div class="page-popup-title uppercase">ВЫБРАТЬ ПУНКТ ВЫДАЧИ</div>
+      </div>
+      <div class="page-popup-body">
+        <div class="page-popup-body__card-block">
+          <div id="map"></div>
+        </div>
+        <div class="page-popup-body__text-block">Выбор магазина BRUSNIKA</div>
       </div>
     </div>
     <div class="page-popup page-popup-w565 mfp-hide" id="notify-about-arrival">
@@ -1541,5 +1557,6 @@
         <div class="delivery-map-selected"><strong>Выбран: </strong><span class="delivery-map-selected-value"> </span></div>
       </div>
     </div>
+    <script type="text/javascript" src="../../js/shops-map.js">       </script>
   </body>
 </html>

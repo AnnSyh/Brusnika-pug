@@ -5,7 +5,7 @@ div.basket-page-form
       .search-form.search-form--basket
         input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Ростов-на-Дону')
         button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
-      label.form-item-label(for='city') Ваш город
+      label.form-item-label(for='city') Выберите свой город в списке
 
     .form-row
       .basket-form__title 2. Доставка
@@ -38,12 +38,37 @@ div.basket-page-form
               .filter-row__radio-coll
                 input.form-item.form-item--radio.hidden-radio(type='radio' name='pickup')
                 div 
-                  | Из магазина  
+                  b Доставка по Москве
+                  br
+                  | Бесплатно
+              .filter-row__text-coll Примерка 15 минут, позволяет определиться с выбором, пока курьер ожидает.
+              
+            .filter-row__content 
+                div.mb-30px
+                  | Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней. Доставка за пределы МКАД только по 100% предоплате всей стоимости заказа на сайте. Сроки доставки 1-3 дня (при наличии изделий в Москве). Максимум 6 позиций в одном заказе.
+                div.bold.mb-10px  Куда доставить заказ?
+                div.mb-30px
+                  .search-form.search-form--basket
+                    input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Москва, ул. Ленина, 44, кв. 23')
+                    button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
+
+                a.link-more.link-more-js(href="#")  Добавить комментарий к заказу
+                .v-hidden
+                  div.mt-30px 
+                    textarea.form-item--textarea.w-100(name="" cols="30" rows="10") 
+
+      .filter-row.filter-row-click
+          .filter-row__inner.filter-row__inner--first
+            label.form-radio
+              .filter-row__radio-coll
+                input.form-item.form-item--radio.hidden-radio(type='radio' name='pickup')
+                div 
+                  b Из магазина  
                   br
                   | Бесплатно
               
               
-            .filter-row__content(style='display: block;')
+            .filter-row__content(style1='display: block;')
                 ul.basket__pickup
                   each item in pickupItems
                     li
@@ -60,7 +85,10 @@ div.basket-page-form
             label.form-radio
               .filter-row__radio-coll
                 input.form-item.form-item--radio(type='radio' name='pickup')
-                div Курьерска служба СДЭК с бесплатной примеркойот 160  Р
+                div 
+                  b Курьерска служба СДЭК 
+                  br
+                  | с бесплатной примеркойот 160  Р
               .filter-row__text-coll Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. 
             .filter-row__content 
                 div.mb-30px
@@ -81,23 +109,15 @@ div.basket-page-form
             label.form-radio
               .filter-row__radio-coll
                 input.form-item.form-item--radio(type='radio' name='pickup')
-                div Пункты выдачи СДЭК
+                div 
+                  b Пункты выдачи СДЭК
                   br 
                   |  от 238 Р
               .filter-row__text-coll Доставка заказа в один из пунктов самовывоза компании СДЭК.
-            .filter-row__content
-                div.mb-30px
-                  | Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.
+            .filter-row__content 
                 div.bold.mb-10px  Куда доставить заказ?
                 div.mb-30px
-                  .search-form.search-form--basket
-                    input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Москва, ул. Ленина, 44, кв. 23')
-                    button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
-
-                a.link-more.link-more-js(href="#")  Добавить комментарий к заказу
-                .v-hidden
-                  div.mt-30px 
-                    textarea.form-item--textarea.w-100(name="" cols="30" rows="10") 
+                  a.btn.btn--medium(href='#checkout-popup' data-popup='{"type":"inline"}') ВЫБРАТЬ ПУНКТ ВЫДАЧИ
 
       .filter-row.filter-row-click
         
@@ -105,7 +125,8 @@ div.basket-page-form
             label.form-radio
               .filter-row__radio-coll
                 input.form-item.form-item--radio(type='radio' name='pickup')
-                div Пункты выдачи Via Delivery 
+                div 
+                  b Пункты выдачи Via Delivery 
                   br 
                   |  от 193 Р
               .filter-row__text-coll Доставка заказов с выдачей на кассе в Пятерочке или в отделениях СберБанка.

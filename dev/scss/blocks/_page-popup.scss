@@ -6,12 +6,49 @@
     max-width: 430px;
     padding: 55px 45px;
 
-    &--auth-form { 
-        min-width:430px; 
+    #map {
+        width: auto;
+        height: 550px;
+
+        @media screen and (max-width:768px) {
+            height: 440px;
+        }
+    }
+
+    &--checked {
+        position: relative;
+        background: #fff;
+        padding: 0px;
+        max-width: 800px;
+        max-height: 630px;
+        overflow: hidden;
+        margin: auto;
+
+        .page-popup-title {
+            margin-top: 10px;
+        }
+
+        .page-popup-body {
+            display: flex;
+        }
+
+        .page-popup-body__card-block {
+            width: 50%;
+        }
+
+        .page-popup-body__text-block {
+            padding: 0 15px;
+            width: 50%;
+        }
+
+    }
+
+    &--auth-form {
+        min-width: 430px;
         padding: 20px !important;
 
         @media screen and(max-width:480px) {
-            min-width:100%; 
+            min-width: 100%;
         }
     }
 
@@ -145,7 +182,7 @@
             display: flex !important;
             align-items: center;
             gap: 15px;
-            
+
         }
 
         img {

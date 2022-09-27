@@ -1795,6 +1795,11 @@ a.basket-menu__link_lowercase {
   text-transform: capitalize;
   margin-left: 30px;
 }
+@media screen and (max-width: 480px) {
+  .filters-list-small {
+    margin-right: 15px;
+  }
+}
 
 .filters-list-small li {
   margin-left: 10px;
@@ -1889,12 +1894,14 @@ a.basket-menu__link_lowercase {
 .filter-slider__shops-list-link {
   margin-left: 10px;
   margin-right: 10px;
+  padding: 0;
 }
 @media screen and (max-width: 480px) {
   .filter-slider__shops-link,
 .filter-slider__shops-list-link {
     margin-left: 7px;
     margin-right: 7px;
+    padding: 0;
   }
 }
 
@@ -5206,6 +5213,9 @@ ul.footer-top__list {
   font-family: "SFProDisplay", "Arial", sans-serif;
   padding: 0 15px;
 }
+.item-shop .show-on--map {
+  margin: 0 15px;
+}
 .item-shop-phone {
   margin: 15px 0;
   font-weight: 600;
@@ -5230,6 +5240,10 @@ ul.footer-top__list {
     font-size: 14px;
     text-align: left;
     margin: 0;
+    line-height: 20px;
+    position: relative;
+    width: 100px;
+    top: 25px;
   }
 }
 
@@ -5248,13 +5262,17 @@ ul.footer-top__list {
 }
 
 @media screen and (max-width: 480px) {
-  #map {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
+  .page-inner--shop-map,
+#map {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
   }
   .filters-block-shops {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .filters-block-wrapper {
     display: flex;
     flex-direction: column-reverse;
   }

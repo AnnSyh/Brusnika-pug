@@ -838,6 +838,14 @@ body .mobile-nav-menu-item-holder.open:before {
     padding:  0;
     margin-left: -20px;
     margin-right: -20px;
+
+    div {
+      padding: 0;
+
+      &:last-child a {
+        border-bottom: none;
+      }
+    }
   }
   .personal-blocks:before {
     content: "";
@@ -851,13 +859,13 @@ body .mobile-nav-menu-item-holder.open:before {
   }
   .personal-blocks .personal-block {
     margin-top: -1px;
-    padding: 15px 0;
+    padding: 15px 20px;
     background-color: transparent;
     border-radius: 0;
     border-bottom: 1px solid $color-gray-two;
     text-align: left;
   }
-  .personal-blocks>div:first-child .personal-block {
+  .personal-blocks {
     border-top: 1px solid $color-gray-two;
   }
 

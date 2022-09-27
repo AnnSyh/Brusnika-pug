@@ -315,9 +315,15 @@
   display: flex;
   flex-direction: column;
 
-  .mobile-filter-item:last-child {
-    border: 1px solid red;
-  }
+  // .mobile-filter-item:last-child {
+  //   border: 1px solid red;
+  // }
+
+  .filter-row {
+    border: 1px solid transparent;
+}
+
+
 }
 
 .mobile-filter-holder {
@@ -427,9 +433,9 @@
   }
 }
 
-.mobile-filter-item--size {
-  border: 1px solid green !important;
-}
+// .mobile-filter-item--size {
+//   border: 1px solid green !important;
+// }
 
 .mobile-filter-btns {
   display: flex;

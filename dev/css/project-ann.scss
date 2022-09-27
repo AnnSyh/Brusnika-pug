@@ -5,7 +5,7 @@
 @import '../scss/blocks/catalog-menu';
 @import'../scss/blocks/basket-menu';
 @import '../scss/blocks/size-menu';
-@import '../scss/blocks/catalog';  
+@import '../scss/blocks/catalog';
 @import '../scss/blocks/page-note';
 @import'../scss/blocks/filter';
 @import '../scss/blocks/mobile-menu-filter';
@@ -27,7 +27,7 @@
 @import '../scss/blocks/product-photos'; //для слайдера на стр товаров
 @import '../scss/blocks/sliders-style'; //для слайдеров
 
-@import '../scss/blocks/complete-look'; 
+@import '../scss/blocks/complete-look';
 @import '../scss/blocks/look';
 
 @import '../scss/blocks/tables';
@@ -45,7 +45,7 @@
 @import '../scss/blocks/loyalty-card';
 @import '../scss/blocks/big-grid';
 
-  
+
 
 // выравнивание заголовков блоков 'Вам также может понравиться' и 'Ранее вы смотрели' на стр card.html
 // @media screen and (min-width:960px) {
@@ -179,6 +179,7 @@
 .mt-40px {
   margin-top: 40px;
 }
+
 .mb-40px {
   margin-bottom: 40px;
 }
@@ -186,6 +187,7 @@
 .mt-30px {
   margin-top: 30px;
 }
+
 .mb-30px {
   margin-bottom: 30px;
 }
@@ -193,6 +195,7 @@
 .mt-10px {
   margin-top: 10px;
 }
+
 .mb-10px {
   margin-bottom: 10px;
 }
@@ -207,7 +210,7 @@
 
 
 
-.order-aside-sticky { 
+.order-aside-sticky {
   top: 140px; //высота закрепленной при прокрутке шапки
   position: sticky;
 }
@@ -366,12 +369,12 @@ body,
   font-family: 'SFProDisplay', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px; 
+  line-height: 20px;
 }
 
 
 .cards__list .catalog-item-photo-holder {
-  padding-top: 137%; 
+  padding-top: 137%;
 }
 
 .cards__list .catalog-item-photo-holder img {
@@ -495,6 +498,13 @@ body,
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width:480px) {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 

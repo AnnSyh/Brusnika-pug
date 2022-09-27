@@ -6,14 +6,14 @@ block variables
 
 
 block content
-  main.page-content
+  main.page-content.page-content--personal-area 
 
     .page-inner.page-inner--w2
 
       .personal-grid
 
         .personal-grid-block-one 
-          .page-heading-title.page-heading-title_personal.uppercase(style="margin-bottom: 100px;")= title
+          .page-heading-title.page-heading-title_personal.uppercase= title
           div
             .h2.mb-2 Здравствуйте, Максим
             a.d-none.d-lg-inline-flex.link.link--black_border.uppercase(href='#') ВЫЙТИ                  
@@ -22,10 +22,10 @@ block content
           .row.personal-blocks
 
             each item in personalMenuDataWithOutEnter
-              .col-lg-3.mb-lg-4
+              .col-lg-4.mb-lg-4
                 a.personal-block(href=`${item.url}`)
-                  span.h3= item.name 
+                  span.dashboard-title= item.name 
             
-            .col-lg-3.mb-lg-4.d-lg-none(style="line-height: 60px;")
+            .col-lg-3.mb-lg-4.d-lg-none
                 a.personal-block(href='#')
                   span.h3 Выйти 

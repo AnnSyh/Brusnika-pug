@@ -860,6 +860,12 @@ body .mobile-nav-menu-item-holder.open:before {
     margin-left: -20px;
     margin-right: -20px;
   }
+  .personal-blocks div {
+    padding: 0;
+  }
+  .personal-blocks div:last-child a {
+    border-bottom: none;
+  }
 }
 @media screen and (max-width: 960px) {
   .personal-blocks:before {
@@ -876,7 +882,7 @@ body .mobile-nav-menu-item-holder.open:before {
 @media screen and (max-width: 960px) {
   .personal-blocks .personal-block {
     margin-top: -1px;
-    padding: 15px 0;
+    padding: 15px 20px;
     background-color: transparent;
     border-radius: 0;
     border-bottom: 1px solid #E1E1E1;
@@ -884,7 +890,7 @@ body .mobile-nav-menu-item-holder.open:before {
   }
 }
 @media screen and (max-width: 960px) {
-  .personal-blocks > div:first-child .personal-block {
+  .personal-blocks {
     border-top: 1px solid #E1E1E1;
   }
 }

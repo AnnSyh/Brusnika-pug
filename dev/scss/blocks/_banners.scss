@@ -1,0 +1,57 @@
+@import '../variables';
+
+
+.banner-item-text {border:1px solid violet;
+
+ 
+    max-width: 760px;
+    text-align: center;
+    margin: 0 auto 30px auto;
+
+
+  &__title {
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 125px;
+    margin-top: 50px;
+  }
+  
+  &__lid {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 525px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 478px;
+    margin: auto;
+  }
+
+  @media screen and (max-width:480px) {
+    &__title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 15px;
+    }
+    
+    &__lid {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    
+  }
+} 
+

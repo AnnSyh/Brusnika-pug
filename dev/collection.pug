@@ -1,0 +1,23 @@
+
+extends layout/main
+
+block variables
+  - var title = 'collection'
+  - var mainPage = false
+
+
+block content
+  main.page-content
+
+    .page-inner--banners 
+      .big-grid
+        include modules/banners/two-img
+      .big-grid__item-one-center-text
+        include modules/banners/two-img-text
+
+    .page-inner.page-inner--w1.page-inner--mobile_empty
+      include modules/filters/filterLarge
+
+    .page-inner.page-inner--w2 
+      .big-grid
+        include modules/catalog-large  

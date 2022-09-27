@@ -1738,15 +1738,15 @@
         <div class="tabs form-tabs">
           <div class="tabs-heading form-tabs-heading">
             <div class="form-tabs-heading-items">
-              <div class="tab-heading-item active form-tab-heading-item" data-tab="#form_email" data-tabs=".tab">Через E-mail</div>
-              <div class="tab-heading-item form-tab-heading-item" data-tab="#form_phone" data-tabs=".tab">Через смс</div>
+              <div class="tab-heading-item active form-tab-heading-item" data-tab="#form_email" data-tabs=".tab">Войти через E-mail</div>
+              <div class="tab-heading-item form-tab-heading-item" data-tab="#form_phone" data-tabs=".tab">Войти через смс</div>
             </div>
           </div>
           <div class="tabs-content form-tabs-content">
             <div class="tab-content-item tab show form-tab-content-item" id="form_phone">
               <div class="form-row">
                 <div class="page-popup-title--small">
-                  Пожалуйста, введите вашномер, на который мы отправим смс скодом для восстановления пароля   </div>
+                  Пожалуйста, введите ваш номер, на который мы отправим смс скодом для восстановления пароля   </div>
               </div>
               <div class="form-row">
                 <label class="form-label" for="auth_sms">Контактный телефон</label>
@@ -1829,9 +1829,74 @@
         </form>
       </div>
     </div>
-    <div class="page-popup mfp-hide" id="checkout-popup">
+    <div class="page-popup mfp-hide" id="nosms-popup">
       <div class="page-popup-heading">
-        <div class="page-popup-title uppercase">ОФОРМИТЬ ЗАКАЗ</div>
+        <div class="page-popup-title uppercase"> Не приходит sms</div>
+      </div>
+      <p>Проверьте, что:   </p>
+      <ul class="disc"> 
+        <li>ваш телефон включён и находится в зоне приёма сети,</li>
+        <li>вы ввели правильный номер телефона или адрес электронной почты.</li>
+        <li>Иногда СМС приходит не сразу. Если смс нет 20 минут, попробуйте получить код ещё раз.</li>
+      </ul>
+    </div>
+    <div class="page-popup mfp-hide" id="sms-cod-popup">
+      <div class="page-popup-title uppercase">Введите код</div>
+      <form class="form">
+        <div class="tab-content-item auth-tab show form-tab-content-item" id="auth-form_phone">
+          <div class="form-row">               
+            <div class="page-popup-title--small">Мы отправили код подтверждения на номер <br>+7 900-456-98-88. <a class="link link--black_border" href="login.html">Изменить номер</a></div>
+          </div>
+          <div class="form-row">
+            <div class="form-item-holder">
+              <input class="form-item form-item--text" id="auth_sms" type="text" name="auth_sms" required="" placeholder="6643" data-validation="{&quot;message&quot;: &quot;Укажите код из смс&quot;, &quot;mask&quot;: &quot;9999&quot;}">
+            </div>
+          </div>
+          <div class="form-row" style="margin-bottom: 10px;"><a class="btn btn--black btn--medium w100 max-w100" href="sms-cod.html">Войти</a></div>
+          <div class="form-row"> 
+            <div class="new-code">Получить новый код можно через 0:30</div>
+          </div>
+          <div class="form-row">
+            <div class="form-group-inner forgot-password"><a class="link link--black_simple" href="login.html"><span>Войти по E-mail  </span></a><a class="link link--black_border" href="#nosms-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}"> <span>Не приходит смс?</span></a></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="page-popup page-popup--checked mfp-hide" id="checkout-popup">
+      <div class="page-popup-heading">
+        <div class="page-popup-title uppercase">ВЫБРАТЬ ПУНКТ ВЫДАЧИ</div>
+      </div>
+      <div class="page-popup-body">
+        <div class="page-popup-body__card-block">
+          <div id="map"></div>
+        </div>
+        <div class="page-popup-body__text-block"> 
+          <div class="order-aside__title">Выбор магазина BRUSNIKA</div>
+          <div class="search-form search-form--basket">
+            <input class="search-form__input form-item form-item--text" type="text" name="city" value="Ростов-на-Дону">
+            <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button">    </button>
+          </div>
+          <div class="filter-row__content" style="margin-left: 0px;">
+            <ul class="basket__pickup">
+              <li>
+                <div class="form-radio__item">
+                  <div class="basket__pickup-metro">ТРЦ Горизонт</div>
+                  <div class="basket__pickup-address">пр-т Михаила Нагибина, д. 32/2, ТРЦ «Горизонт», «Премиум-галерея» 1 этаж </div>
+                  <div class="basket__pickup-data">(с 10:00 до 22:00)</div>
+                  <div class="basket__pickup-payment"> <b>Бесплатно </b>— можно забрать 1 июня, в субботу</div>
+                </div>
+              </li>
+              <li>
+                <div class="form-radio__item">
+                  <div class="basket__pickup-metro">Проспект Чехова, д. 51–53</div>
+                  <div class="basket__pickup-address"> проспект Чехова, д. 51-53</div>
+                  <div class="basket__pickup-data">(с 09:00 до 21:00)</div>
+                  <div class="basket__pickup-payment"> <b>Бесплатно </b>— можно забрать 1 июня, в субботу<br>Срок хранения заказа — 30 дней</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="page-popup page-popup-w565 mfp-hide" id="notify-about-arrival">

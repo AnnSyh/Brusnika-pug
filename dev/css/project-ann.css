@@ -1692,11 +1692,6 @@ a.basket-menu__link_lowercase {
   cursor: pointer;
 }
 
-.filters-block-wrapper {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
 .filters-rezult__not-found {
   display: flex;
   flex-direction: column;
@@ -1888,6 +1883,19 @@ a.basket-menu__link_lowercase {
   line-height: 20px;
   color: #1D1D1D;
   margin-bottom: 22px;
+}
+
+.filter-slider__shops-link,
+.filter-slider__shops-list-link {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 480px) {
+  .filter-slider__shops-link,
+.filter-slider__shops-list-link {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
 }
 
 .filter-price-fields {
@@ -5135,18 +5143,40 @@ ul.footer-top__list {
   }
 }
 
+.item-shops {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .item-shops {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .item-shops {
+    gap: 0;
+  }
+}
+
 .item-shop {
   border: 1px solid #E1E1E1;
   padding: 40px;
-  margin: 20px;
+  margin: 0;
 }
 @media screen and (max-width: 768px) {
   .item-shop {
     border: none;
     border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid transparent;
     padding: 20px;
     margin: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .item-shop {
+    padding: 15px;
+    margin: 0;
   }
 }
 .item-shop-info {
@@ -5154,15 +5184,32 @@ ul.footer-top__list {
   line-height: 25px;
   max-width: 340px;
 }
+@media screen and (max-width: 480px) {
+  .item-shop-info {
+    font-size: 12px;
+  }
+}
 .item-shop-title {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 480px) {
+  .item-shop-title {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
 .item-shop-phone {
   margin: 15px 0;
   font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .item-shop-phone {
+    font-size: 12px;
+    margin: 0;
+  }
 }
 
 .page-shop-title {
@@ -5170,7 +5217,15 @@ ul.footer-top__list {
   font-size: 36px;
   line-height: 46px;
   text-align: center;
+  margin-top: 46px;
   margin-bottom: 46px;
+}
+@media screen and (max-width: 480px) {
+  .page-shop-title {
+    font-size: 14px;
+    text-align: left;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -5580,6 +5635,11 @@ ul.footer-top__list {
 .w-100 {
   width: 100%;
   max-width: 100%;
+}
+
+.mlr-10px {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .mt-60px {

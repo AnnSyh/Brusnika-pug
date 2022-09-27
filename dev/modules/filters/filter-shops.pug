@@ -2,20 +2,20 @@ block variables
   - var title = 'Mагазины'
   - var mainPage = false
 
-.filters-block
-  //- мобилка
-  .filters-row.d-block.d-lg-none
-    //- .filters-row__list
-    .filter-items.filters-list(data-params='{"slidesToShow": 10}')
-        +listShopFiltersMobile(shopsFilters)
 
-  //- десктоп        
-  .filters-row
-    .d-none.d-lg-block
-      +listShopFiltersDesktop('filters-list', shopsFilters)
-
+.filters-block.d-block.d-lg-none
+  .row.mobile-slider
+    each item in shopsFilters
+      a.filter-slider__shops-link(href=`${item.href}`)= item.name
+.filters-row
+  .filters-row__list.d-none.d-lg-block
+    ul.filters-list
+      each item in shopsFilters
+        li.filter-slider__shops-list-link
+          a(href=`${item.href}`)= item.name
+  div
     ul.filters-list-small
-        li
-          span.active Список
-        li
-          a(href='shop-map.html') На карте
+      li
+         span.active Список
+      li
+        a(href='shop-map.html') На карте

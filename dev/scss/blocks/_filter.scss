@@ -1,11 +1,5 @@
 @import '../variables';
 
-.filters-block-wrapper {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-
 .filters-rezult__not-found {
     display: flex;
     flex-direction: column;
@@ -200,4 +194,15 @@
     line-height: 20px;
     color: $color-black;
     margin-bottom: 22px;
+}
+
+.filter-slider__shops-link,
+.filter-slider__shops-list-link { 
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @media screen and (max-width:480px) {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
 }

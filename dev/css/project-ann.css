@@ -5160,6 +5160,7 @@ ul.footer-top__list {
 }
 
 .item-shop {
+  font-family: "SFProDisplay", "Arial", sans-serif;
   border: 1px solid #E1E1E1;
   padding: 40px;
   margin: 0;
@@ -5201,6 +5202,10 @@ ul.footer-top__list {
     line-height: 20px;
   }
 }
+.item-shop-title, .item-shop-address, .item-shop-time, .item-shop-phone {
+  font-family: "SFProDisplay", "Arial", sans-serif;
+  padding: 0 15px;
+}
 .item-shop-phone {
   margin: 15px 0;
   font-weight: 600;
@@ -5237,6 +5242,23 @@ ul.footer-top__list {
   }
 }
 
+.ymaps-2-1-79-balloon__close + .ymaps-2-1-79-balloon__content {
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 480px) {
+  #map {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+  .filters-block-shops {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 /* Личный кабинет */
 /*** loyalty ***/
 .loyalty-blocks .loyalty-block {

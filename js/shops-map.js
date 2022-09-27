@@ -92,6 +92,7 @@ function init() {
 
 		placemarks[i] = new ymaps.Placemark(shops[i].coords,
 			{
+				// balloonContentLayout: `<div class="balloonContent" width="100%">`,
 				balloonContentHeader: `<img src="../dummy/shops/${shops[i].img}" width="100%">`,
 				balloonContentBody: ` <div class="item-shop-title">${shops[i].name}</div>` +
 					`<div class="item-shop-address">${shops[i].address}</div>` +
@@ -123,7 +124,7 @@ function init() {
 
 
 		// // открыть балун
-		myMap.balloon.open([55.757131068980215, 37.61711450000001], 'Содержимое балуна');
+		// myMap.balloon.open([55.757131068980215, 37.61711450000001], 'Содержимое балуна');
 	};
 
 };	

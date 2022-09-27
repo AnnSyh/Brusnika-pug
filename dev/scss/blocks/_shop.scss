@@ -26,6 +26,8 @@
 }
 
 .item-shop {
+    font-family: 'SFProDisplay', 'Arial', sans-serif;
+
     border: 1px solid $color-gray-two;
     padding: 40px;
     margin: 0;
@@ -50,7 +52,7 @@
 
         @media screen and (max-width:480px) {
             font-size: 12px;
-        }        
+        }
     }
 
     &-title {
@@ -65,6 +67,15 @@
         }
     }
 
+    // шрифты для всплывашки на карте
+    &-title,
+    &-address,
+    &-time,
+    &-phone {
+        font-family: 'SFProDisplay', 'Arial', sans-serif;
+        padding: 0 15px
+    }
+
     &-phone {
         margin: 15px 0;
         font-weight: 600;
@@ -72,10 +83,11 @@
         @media screen and (max-width:480px) {
             font-size: 12px;
             margin: 0;
-        }        
+        }
 
 
     }
+
 }
 
 .page-shop-title {
@@ -87,8 +99,8 @@
     margin-bottom: 46px;
 
     @media screen and(max-width:480px) {
-        font-size: 14px; 
-        text-align: left ;
+        font-size: 14px;
+        text-align: left;
         margin: 0;
     }
 }
@@ -104,4 +116,24 @@
         }
     }
 
+}
+
+// перекрытие стилей балуна на карте
+.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+// растягиваю карту на весь экран без отступов
+@media screen and(max-width:480px) {
+    #map {
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+    }
+
+    .filters-block-shops { 
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

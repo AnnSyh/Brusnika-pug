@@ -223,12 +223,11 @@ favoritesList.forEach((item) => {
 });
 
 // ---закрыть корзину показать попап 'Вы подписаны'------------------------------
-const sizeGuideLink = document.querySelector('.size-guide-link');
-const pageBody = document.querySelector('body');
-sizeGuideLink.addEventListener('click', (evt) => {
-  pageBody.classList.remove('show-filter');
-
-});
+// const sizeGuideLink = document.querySelector('.size-guide-link');
+// const pageBody = document.querySelector('body');
+// sizeGuideLink.addEventListener('click', (evt) => {
+//   pageBody.classList.remove('show-filter');
+// });
 // ---кнопка 'Подробнее'------------------------------
 const linksMore = document.querySelectorAll('.link-more-js');
 

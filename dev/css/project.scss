@@ -317,6 +317,9 @@ header .header-logo img {
   // z-index: 100000;
   z-index: 10000;
 }
+footer .header-logo img { 
+  z-index: 10;
+}
 
 .header-search-holder {
   display: -webkit-box;

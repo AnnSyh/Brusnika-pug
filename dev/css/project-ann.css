@@ -11,7 +11,7 @@
 }
 @media screen and (max-width: 480px) {
   .page-header {
-    height: 40px;
+    height: 60px;
   }
 }
 
@@ -3780,7 +3780,6 @@ ul.footer-top__list {
 }
 
 .order-table__img {
-  border: 1px solid red;
   width: 100%;
   max-width: 127px;
   margin-right: 20px;
@@ -4551,7 +4550,6 @@ ul.footer-top__list {
   gap: 10px;
 }
 .gallery__item .catalog-item__mobile .gallery__item-mobile-col {
-  border: 1px solid red;
   margin-right: 10px;
 }
 @media screen and (max-width: 768px) {

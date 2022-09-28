@@ -299,6 +299,10 @@ header .header-logo img {
   z-index: 10000;
 }
 
+footer .header-logo img {
+  z-index: 10;
+}
+
 .header-search-holder {
   display: -ms-flexbox;
   display: box;

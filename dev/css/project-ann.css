@@ -4215,6 +4215,10 @@ ul.footer-top__list {
   gap: 20px;
 }
 
+.product-to-basket .product-list .product-list-link {
+  border: 1px solid red;
+}
+
 .jcf-select-w100 {
   width: 100%;
 }

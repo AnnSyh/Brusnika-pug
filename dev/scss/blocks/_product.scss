@@ -140,11 +140,12 @@
 
 .product-to-basket .product-list {
     display: flex;
-    gap: 20px;
+    // gap: 20px;
 }
 
 .product-to-basket .product-list .product-list-link {
     border: 1px solid red;
+    margin-right: 20px;
 }
 
 

@@ -1,49 +1,20 @@
 div
-      .footer-top
-        ul.footer-top__list
-          li.footer-top__item
-            a(href='#') VKONTAKTE
-          li.footer-top__item
-            a(href='#') Telegram
-          li.footer-top__item
-            a(href='#') WHATSAPP
-      .footer-content
+  .footer-top
+    ul.footer-top__list
+      li.footer-top__item
+        a(href='#') VKONTAKTE
+      li.footer-top__item
+        a(href='#') Telegram
+      li.footer-top__item
+        a(href='#') WHATSAPP
+  .footer-content
 
-        .footer-content__left
+    .footer-content__left
 
-          .accordion.d-block.d-lg-none.w-100
-            .accordion-item
-              .accordion-item-heading Покупателю
-              .accordion-item-content
-                ul.footer-content__list
-                  li
-                    a(href='#') Доставка и оплата
-                  li
-                    a(href='#') Гарантия и возврат
-                  li
-                    a(href='#') Руководство по покупке
-                  li
-                    a(href='#') Система лояльности
-                  //- li.only-mobile
-                  //-   a(href='#') Политика конфиденциальности
-                  //- li.only-mobile
-                  //-   a(href='#') Оферта
-                  //- li.only-mobile
-                  //-   a(href='#') Политика конфиденциальности
-            .accordion-item
-              .accordion-item-heading Компания
-              .accordion-item-content
-                ul.footer-content__list
-                  li
-                    a(href='shops.html') Магазины
-                  li
-                    a(href='#') О нас
-                  li
-                    a(href='#') Контакты
-                  li
-                    a(href='#') Работа у нас
-
-          .d-none.d-lg-flex.w-100
+      .accordion.d-block.d-lg-none.w-100
+        .accordion-item
+          .accordion-item-heading Покупателю
+          .accordion-item-content
             ul.footer-content__list
               li
                 a(href='#') Доставка и оплата
@@ -53,6 +24,15 @@ div
                 a(href='#') Руководство по покупке
               li
                 a(href='#') Система лояльности
+              //- li.only-mobile
+              //-   a(href='#') Политика конфиденциальности
+              //- li.only-mobile
+              //-   a(href='#') Оферта
+              //- li.only-mobile
+              //-   a(href='#') Политика конфиденциальности
+        .accordion-item
+          .accordion-item-heading Компания
+          .accordion-item-content
             ul.footer-content__list
               li
                 a(href='shops.html') Магазины
@@ -63,31 +43,55 @@ div
               li
                 a(href='#') Работа у нас
 
-        .footer-content__center
-          a.header-logo(href='#')
-            img(src='../svg/header_logo.svg' alt='')
-        .footer-content__right
-          .footer-content__right-content
-            .footer-text.only-desktop
-              | Подпишитесь на рассылку с новостями о тенденциях, специальных предложениях и новинках!
-            .footer-form.only-desktop
-              form(action='')
-                .footer-form__form
-                  input(type='text' placeholder='Введите свой E-mail')
-                  button.btn.btn--white ok
-                .privacy-policy
-                  | Подписываясь на расслыку, вы соглашаетесь
-                  br
-                  | с 
-                  a(href='#') политикой конфиденциальности
-      .footer-bottom
-        .footer-bottom__left.only-desktop
-          ul.footer-bottom__list
-            li
-              a(href='#') Политика конфиденциальности
-            li
-              a(href='#') Оферта
-        .footer-bottom__center
-          a(href='#') ©2022 Brusnika
-        .footer-bottom__right.only-desktop
-          | © 1999-2022 Интернет-магазин «Brusnika»    
+      .d-none.d-lg-flex.w-100
+        ul.footer-content__list
+          li
+            a(href='#') Доставка и оплата
+          li
+            a(href='#') Гарантия и возврат
+          li
+            a(href='#') Руководство по покупке
+          li
+            a(href='#') Система лояльности
+        ul.footer-content__list
+          li
+            a(href='shops.html') Магазины
+          li
+            a(href='#') О нас
+          li
+            a(href='#') Контакты
+          li
+            a(href='#') Работа у нас
+
+    .footer-content__center
+      a.header-logo(href='#')
+        img(src='../svg/header_logo.svg' alt='')
+    .footer-content__right
+      .footer-content__right-content
+        .footer-text.only-desktop
+          | Подпишитесь на рассылку с новостями о тенденциях, специальных предложениях и новинках!
+        .footer-form.only-desktop
+
+          form.form(novalidate="novalidate")
+            .footer-form__form
+              .form-row
+                input( type='email' name='f3' required='' data-validation='{"message": "Укажите корретный адрес почты"}' value='petrov@gmail.com')
+              button.btn.btn--white(type='submit' href='#message-you-subscribed' data-popup='{"type":"inline"}') ok
+              //- a.link.link--black_border(href='#message-you-subscribed' data-popup='{"type":"inline"}') Сообщение об удачной подписке
+
+            .privacy-policy
+              | Подписываясь на расслыку, вы соглашаетесь
+              br
+              | с 
+              a(href='#') политикой конфиденциальности
+  .footer-bottom
+    .footer-bottom__left.only-desktop
+      ul.footer-bottom__list
+        li
+          a(href='#') Политика конфиденциальности
+        li
+          a(href='#') Оферта
+    .footer-bottom__center
+      a(href='#') ©2022 Brusnika
+    .footer-bottom__right.only-desktop
+      | © 1999-2022 Интернет-магазин «Brusnika»    

@@ -319,10 +319,12 @@
 
 // -------------------
 
-.page-inner--banners { border: 1px solid red; 
+.page-inner--banners { 
+    // border: 1px solid red; 
     margin-bottom: 30px;
 
-    @media screen and (max-width: 480px) { border: 1px solid green;  
+    @media screen and (max-width: 480px) { 
+        // border: 1px solid green;  
         margin-bottom: 15px;
     }
 

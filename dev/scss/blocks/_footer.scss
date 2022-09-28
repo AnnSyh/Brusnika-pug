@@ -225,11 +225,9 @@ ul.footer-top__list {
 .footer-form__form input {
     border: 1px solid $color-gray-two;
     border-right: 1px solid transparent;
-}
-
-.footer-form__form input {
     width: 100%;
     padding: 15px;
+    min-width: 190px;
 }
 
 .footer-form__form button {

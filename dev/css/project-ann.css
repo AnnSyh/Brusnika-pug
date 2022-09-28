@@ -3500,6 +3500,7 @@ ul.footer-top__list {
 
 .form-row {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .form-row:last-child {

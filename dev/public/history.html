@@ -664,10 +664,12 @@
                 <div class="footer-content__right-content">
                   <div class="footer-text only-desktop">Подпишитесь на рассылку с новостями о тенденциях, специальных предложениях и новинках!</div>
                   <div class="footer-form only-desktop">
-                    <form action="">
+                    <form class="form" novalidate="novalidate">
                       <div class="footer-form__form">
-                        <input type="text" placeholder="Введите свой E-mail">
-                        <button class="btn btn--white">ok</button>
+                        <div class="form-row">
+                          <input type="email" name="f3" required="" data-validation="{&quot;message&quot;: &quot;Укажите корретный адрес почты&quot;}" value="petrov@gmail.com">
+                        </div>
+                        <button class="btn btn--white" type="submit" href="#message-you-subscribed" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ok</button>
                       </div>
                       <div class="privacy-policy">Подписываясь на расслыку, вы соглашаетесь<br>с <a href="#">политикой конфиденциальности</a></div>
                     </form>
@@ -1130,7 +1132,7 @@
                   <div class="mobile-filter-item-heading-title">Размер</div>
                   <div class="mobile-filter-item-heading-toggler"></div>
                 </div>
-                <div class="mobile-filter-item-content"><a class="mobile-filter__link size-guide-link" href="#message-you-subscribed" data-popup="{&quot;type&quot;:&quot;inline&quot;}">Руководство по размерам</a>
+                <div class="mobile-filter-item-content"><a class="mobile-filter__link size-open" href="#">Руководство по размерам</a>
                   <div class="filter-row filter-row__size">
                     <label class="form-checkbox">
                       <input class="form-item form-item--checkbox" type="checkbox"><span class="form-checkbox-title">One size</span>

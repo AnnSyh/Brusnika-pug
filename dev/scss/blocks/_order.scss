@@ -63,12 +63,13 @@
 .order-table__item {
     display: flex;
     width: 100%;
-    gap: 20px;
+    // gap: 20px;
 }
 
-.order-table__img {
+.order-table__img { border: 1px solid red;
     width: 100%;
     max-width: 127px;
+    margin-right: 20px;
 }
 
 .order-table__info {

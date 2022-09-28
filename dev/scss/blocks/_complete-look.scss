@@ -50,6 +50,11 @@
         &__mobile {
             display: flex;
             gap: 10px;
+
+            & .gallery__item-mobile-col {
+                border: 1px solid red;
+                margin-right: 10px
+            }
         }
     }
 
@@ -59,7 +64,7 @@
 
     &-mobile {
 
-        &-col { 
+        &-col {
             position: relative;
             width: 50%;
             display: flex;

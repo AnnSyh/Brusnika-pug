@@ -2572,15 +2572,11 @@ ul.disc {
   #auth-form .form-row {
     margin-bottom: 10px;
   }
-  #auth-form .forgot-password {
-    padding: 0;
-  }
 }
 #auth-form .tabs-heading .tab-heading-item {
   padding: 0 20px 10px 20px;
 }
 #auth-form .page-popup-title {
-  border: 1px solid red;
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 20px;
@@ -2591,7 +2587,6 @@ ul.disc {
   #auth-form .page-popup-title {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 0;
   }
 }
 #auth-form .page-popup-title--small {

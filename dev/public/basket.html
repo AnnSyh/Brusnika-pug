@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/plugins/magnific-popup.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/plugins/datepicker.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/project.css?v=11312">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/project-ann.css?v=797191">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/project-main.css?v=797191">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/project.responsive.css?v=724611">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/plugins/simplebar.css">
     <script src="https://api-maps.yandex.ru/2.1/?load=package.standard&amp;lang=ru-RU&amp;apikey=3493f917-bc4d-4df0-aaaf-2d994fa3f731" type="text/javascript"></script>
@@ -46,19 +46,13 @@
           <div class="header-menu">
             <div class="header-menu__left">
               <ul class="header-menu__list">
-                <li class="header-menu__item header-menu__item_catalog"><a class="header-menu__item-catalog catalog-open" href="#"><span>Каталог</span></a></li>
-                <li class="header-menu__item header-menu__item-dropdown catalog-dropdown"><a href="#"><span>Покупателям</span></a></li>
-                <li class="header-menu__item header-menu__item_shops"><span><a href="shops.html">Магазины</a></span></li>
-                <li class="header-menu__item header-menu__item_blog"><span><a href="#">Блог</a></span></li>
-                <li class="header-menu__item header-menu__item_search catalog-search-open only-mobile_header-menu"><a href="#"><span>Поиск</span></a></li>
+                <li class="header-menu__item header-menu__item_catalog"><a class="header-menu__item-catalog catalog-open" href="#"></a></li>
               </ul>
             </div>
             <div class="header-menu__center"><a class="header-logo" href="http://brusnika.ruformat.ru/"><img src="../svg/header_logo.png" alt=""></a></div>
-            <div class="header-menu__right">
+            <div class="header-menu__right" style="min-width: auto;">
               <ul class="header-menu__list">
-                <li class="header-menu__item header-menu__item_search catalog-search-open only-desktop_header-menu"><a href="#"><span>Поиск</span></a></li>
                 <li class="header-menu__item header-menu__item_enter"><a class="header-login-item" href="login.html"><span>Вход</span></a></li>
-                <li class="header-menu__item header-menu__item_favorites"><a class="header-menu__item_favorites" href="favorites.html"><span>Избранное</span></a></li>
                 <li class="header-menu__item header-menu__item_basket"><a class="header-basket-item basket-open" href="#"><img src="../svg/basket.svg"><span class="dot"></span></a></li>
               </ul>
             </div>
@@ -501,7 +495,7 @@
       </header>
       <main class="page-content">
         <div class="page-inner page-inner--w2">
-          <div class="basket__header">
+          <div class="basket__page-header">
             <div class="row align-items-end justify-content-between">
               <div class="col-md-6">
                 <div class="d-md-none mb-3"><a class="link link--black" href="#">Вернуться в корзину</a></div>
@@ -650,19 +644,8 @@
                         <div class="filter-row__text-coll">Доставка заказа в один из пунктов самовывоза компании СДЭК.</div>
                       </label>
                       <div class="filter-row__content">
-                        <div class="mb-30px">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.</div>
                         <div class="bold mb-10px"> Куда доставить заказ?</div>
-                        <div class="mb-30px">
-                          <div class="search-form search-form--basket">
-                            <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
-                            <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
-                          </div>
-                        </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
-                        <div class="v-hidden">
-                          <div class="mt-30px"> 
-                            <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
-                          </div>
-                        </div>
+                        <div class="mb-30px"><a class="btn btn--medium" href="#checkout-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ВЫБРАТЬ ПУНКТ ВЫДАЧИ            </a></div>
                       </div>
                     </div>
                   </div>
@@ -1223,7 +1206,7 @@
                   <div class="mobile-filter-item-heading-title">Размер</div>
                   <div class="mobile-filter-item-heading-toggler"></div>
                 </div>
-                <div class="mobile-filter-item-content"><a class="mobile-filter__link size-open" href="#">Руководство по размерам</a>
+                <div class="mobile-filter-item-content"><a class="link link--black_border size-open" href="#">Как подобрать размер</a>
                   <div class="filter-row filter-row__size">
                     <label class="form-checkbox">
                       <input class="form-item form-item--checkbox" type="checkbox"><span class="form-checkbox-title">One size</span>

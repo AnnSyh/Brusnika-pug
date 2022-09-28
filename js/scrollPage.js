@@ -216,7 +216,7 @@ const favoritesList = document.querySelectorAll('.page-favorites .catalog-item.w
 favoritesList.forEach((item) => {
   item.addEventListener('click', (evt) => {
     evt.preventDefault();
-    const parent = evt.target.parentNode;
+    const parent = evt.target.parentNode.parentNode;
     parent.classList.toggle('d-none');
 
   });

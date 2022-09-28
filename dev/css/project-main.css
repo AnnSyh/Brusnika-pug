@@ -3922,6 +3922,7 @@ ul.footer-top__list {
   height: 50px;
   line-height: 50px;
   white-space: nowrap;
+  margin-left: 30px;
 }
 @media screen and (max-width: 670px) {
   .order-table__item > .order-table__price {
@@ -4626,9 +4627,8 @@ ul.footer-top__list {
 
 .favorites__count-title {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
-  text-transform: uppercase;
   margin-bottom: 30px;
 }
 
@@ -4670,6 +4670,9 @@ ul.footer-top__list {
   text-align: left;
 }
 
+.basket__page-header {
+  margin-bottom: 70px;
+}
 .basket__header {
   margin-bottom: 50px;
 }
@@ -4772,15 +4775,18 @@ ul.footer-top__list {
 }
 .basket-form__title {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 11px;
 }
 @media screen and (max-width: 480px) {
   .basket-form__title {
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    line-height: 20px;
+    margin-bottom: 5px;
   }
 }
 .basket-form__text {
@@ -6156,4 +6162,17 @@ body,
   .page-content {
     margin-bottom: 70px;
   }
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number],
+input[type=number]:hover,
+input[type=number]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
 }

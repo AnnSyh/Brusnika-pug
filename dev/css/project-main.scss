@@ -483,7 +483,7 @@ body,
   font-weight: 600;
   font-size: 14px;
   line-height: 20px; 
-}
+} 
 
 /* --------/add-favorites----- */
 
@@ -547,4 +547,17 @@ body,
   @media screen and (max-width:768px) {
     margin-bottom: 70px;
   }
+}
+
+//убрать стрелочки для мозилы
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
 }

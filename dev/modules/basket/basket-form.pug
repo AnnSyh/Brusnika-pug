@@ -86,18 +86,21 @@ div.basket-page-form
                   |  от 238 Р
               .filter-row__text-coll Доставка заказа в один из пунктов самовывоза компании СДЭК.
             .filter-row__content
-                div.mb-30px
-                  | Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.
                 div.bold.mb-10px  Куда доставить заказ?
                 div.mb-30px
-                  .search-form.search-form--basket
-                    input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Москва, ул. Ленина, 44, кв. 23')
-                    button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
+                  a.btn.btn--medium(href='#checkout-popup' data-popup='{"type":"inline"}') ВЫБРАТЬ ПУНКТ ВЫДАЧИ            
+            //-     div.mb-30px
+            //-       | Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.
+            //-     div.bold.mb-10px  Куда доставить заказ?
+            //-     div.mb-30px
+            //-       .search-form.search-form--basket
+            //-         input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Москва, ул. Ленина, 44, кв. 23')
+            //-         button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
 
-                a.link-more.link-more-js(href="#")  Добавить комментарий к заказу
-                .v-hidden
-                  div.mt-30px 
-                    textarea.form-item--textarea.w-100(name="" cols="30" rows="10") 
+            //-     a.link-more.link-more-js(href="#")  Добавить комментарий к заказу
+            //-     .v-hidden
+            //-       div.mt-30px 
+            //-         textarea.form-item--textarea.w-100(name="" cols="30" rows="10") 
 
       .filter-row.filter-row-click
         

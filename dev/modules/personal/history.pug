@@ -1,37 +1,83 @@
-- for (var x = 0; x < 2; x++)
+.history
+  .tabs
+    .tabs-heading
+      .tab-heading-item.active(data-tab='#current_orders' data-tabs='.orders') Текущие заказы (2)
+      .tab-heading-item(data-tab='#history_orders' data-tabs='.orders') История заказов (2)
+    .tabs-content
+      #current_orders.tabs-content-item.orders.active 
+        
+          .order-items
+            .order-item
+              .order-item-title Заказ № 21112 от 03.02.2021
+              .order-item-sub-title 
+                |  Сумма заказа
+                .price 19 000 РУБ.
+                | Ожидается доставка
 
-  .order-items
-    .order-item
-      .order-item-title Заказ № 21112 от 03.02.2021
-      .order-item-info.row.mb-3
-        .col-md-3.mb-4.mb-lg-0
-          p
-            b Статус
-          p Ожидается доставка
-        .col-md-3.mb-4.mb-lg-0
-          p
-            b Сумма заказа
-          p
-            | 11 390 Р
-            br
-            | Cпособ оплаты: Онлайн картой на сайте
-        .col-md-3.mb-4.mb-lg-0
-          p
-            b Дата доставки
-          p 07.03.2021
-        .col-md-3
-          p
-            b Доставка
-          p Пункт выдачи посылок СДЭК Ростов-на-Дону, ул. Ленина, 44
-      .d-none.d-lg-block
-        .row.justify-content-between.align-items-center
-          .col-auto
-            a.link.link--black_border(href='last-order.html') Подробнее о заказе
-          .col-auto
-            a.btn.btn--medium.btn--black(href='#') ПОВТОРИТЬ ЗАКАЗ
-      .d-lg-none
-        .row.mt-4
-          .col-12.mb-4
-            a.btn.btn--medium.btn--black.btn--fullwidth(href='#') ПОВТОРИТЬ ЗАКАЗ
-          .col-12.center
-            a.link.link--black_border(href='last-order.html') Подробнее о заказе
+              .order-row 
+                .order-row__images 
+                  .order-photo-holder
+                    img.cover(src='../dummy/orders/1.jpg')
+                  .order-photo-holder
+                    img.cover(src='../dummy/orders/2.jpg')
+                .order-row__btns 
+                  span
+                    a.link.link--black_border(href="orders.html") Отследить заказ
+                  a.btn.btn--medium.btn--black(href='last-order.html') Подробнее о заказе
+
+          .order-items
+            .order-item
+              .order-item-title Заказ № 21110 от 04.05.2021
+              .order-item-sub-title 
+                |  Сумма заказа
+                .price 29 000 РУБ.
+                | Ожидается доставка
+
+              .order-row 
+                .order-row__images 
+                  .order-photo-holder
+                    img.cover(src='../dummy/catalog/c9.jpg')
+                  .order-photo-holder
+                    img.cover(src='../dummy/catalog-large/c2.png')
+                .order-row__btns 
+                  span
+                    a.link.link--black_border(href="orders.html") Отследить заказ
+                  a.btn.btn--medium.btn--black(href='last-order.html') Подробнее о заказе
+
+      #history_orders.tabs-content-item.orders 
+          //- - for (var x = 0; x < 2; x++)
+          .order-items
+            .order-item
+              .order-item-title Заказ № 21112 от 03.02.2021
+              .order-item-sub-title 
+                |  Сумма заказа
+                .price 19 000 РУБ.
+                | Ожидается доставка
+
+              .order-row 
+                .order-row__images 
+                  .order-photo-holder
+                    img.cover(src='../dummy/orders/1.jpg')
+                  .order-photo-holder
+                    img.cover(src='../dummy/orders/2.jpg')
+                .order-row__btns 
+                  span
+                  a.btn.btn--medium.btn--black(href='last-order.html') Подробнее о заказе
+
+          .order-items
+            .order-item
+              .order-item-title Заказ № 21110 от 04.05.2021
+              .order-item-sub-title 
+                |  Сумма заказа
+                .price 29 000 РУБ.
+                | Ожидается доставка
+
+              .order-row 
+                .order-row__images 
+                  .order-photo-holder
+                    img.cover(src='../dummy/catalog/c9.jpg')
+                  .order-photo-holder
+                    img.cover(src='../dummy/catalog-large/c2.png')
+                .order-row__btns 
+                  span
+                  a.btn.btn--medium.btn--black(href='last-order.html') Подробнее о заказе

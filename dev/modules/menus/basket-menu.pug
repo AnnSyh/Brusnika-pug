@@ -4,11 +4,13 @@
       .basket-open.basket-menu__close
       .basket-menu-sections
         .basket-mobile-menu__header
-          a.basket__title-link(href='basket.html') Товары в корзине(1)
-          a.basket__title-link-clean-basket(href='#') Очистить корзину
+          a.basket__title-link(href='basket.html') Товары в корзине
+            span.counter-js (1)
+          a.basket__title-link-clean-basket.clean-basket-js(href='#') Очистить корзину
         .basket-mobile-menu__body.simplebar
           include ../basket/items-in-cart
           //- include ../basket/watching-with
+        include ../messages/basket-empty
       .basket-mobile-menu__footer
         .basket-mobile-menu__footer-links
           .basket__title-link 1 Товар на сумму

@@ -11,6 +11,10 @@
 
   .page-heading {
     margin-bottom: 50px;
+
+    @media screen and  (max-width: 1199px) {
+      margin-bottom: 0;
+    }
   }
 
   .order-item-title {

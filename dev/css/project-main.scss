@@ -212,6 +212,16 @@
 }
 
 
+@media screen and (min-width: 1200px) {
+  
+  .position-lg-top-100px {
+    position: relative; 
+    top: -100px;
+  }
+}
+
+
+
 
 .order-aside-sticky {
   top: 140px; //высота закрепленной при прокрутке шапки

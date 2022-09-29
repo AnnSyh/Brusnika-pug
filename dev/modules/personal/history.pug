@@ -1,4 +1,4 @@
-.history
+.history.position-lg-top-100px
   .tabs
     .tabs-heading
       .tab-heading-item.active(data-tab='#current_orders' data-tabs='.orders') Текущие заказы (2)
@@ -7,7 +7,7 @@
       #current_orders.tabs-content-item.orders.active 
         
           .order-items
-            .order-item
+            .order-item.p-0
               .order-item-title Заказ № 21112 от 03.02.2021
               .order-item-sub-title 
                 |  Сумма заказа
@@ -22,11 +22,11 @@
                     img.cover(src='../dummy/orders/2.jpg')
                 .order-row__btns 
                   span
-                    a.link.link--black_border(href="orders.html") Отследить заказ
-                  a.btn.btn--medium.btn--black(href='last-order.html') Подробнее о заказе
+                    a.link.link--black_border.nowrap(href="orders.html") Отследить заказ
+                  a.btn.btn--medium.btn--black.nowrap(href='last-order.html') Подробнее о заказе
 
           .order-items
-            .order-item
+            .order-item.p-0
               .order-item-title Заказ № 21110 от 04.05.2021
               .order-item-sub-title 
                 |  Сумма заказа
@@ -41,13 +41,13 @@
                     img.cover(src='../dummy/catalog-large/c2.png')
                 .order-row__btns 
                   span
-                    a.link.link--black_border(href="orders.html") Отследить заказ
-                  a.btn.btn--medium.btn--black(href='last-order.html') Подробнее о заказе
+                    a.link.link--black_border.nowrap(href="orders.html") Отследить заказ
+                  a.btn.btn--medium.btn--black.nowrap(href='last-order.html') Подробнее о заказе
 
       #history_orders.tabs-content-item.orders 
           //- - for (var x = 0; x < 2; x++)
           .order-items
-            .order-item
+            .order-item.p-0
               .order-item-title Заказ № 21112 от 03.02.2021
               .order-item-sub-title 
                 |  Сумма заказа
@@ -65,7 +65,7 @@
                   a.btn.btn--medium.btn--black(href='last-order.html') Подробнее о заказе
 
           .order-items
-            .order-item
+            .order-item.p-0
               .order-item-title Заказ № 21110 от 04.05.2021
               .order-item-sub-title 
                 |  Сумма заказа

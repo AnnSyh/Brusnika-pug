@@ -53,9 +53,10 @@ $(".clean-basket-js").on("click", function (e) {
   e.preventDefault();
   const parent = e.target.parentNode.parentNode
   parent.querySelector('.basket-mobile-menu__body').classList.add('d-none');
-  parent.querySelector('.message').classList.add('d-none');
+  parent.querySelector('.message').classList.toggle('d-none');
   parent.parentNode.querySelector('.basket-mobile-menu__footer').classList.add('d-none');
   parent.parentNode.querySelector('.counter-js').classList.add('d-none');
+  parent.parentNode.querySelector('.basket-mobile-menu__header').classList.add('d-none');
 });
 
 const checkListLinks = document.querySelectorAll('.check-list a');

@@ -4977,6 +4977,11 @@ ul.footer-top__list {
 .page-content.page-content--personal-area .page-heading {
   margin-bottom: 50px;
 }
+@media screen and (max-width: 1199px) {
+  .page-content.page-content--personal-area .page-heading {
+    margin-bottom: 0;
+  }
+}
 .page-content.page-content--personal-area .order-item-title {
   margin-top: 0px;
   margin-bottom: 20px;
@@ -5754,9 +5759,32 @@ ul.footer-top__list {
   width: 65px;
   height: 97px;
 }
+@media screen and (max-width: 600px) {
+  .history .order-row__images {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .history .order-row__btns {
   gap: 40px;
   align-items: baseline;
+}
+@media screen and (max-width: 600px) {
+  .history .order-row__btns {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .history .order-row__btns .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .history .order-row {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .history .order-item-sub-title {
   display: flex;
@@ -5768,6 +5796,12 @@ ul.footer-top__list {
   line-height: 20px;
   font-weight: bold;
 }
+@media screen and (max-width: 600px) {
+  .history .order-item-sub-title {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
 .history .tabs-content-item {
   display: none;
 }
@@ -5776,7 +5810,24 @@ ul.footer-top__list {
 }
 .history .tabs-heading {
   justify-content: inherit;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 600px) {
+  .history .tabs-heading {
+    margin-bottom: 20px;
+  }
+}
+.history .tab-heading-item {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+}
+@media screen and (max-width: 600px) {
+  .history .tab-heading-item {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
 }
 .history .tabs-heading .tab-heading-item,
 .history .tabs-heading .tab-heading-item.active {
@@ -5939,6 +5990,12 @@ ul.footer-top__list {
   display: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .position-lg-top-100px {
+    position: relative;
+    top: -100px;
+  }
+}
 .order-aside-sticky {
   top: 140px;
   position: -webkit-sticky;

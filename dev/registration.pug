@@ -46,8 +46,22 @@ block content
                 label.form-item-label(for='reg_pass2') Новый пароль еще раз
                 input#reg_pass2.form-item.form-item--password(type='password' name='reg_pass2' required='' data-validation='{"minlength": "6", "equalTo": "#reg_pass1", "message": {"equalTo": "Пароли не совпадают", "required": "", "minlength": "Минимальная длина пароля – 6 символов"}}')
                 span.password-show
+            //- .form-row
+            //-     label.form-label(for='reg_captcha') Я не робот
+            //-     .form-item-holder
+            //-         .form-captcha
+            //-             .form-captcha-inner
+            //-                 img.form-captcha-img(src='https://i.ytimg.com/vi/qW5WMdgJ8wI/mqdefault.jpg')
+            //-                 span.form-captcha-reload(data-href='captcha.json') Обновить
+            //-                 input#reg_captcha.form-captcha-text.form-item.form-item--text(name='reg_captcha' required='' data-validation='')
+
             .form-row
-                | я не робот
+                .form-captcha
+                    img(src='../svg/not_robot.png' width='287')
+                
+
+
+
 
             .form-row
                 button.btn.btn--black.btn--medium.w100.max-w100(type='submit') Зарегистрироваться

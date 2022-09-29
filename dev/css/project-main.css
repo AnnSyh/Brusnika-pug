@@ -2612,6 +2612,9 @@ ul.disc {
     max-width: calc(100% - 60px);
   }
 }
+.reg-form__under-form-text {
+  margin-bottom: 50px;
+}
 
 .jcf-number {
   position: relative;
@@ -2751,6 +2754,29 @@ ul.disc {
 
 .jcf-range .jcf-range-track .jcf-range-handle:hover {
   transform: scale(1.4);
+}
+
+.form-captcha-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.form-captcha-inner .form-captcha-img {
+  width: 25%;
+}
+.form-captcha-inner .form-captcha-reload {
+  display: block;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #121212 url(../svg/icon_load.svg) no-repeat center center;
+  background-size: 60%;
+  text-indent: -9999px;
+  cursor: pointer;
+  transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .page-popup {

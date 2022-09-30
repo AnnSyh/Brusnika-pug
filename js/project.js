@@ -70,6 +70,7 @@
 					self.$dropdown = $(".header-menu__item-dropdown", $sel.page);
 					self.$buyerMenu = $("#catalog-buyer-menu", $sel.page);
 					self.$buyerMenuSections = $(".menu-sections", $sel.page);
+					self.$buyerMenuSectionsNotDropdown = $(".header-menu__list .header-menu__item:not(.catalog-dropdown)", $sel.page);
 
 					self.$btn = $(".catalog-open", $sel.page);
 					self.$menu = $("#catalog-menu", $sel.page);
@@ -205,13 +206,32 @@
 						self.openBuyerMenu();
 					});
 
+					// $(self.$buyerMenuSections, self.$dropdown).on("mouseleave", function (e) { //уход с  пункт 'Покупателям'
 					$(self.$buyerMenuSections, self.$dropdown).on("mouseleave", function (e) { //уход с  пункт 'Покупателям'
 						console.log('уход = ', self.$buyerMenuSections);
+						console.log('e.target = ', e.target);
 
 						e.preventDefault();
 						e.stopPropagation();
 						var $link = $(this);
 						self.closeBuyerMenu();
+
+
+					});
+
+					// наведение на все пункты меню кроме пункта 'Покупателям'
+					// console.log('$(self.buyerMenuSectionsNotDropdown)= ',buyerMenuSectionsNotDropdown);
+					const linksNotDropdown = document.querySelectorAll('.header-menu__list .header-menu__item:not(.catalog-dropdown)');
+					console.log('linksNotDropdown = ', linksNotDropdown);
+					linksNotDropdown.forEach((item) => {
+						item.addEventListener("mouseenter", function (e) { //наведение на все пункты меню кроме пункта 'Покупателям'
+							// console.log('наведение/клик = ', item);
+							// console.log('e.target = ', e.target);
+							e.preventDefault();
+							e.stopPropagation();
+							var $link = $(this);
+							self.closeBuyerMenu();
+						});
 					});
 
 					self.$links.on("mouseover", function (e) { //наведение на пункты меню

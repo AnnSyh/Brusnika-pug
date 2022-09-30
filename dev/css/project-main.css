@@ -5230,6 +5230,10 @@ ul.footer-top__list {
     font-weight: 400;
   }
 }
+.order-table > .row.justify-content-between::after {
+  content: none;
+}
+
 /* Личный кабинет */
 #map {
   width: auto;

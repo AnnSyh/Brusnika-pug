@@ -26,8 +26,8 @@
     .d-none.d-lg-block
       .row.justify-content-between.align-items-center.mb-5
         .col-auto
-          a.link.link--black_border(href='order-cancel.html') Отменить заказ
-        .col-auto
+          a.link.link--black_border(href='#') Отследить заказ
+        .col-md-3
           a.btn.btn--medium.btn--black(href='#') ПОВТОРИТЬ ЗАКАЗ
     .d-lg-none
       .row.mt-5
@@ -70,76 +70,5 @@
         p
           b Стоимость доставки
         p 0 Р
-    .order-table
-      .row.align-items-end.d-none.d-lg-flex
-        .col-lg-6
-          span.h2 Товары в заказе
-        .col-lg-6
-          .row
-            .col-md-3
-              b Стоимость
-            .col-md-6
-              b Количество
-            .col-md-3
-              b Итого
-      .h2.mb-3.d-lg-none Товары в заказе
-      .row
-        .col-4.col-lg-6
-          .row
-            .col-12.col-lg-3
-              .order-photo-holder
-                img.cover(src='../dummy/orders/1.jpg')
-            .col-9.d-none.d-lg-block
-              p
-                b Бутсы Nike Vapor 13 Pro FG AT7901-414
-              p Размер: 41 RU
-        .col-8.col-lg-6
-          .row
-            .col-12.d-lg-none
-              p Бутсы Nike Vapor 13 Pro FG AT7901-414
-              b.mr-10 8 990 Р
-              | 1 шт.
-            .col-lg-3.d-none.d-lg-block 8 990 Р
-            .col-lg-6.d-none.d-lg-block 1
-            .col-lg-3.d-none.d-lg-block 8 990 Р
-      .row
-        .col-4.col-lg-6
-          .row
-            .col-12.col-lg-3
-              .order-photo-holder
-                img.cover(src='../dummy/orders/2.jpg')
-            .col-9.d-none.d-lg-block
-              p
-                b Мяч футбольный Select Diamond
-              p Размер: 5
-        .col-8.col-lg-6
-          .row
-            .col-12.d-lg-none
-              p Мяч футбольный Select Diamond
-              b.mr-10 2 390 Р
-              | 1 шт.
-            .col-lg-3.d-none.d-lg-block 2 390 Р
-            .col-lg-6.d-none.d-lg-block 1
-            .col-lg-3.d-none.d-lg-block 2 390 Р
-      .row.justify-content-between.d-none.d-lg-flex
-        .col-auto  
-        .col-md-4
-          .row.mb-2
-            .col-md-8.right Общий вес: 
-            .col-md-4 4, 28 кг
-          .row.mb-2
-            .col-md-8.right Стоимость доставки: 
-            .col-md-4 0 Р
-          .row.mb-2
-            .col-md-8.right Сумма заказа:
-            .col-md-4 11 380 Р
-          .row
-            .col-md-8.right
-              b Всего: 
-            .col-md-4 11 380 Р
-      .d-lg-none
-        p Общий вес: 4, 28 кг
-        p Стоимость доставки: 0 Р
-        p Сумма заказа: 11 380 Р
-        p
-          b Всего: 11 380 Р
+
+    include ../orders/items-in-order     

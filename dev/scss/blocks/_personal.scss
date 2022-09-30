@@ -263,11 +263,11 @@
   padding-bottom: 30px;
 }
 
-.order-table>.row:last-child {
+.order-table>.row:last-child { 
   padding-bottom: 0;
 }
 
-.order-table>.row:last-child:after {
+.order-table>.row:last-child:after { 
   display: none;
 }
 
@@ -306,4 +306,8 @@
     }
   }
 
+}
+
+.order-table>.row.justify-content-between::after {
+  content: none;
 }

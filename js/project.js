@@ -153,6 +153,7 @@
 					});
 
 					$sel.window.on("click", function (e) {
+						// console.log('$sel.window.on click');
 
 						if (!$('.only-desktop_header-menu .open-search').length) {
 							const searchIcon = $('.only-desktop_header-menu');
@@ -186,6 +187,8 @@
 							if (self.openedSizeMenu) {
 								self.closeSizeMenu();
 							}
+						} else {
+							console.log('$sel.window.on  else');
 						}
 						// доделать закрытие мерю при клике вне его области для Фильтров стр brand.html
 						// if (!$(e.target).closest("#self.$filterMenu").length) {
@@ -193,6 +196,8 @@
 						// 		self.closeSizeMenu();
 						// 	}
 						// }
+
+
 					});
 
 					$(self.$dropdown, self.$buyerMenu).on("mouseenter click", function (e) { //наведение на пункт 'Покупателям'

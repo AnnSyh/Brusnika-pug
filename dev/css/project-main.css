@@ -4103,7 +4103,6 @@ ul.footer-top__list {
   width: 24px;
   height: 24px;
   background: url("../../svg/basket_remove.svg") no-repeat center center;
-  background-size: contain;
   transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 

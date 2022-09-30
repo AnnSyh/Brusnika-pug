@@ -354,3 +354,28 @@ paymentList.forEach((item) => {
 
 //   e.target.parentNode.parentNode.parentNode.querySelector('.v-hidden').classList.remove('v-hidden');
 // });
+
+// закрыть все попапы
+
+const closeAllPopups = document.querySelectorAll('.page-popup');
+const btnClose = document.querySelectorAll('.close-popup');
+
+btnClose.forEach((item) => {
+
+  item.addEventListener('click', (e) => {
+      console.log('close all btns');
+
+
+      closeAllPopups.forEach((popup) => {
+      
+        if (!popup.classList.contains('mfp-hide')) {
+          popup.classList.add('mfp-hide');
+          document.querySelector('mfp-bg').classList.remove('mfp-hide');
+        } 
+      
+      });
+
+  });
+
+});
+

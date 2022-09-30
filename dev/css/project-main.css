@@ -4012,6 +4012,7 @@ ul.footer-top__list {
 }
 .order-aside__list {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .order-aside__to-pay {
   display: flex;
@@ -4800,18 +4801,16 @@ ul.footer-top__list {
 }
 .basket-form__title {
   font-weight: 600;
-  font-size: 20px;
-  text-transform: uppercase;
-  line-height: 30px;
-  margin-bottom: 11px;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 480px) {
   .basket-form__title {
     font-size: 14px;
-    text-transform: uppercase;
     margin-bottom: 10px;
     line-height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 }
 .basket-form__text {
@@ -4937,10 +4936,6 @@ ul.footer-top__list {
 
 .filter-row__inner.opend .filter-row__content {
   display: block;
-}
-
-.opend .v-hidden {
-  visibility: visible;
 }
 
 .message {

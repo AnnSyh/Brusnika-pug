@@ -247,7 +247,7 @@ linksMore.forEach((item) => {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
       // evt.target.nextElementSibling.classList.toggle('d-none');
-      // console.log('evt.target.nextElementSibling = ',evt.target.nextElementSibling);
+      console.log('evt.target.nextElementSibling = ',evt.target.nextElementSibling);
       evt.target.nextElementSibling.classList.toggle('v-hidden');
     });
   }

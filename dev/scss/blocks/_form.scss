@@ -18,8 +18,35 @@ ul.disc {
   padding-left: 30px;
 }
 
-#auth-form {
+// меняем местами текст и закладки (дизайн такой)
+#form_email > .form-row:first-child, 
+#form_phone > .form-row:first-child, 
+#auth-form_phone > .form-row:first-child,
+#auth-form_email > .form-row:first-child { 
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#change-password-popup{ 
   padding-top: 100px;
+
+  .tabs.form-tabs { 
+    position: relative;
+    padding-top: 80px;
+  }
+}
+
+#auth-form { 
+  padding-top: 100px;
+}
+
+#auth-form { 
+  // меняем местами текст и закладки (дизайн такой)
+  .tabs.form-tabs { 
+    position: relative;
+    padding-top: 60px;
+  }
 
   @media screen and (max-width:480px) {
     padding: 20px 15px;

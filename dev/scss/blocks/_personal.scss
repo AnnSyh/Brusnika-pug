@@ -6,7 +6,7 @@
 
   @media screen and (max-width:960px) {
     margin-top: 30px;
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 
   .page-heading {
@@ -22,6 +22,14 @@
     margin-bottom: 20px;
   }
 }
+
+@media screen and (max-width:960px) {
+
+  .page-content--personal-area--dashboard  {
+    margin-bottom: 0 !important;
+  }
+}
+
 
 .dashboard-title {
   font-weight: 600;

@@ -86,52 +86,16 @@ checkListLinks.forEach((item) => {
 
 });
 
-
-// $("button.basket-open").on("click", function (e) {
-//   e.preventDefault();
-//   const item = e.target
-//   item.classList.toggle('active');
-// });
-
-$('#catalog-basket').on("click", function (e) {
-  e.preventDefault();
-  const item = e.target
-  item.classList.toggle('active');
-});
-
-
-
-// const simplebarsList = document.querySelectorAll('.simplebar');
-// console.log('simplebarsList = ', simplebarsList);
-
-// simplebarsList.forEach((item) => {
-//   new SimpleBar(item, {
-//     autoHide: false,
-//   });
-// })
-// 
-// simpleBar.unMount()
-
 const simplebar1 = document.querySelector('.basket-mobile-menu__body.test.simplebar');
 const body = document.querySelector('body');
 
 if (body.classList.contains('size-open')) {
-  console.log('contains(size-open)');
+  // console.log('contains(size-open)');
   new SimpleBar(simplebar1, { autoHide: false });
 }
 
-
-
-
-
-
-$('.jcf-option-notify-about-arrival').on("click", function (e) {
-  console.log('notify-about-arrival !!!');
-});
-
-
 $('.sms-not-coming').on("click", function (e) {
-  console.log('sms-not-coming');
+  // console.log('sms-not-coming');
   e.preventDefault();
   window.location = 'login.html';
   const tabs = document.querySelectorAll('.sign-with');
@@ -145,9 +109,8 @@ $('.sms-not-coming').on("click", function (e) {
 
 
 // сделать при клике окрашивание границы в черный и появление подсписка
-
 const radiosList = document.querySelectorAll('.basket-form .form-item--radio');
-console.log('radiosList = ', radiosList);
+// console.log('radiosList = ', radiosList);
 
 radiosList.forEach((item) => {
   item.addEventListener('click', (e) => {
@@ -206,19 +169,7 @@ productListLinks.forEach((item) => {
 
   });
 
-
 });
-
-//переключение картинки при нажатии на цвета в карточках
-// слайдеры 'Вам также может понравиться' и 'Ранее вы смотрели' др блоки с карточками
-
-
-// const sizeGuideLink = document.querySelector('.size-guide-link');
-
-// sizeGuideLink.addEventListener('click', (e) => {
-//   console.log('sizeGuideLink');
-
-// });
 
 // -----------page-favorites-----------------------
 const favoritesList = document.querySelectorAll('.page-favorites .catalog-item.w2 .catalog-item-like');
@@ -242,18 +193,15 @@ favoritesList.forEach((item) => {
 const linksMore = document.querySelectorAll('.link-more-js');
 
 linksMore.forEach((item) => {
-
   if (item) {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
       // evt.target.nextElementSibling.classList.toggle('d-none');
-      console.log('evt.target.nextElementSibling = ',evt.target.nextElementSibling);
+      // console.log('evt.target.nextElementSibling = ',evt.target.nextElementSibling);
       evt.target.nextElementSibling.classList.toggle('v-hidden');
     });
   }
 });
-
-
 
 // $(".catalog-items--slider-watched").slick({
 //   slidesToShow: 6,
@@ -277,9 +225,7 @@ linksMore.forEach((item) => {
 //     }
 //   ]
 // });
-
 //
-
 
 // аккардион-обычный  без чекбокса
 $('.accordion--basket-page .accordion-item-heading').on("click", function (e) {
@@ -296,9 +242,7 @@ $('.accordion--basket-page .accordion-item-heading').on("click", function (e) {
 
 // аккардион с чекбоксом
 const filterInputs = document.querySelectorAll('input[name="pickup"]');
-
 filterInputs.forEach((item) => {
-
   item.addEventListener('click', (e) => {
     const parent = e.target.parentNode.parentNode.parentNode.parentNode;
     const content = parent.querySelector('.filter-row__content');
@@ -313,9 +257,7 @@ filterInputs.forEach((item) => {
       } else {
         contentCurrent.classList.remove('opend');
       }
-
     });
-
   });
 });
 
@@ -335,25 +277,7 @@ paymentList.forEach((item) => {
 
   });
 
-
 });
-
-// const paymentCard = document.querySelector('#payment-card');
-// paymentCard.addEventListener('click', (e) => {
-
-//   radiosListPayment.forEach((item) => {
-//     item.parentNode.parentNode.classList.add('.v-hidden')
-//   });
-
-//   e.target.parentNode.parentNode.parentNode.querySelector('.v-hidden').classList.remove('v-hidden');
-// });
-// const paymentReceipt = document.querySelector('#payment-receipt');
-// paymentReceipt.addEventListener('click', (e) => {
-
-
-
-//   e.target.parentNode.parentNode.parentNode.querySelector('.v-hidden').classList.remove('v-hidden');
-// });
 
 // закрыть все попапы
 
@@ -363,9 +287,7 @@ const btnClose = document.querySelectorAll('.close-popup');
 btnClose.forEach((item) => {
 
   item.addEventListener('click', (e) => {
-      console.log('close all btns');
-
-
+      // console.log('close all btns');
       closeAllPopups.forEach((popup) => {
       
         if (!popup.classList.contains('mfp-hide')) {

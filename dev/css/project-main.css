@@ -5060,6 +5060,16 @@ ul.footer-top__list {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 480px) {
+  .dashboard-enter {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding-bottom: 25px !important;
+  }
+}
 .personal {
   display: flex;
   flex-direction: row;

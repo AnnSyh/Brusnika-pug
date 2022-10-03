@@ -76,7 +76,7 @@ const shops = [
 ]
 
 const lengthShops = Object.keys(shops).length;
-console.log('lengthShops = ', lengthShops);
+// console.log('lengthShops = ', lengthShops);
 const placemarks = [];
 const shopsCoords = [];
 
@@ -88,7 +88,7 @@ function init() {
 	});
 
 	for (let i = 0; i < lengthShops; i++) {
-		console.log('shops [' + i + '] = ', shops[i].coords);
+		// console.log('shops [' + i + '] = ', shops[i].coords);
 
 		placemarks[i] = new ymaps.Placemark(shops[i].coords,
 			{

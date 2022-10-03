@@ -227,7 +227,7 @@
 					// наведение на все пункты меню кроме пункта 'Покупателям'
 					// console.log('$(self.buyerMenuSectionsNotDropdown)= ',buyerMenuSectionsNotDropdown);
 					const linksNotDropdown = document.querySelectorAll('.header-menu__list .header-menu__item:not(.catalog-dropdown)');
-					console.log('linksNotDropdown = ', linksNotDropdown);
+					// console.log('linksNotDropdown = ', linksNotDropdown);
 					linksNotDropdown.forEach((item) => {
 						item.addEventListener("mouseenter", function (e) { //наведение на все пункты меню кроме пункта 'Покупателям'
 							// console.log('наведение/клик = ', item);
@@ -488,9 +488,8 @@
 				},
 
 				product: function () {
-					console.log('product slider');
+					// console.log('product slider');
 					// ------------------------------
-
 					$(".product-photos-gallery").slick({
 						slidesToShow: 1,
 						slidesToScroll: 1,
@@ -1175,7 +1174,7 @@
 					const tooltipCloses = document.querySelectorAll('.tooltip__close');
 
 					tooltipCloses.forEach((item) => {
-						console.log('forEach');
+						// console.log('forEach');
 						item.addEventListener('click', (e) => {
 							console.log('addEventListener click');
 						});

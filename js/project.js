@@ -201,8 +201,7 @@
 					});
 
 					$(self.$dropdown, self.$buyerMenu).on("mouseenter click", function (e) { //наведение на пункт 'Покупателям'
-						console.log('наведение');
-
+						// console.log('наведение');
 						e.preventDefault();
 						e.stopPropagation();
 						var $link = $(this);
@@ -213,9 +212,8 @@
 
 					// $(self.$buyerMenuSections, self.$dropdown).on("mouseleave", function (e) { //уход с  пункт 'Покупателям'
 					$(self.$buyerMenuSections, self.$dropdown).on("mouseleave", function (e) { //уход с  пункт 'Покупателям'
-						console.log('уход = ', self.$buyerMenuSections);
-						console.log('e.target = ', e.target);
-
+						// console.log('уход = ', self.$buyerMenuSections);
+						// console.log('e.target = ', e.target);
 						e.preventDefault();
 						e.stopPropagation();
 						var $link = $(this);
@@ -254,8 +252,7 @@
 				},
 				openMenu: function () {
 					var self = this;
-					console.log('111openMenu');
-
+					// console.log('111openMenu');
 					self.$menu.addClass("catalog-menu_visible");
 					self.$btn.addClass("active");
 					// очистить класы менюшек у боди т.е.закрыть их
@@ -269,8 +266,7 @@
 				},
 				closeMenu: function () {
 					var self = this;
-					console.log('111closeMenu');
-
+					// console.log('111closeMenu');
 					self.$menu.removeClass("catalog-menu_visible");
 					self.$btn.removeClass("active");
 					$sel.body.removeClass("catalog-open");
@@ -299,8 +295,7 @@
 
 				openBasketMenu: function () {
 					var self = this;
-					console.log('2222openBasketMenu');
-
+					// console.log('2222openBasketMenu');
 					self.$basketMenu.addClass("basket-menu_visible");
 					self.$basketOpenBtn.addClass("active");
 					// очистить класы менюшек у боди т.е.закрыть их
@@ -314,8 +309,7 @@
 				},
 				closeBasketMenu: function () {
 					var self = this;
-					console.log('closeBasketMenu');
-
+					// console.log('closeBasketMenu');
 					self.$basketMenu.removeClass("basket-menu_visible");
 					self.$basketOpenBtn.removeClass("active");
 					$sel.body.removeClass("basket-open");
@@ -336,7 +330,7 @@
 					self.openedBuyerhMenu = true;
 				},
 				closeBuyerMenu: function () {
-					console.log('closeBuyerMenu');
+					// console.log('closeBuyerMenu');
 					var self = this;
 
 					self.$buyerMenu.hide();
@@ -345,7 +339,7 @@
 				},
 
 				openSizeMenu: function () {
-					console.log('openSizeMenu 111');
+					// console.log('openSizeMenu 111');
 					var self = this;
 
 					self.$sizeMenu.addClass("size-menu_visible");

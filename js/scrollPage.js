@@ -78,8 +78,9 @@ checkListLinks.forEach((item) => {
     const countLinks = sizePopupLinks.querySelectorAll('.active').length;
 
     if (countLinks === 3) {
-      const changeButtton = document.querySelector('.basket-open');
-      changeButtton.innerHTML = 'ДОБАВИТЬ В КОРЗИНУ'
+      const changeButton = document.querySelector('.basket-open');
+      changeButton.innerHTML = 'ДОБАВИТЬ В КОРЗИНУ'
+      changeButton.href = 'basket.html'
     }
 
   });

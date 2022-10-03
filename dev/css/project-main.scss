@@ -10,7 +10,7 @@
 @import'../scss/blocks/filter';
 @import '../scss/blocks/mobile-menu-filter';
 
-@import '../scss/blocks/mobile-slider'; 
+@import '../scss/blocks/mobile-slider';
 
 
 // переиспользуемые компоненты
@@ -45,8 +45,8 @@
 @import '../scss/blocks/loyalty-card';
 @import '../scss/blocks/big-grid';
 
-@import '../scss/blocks/banners';   
-@import '../scss/blocks/history';    
+@import '../scss/blocks/banners';
+@import '../scss/blocks/history';
 
 
 
@@ -212,7 +212,7 @@
 }
 
 // @media screen and (min-width: 1200px) {
-  
+
 //   .position-lg-top-100px { 
 //     position: relative; 
 //     top: -80px;
@@ -471,7 +471,7 @@ body,
 /* --------add-favorites----- */
 .add-favorites {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .add-favorites__img {
@@ -489,8 +489,8 @@ body,
 .add-favorites__title {
   font-weight: 600;
   font-size: 14px;
-  line-height: 20px;  
-} 
+  line-height: 20px;
+}
 
 /* --------/add-favorites----- */
 
@@ -515,12 +515,60 @@ body,
 //убрать стрелочки для мозилы
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none; // Yeah, yeah everybody write about it
+  -webkit-appearance: none; // Yeah, yeah everybody write about it
 }
 
 input[type='number'],
 input[type="number"]:hover,
 input[type="number"]:focus {
-    appearance: none;
-    -moz-appearance: textfield;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+//анимация для magnific-popup
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+
+  @media screen and (max-width:480px) {
+    // контент выезжает снизу
+    transition: 0.5s;
+    transform: translateY(100%);
+  }
+
+
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }

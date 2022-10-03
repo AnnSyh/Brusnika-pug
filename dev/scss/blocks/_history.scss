@@ -3,6 +3,10 @@
 
 .history {
 
+    .page-heading {
+        border:1px solid green;
+    }
+
     .order-row { 
         display: flex;
         justify-content: space-between;
@@ -80,7 +84,7 @@
         justify-content: inherit;
         margin-bottom: 100px;
 
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:768px) {
             margin-bottom: 20px; 
         }
     }
@@ -90,7 +94,7 @@
         line-height: 25px;
         font-weight: 600;
 
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:768px) {
             font-size: 14px;
             line-height: 20px;
             font-weight: 600;            
@@ -111,4 +115,12 @@
         font-weight: bold;
     }
 
+}
+
+
+@media screen and (min-width:768px) {
+    
+    .border-md-top-gray {
+        border-top: 1px solid #E1E1E1;
+    }
 }

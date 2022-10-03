@@ -7,24 +7,24 @@
 
     form.form
       .form-row
-      label.form-item-label(for='f1') Номер карты
-      input#f1.form-item.form-item--text(type='number' min='1' max='1000000' name='f1' data-validation='{"message": "Обязательное поле"}' required='' value='2016614')
+        label.form-item-label(for='f1') Номер карты
+        input#f1.form-item.form-item--text(type='number' min='1' max='1000000' name='f1' data-validation='{"message": "Обязательное поле"}' required='' value='2016614')
 
       .form-row
-      label.form-item-label(for='f4') Телефон
-      input#f4.form-item.form-item--text(type='text' name='f4' data-validation='{"message": "Укажите корректный номер телефона", "pattern": "phoneRU", "mask": "+7 (999) 999-99-99"}' required='' value='+7 556 666-66-6')
-      .form-item-note или
+        label.form-item-label(for='f4') Телефон
+        input#f4.form-item.form-item--text(type='text' name='f4' data-validation='{"message": "Укажите корректный номер телефона", "pattern": "phoneRU", "mask": "+7 (999) 999-99-99"}' required='' value='+7 556 666-66-6')
+      
+      .form-row.center или
 
       .form-row
-      label.form-item-label(for='f3') E-mail
-      input#f3.form-item.form-item--text(type='email' name='f3' required='' data-validation='{"message": "Укажите корректный адрес почты"}' value='petrov@gmail.com')
+        label.form-item-label(for='f3') E-mail
+        input#f3.form-item.form-item--text(type='email' name='f3' required='' data-validation='{"message": "Укажите корректный адрес почты"}' value='petrov@gmail.com')
 
       .form-row
-      button.btn.btn--black.btn--medium.w100.max-w100(type='submit') ДОБАВИТЬ В КОРЗИНУ
+        button.btn.btn--black.btn--medium.w100.max-w100(type='submit') ДОБАВИТЬ В КОРЗИНУ
 
       .form-policy
         .page-text
-          .small
             | Нажимая кнопку «Добавить карту»,
             br
             | вы соглашаетесь с  

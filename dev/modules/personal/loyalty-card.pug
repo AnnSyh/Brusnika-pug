@@ -16,9 +16,9 @@
         .col-lg-4.mb-lg-4
           .loyalty-block
             span
-              div.h3= item.name 
+              .loyalty-block-title= item.name 
               div= item.text 
 
       .row.justify-content-between.align-items-center
-        .col-auto
-          a.link.link--black_border(href='#') Подробнее о программе лояльности
+        .col-auto.col-auto--loyalty-link
+          a.link.link--black_border.loyalty-link(href='loyalty-card-empty.html') Подробнее о программе лояльности

@@ -211,17 +211,13 @@
   display: none;
 }
 
-
-@media screen and (min-width: 1200px) {
+// @media screen and (min-width: 1200px) {
   
-  .position-lg-top-100px {
-    position: relative; 
-    top: -100px;
-  }
-}
-
-
-
+//   .position-lg-top-100px { 
+//     position: relative; 
+//     top: -80px;
+//   }
+// }
 
 .order-aside-sticky {
   top: 140px; //высота закрепленной при прокрутке шапки
@@ -475,7 +471,7 @@ body,
 /* --------add-favorites----- */
 .add-favorites {
   display: flex;
-  gap: 20px;
+  gap: 20px; 
 }
 
 .add-favorites__img {
@@ -497,62 +493,6 @@ body,
 } 
 
 /* --------/add-favorites----- */
-
-@media screen and (max-width:768px) {
-  
-  // .row-test {
-  //   border: 1px solid green;
-  // }
-}
-
-/* заголовки */
-
-.page-heading-title {
-
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 46px;
-
-  &_personal { 
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 30px;
-
-    @media screen and (max-width:991px) { 
-      // border: 1px solid red;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    @media screen and (max-width:480px) {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-}
-
-
-
-/* .page-heading-title {
-  color: $color-black;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  text-transform: uppercase;
-  margin-top: 40px;
-  margin-bottom: 50px;
-}
-@media screen and (max-width: 768px) {
-  .page-heading-title {
-    border: 1px solid red;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-  }
-} */
 
 .page-text h1,
 .h1 {

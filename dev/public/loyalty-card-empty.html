@@ -504,67 +504,67 @@
           </div>
         </div>
       </header>
-      <div class="page-content--personal-area">
-        <main class="page-content">
-          <div class="page-inner page-inner--w2">
-            <div class="page-heading">
-              <div class="row">
-                <div class="col-md-4"> 
-                  <div class="mb-4 d-lg-none"><a class="link link--gray_border" href="dashboard.html">Личный кабинет</a></div>
-                  <div class="page-heading-title page-heading-title_personal uppercase">Карта лояльности</div>
+      <main class="page-content page-content--personal-area">
+        <div class="page-inner page-inner--w2">
+          <div class="page-heading">
+            <div class="row">
+              <div class="col-md-4"> 
+                <div class="d-lg-none"><a class="link link--gray_border" href="dashboard.html">Личный кабинет</a></div>
+                <div class="page-heading-title page-heading-title_personal uppercase">Карта лояльности</div>
+              </div>
+              <div class="col-md-8"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 d-none d-lg-block"> 
+              <div class="personal-menu">
+                <div class="personal-menu-item"><a class="link link--black" href="history.html">Заказы (2)</a>
                 </div>
-                <div class="col-md-8"></div>
+                <div class="personal-menu-item"><a class="link link--black" href="basket.html">Корзина (2)</a>
+                </div>
+                <div class="personal-menu-item"><a class="link link--black" href="favorites.html">Избранное (2)</a>
+                </div>
+                <div class="personal-menu-item"><a class="link link--black" href="personal.html">Личные данные</a>
+                </div>
+                <div class="personal-menu-item"><a class="link link--black active" href="loyalty-card.html">Карта лояльности</a>
+                </div>
+                <div class="personal-menu-item"><a class="link link--black" href="#">Выйти</a>
+                </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-3 d-none d-lg-block"> 
-                <div class="personal-menu">
-                  <div class="personal-menu-item"><a class="link link--black" href="history.html">Заказы (2)</a>
-                  </div>
-                  <div class="personal-menu-item"><a class="link link--black" href="basket.html">Корзина (2)</a>
-                  </div>
-                  <div class="personal-menu-item"><a class="link link--black" href="favorites.html">Избранное (2)</a>
-                  </div>
-                  <div class="personal-menu-item"><a class="link link--black" href="personal.html">Личные данные</a>
-                  </div>
-                  <div class="personal-menu-item"><a class="link link--black active" href="loyalty-card.html">Карта лояльности</a>
-                  </div>
-                  <div class="personal-menu-item"><a class="link link--black" href="#">Выйти</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-1"></div>
-              <div class="col-12 col-md-5 offset-md-2 offset-lg-0 col-lg-5 col-xl-4">
-                <div class="order-items">
-                  <div class="order-item">
-                    <div class="order-item-title mt-0">Есть карта лояльности?</div>
-                    <div class="order-item-text">Заполните одно из полей указанных при регистрации карты</div>
-                    <form class="form">
-                      <div class="form-row"></div>
+            <div class="col-lg-1"></div>
+            <div class="col-12 col-md-5 offset-md-2 offset-lg-0 col-lg-5 col-xl-4">
+              <div class="order-items">
+                <div class="order-item">
+                  <div class="order-item-title mt-0">Есть карта лояльности?</div>
+                  <div class="order-item-text">Заполните одно из полей указанных при регистрации карты</div>
+                  <form class="form">
+                    <div class="form-row">
                       <label class="form-item-label" for="f1">Номер карты</label>
                       <input class="form-item form-item--text" id="f1" type="number" min="1" max="1000000" name="f1" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="2016614">
-                      <div class="form-row"></div>
+                    </div>
+                    <div class="form-row">
                       <label class="form-item-label" for="f4">Телефон</label>
                       <input class="form-item form-item--text" id="f4" type="text" name="f4" data-validation="{&quot;message&quot;: &quot;Укажите корректный номер телефона&quot;, &quot;pattern&quot;: &quot;phoneRU&quot;, &quot;mask&quot;: &quot;+7 (999) 999-99-99&quot;}" required="" value="+7 556 666-66-6">
-                      <div class="form-item-note">или</div>
-                      <div class="form-row"></div>
+                    </div>
+                    <div class="form-row center">или</div>
+                    <div class="form-row">
                       <label class="form-item-label" for="f3">E-mail</label>
                       <input class="form-item form-item--text" id="f3" type="email" name="f3" required="" data-validation="{&quot;message&quot;: &quot;Укажите корректный адрес почты&quot;}" value="petrov@gmail.com">
-                      <div class="form-row"></div>
+                    </div>
+                    <div class="form-row">
                       <button class="btn btn--black btn--medium w100 max-w100" type="submit">ДОБАВИТЬ В КОРЗИНУ</button>
-                      <div class="form-policy">
-                        <div class="page-text">
-                          <div class="small">Нажимая кнопку «Добавить карту»,<br>вы соглашаетесь с  <a href="#">политикой конфиденциальности</a></div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                    <div class="form-policy">
+                      <div class="page-text">Нажимая кнопку «Добавить карту»,<br>вы соглашаетесь с  <a href="#">политикой конфиденциальности</a></div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
       <footer class="page-footer" itemscope="" itemtype="http://schema.org/WPFooter">
         <div class="page-inner page-inner--w2">
           <div>

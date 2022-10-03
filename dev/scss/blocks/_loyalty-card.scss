@@ -3,28 +3,62 @@
 
 /*** loyalty ***/
 .loyalty-blocks .loyalty-block {
-    position: relative;
-    display: block;
-    padding-top: 45%;
-    background-color: $bgcolor-gray;
-    text-decoration: none;
-    text-align: center;
-    color: $color-black;
-    transition: 0.3s background-color cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .loyalty-blocks .loyalty-block span {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    padding: 0 20px;
+  position: relative;
+  display: block;
+  padding-top: 45%;
+  background-color: $bgcolor-gray;
+  text-decoration: none;
+  text-align: center;
+  color: $color-black;
+  transition: 0.3s background-color cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.loyalty-blocks .loyalty-block span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media screen and (max-width:991px) {
+  .loyalty-block {
+    margin-bottom: 20px;
   }
 
-  @media screen and (max-width:991px) {
-    .loyalty-block {
-        margin-bottom: 20px;
-    }
+  .col-auto--loyalty-link {
+    width: 100%;
+    display: flex;
   }
+
+  .loyalty-link {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width:480px) {
+
+  .loyalty-block {
+    margin-bottom: 10px;
+  }
+
+  .loyalty-link {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+.loyalty-block-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+
+  @media screen and (max-width:480px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+}

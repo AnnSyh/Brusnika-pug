@@ -306,3 +306,6 @@ btnClose.forEach((item) => {
 
 });
 
+// фильтры
+const filterPrice = document.querySelector('.filter-price');
+console.log('111 filterPrice = ', filterPrice);

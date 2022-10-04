@@ -993,8 +993,12 @@
 
 				price: function () {
 					var self = this;
+					
 
 					$(".filter-price", $sel.filter).each(function () {
+
+						console.log('!!! filter-price !!! = ');
+
 						(function ($priceFilter) {
 							$(".form-item--range", $priceFilter).on("change input", function (e, u) {
 								syncPriceFilter("slider", $priceFilter);
@@ -1129,8 +1133,13 @@
 						repositionOnScroll: true,
 						selfDestruction: true,
 						arrow: false,
-						interactive: true
+						interactive: true,
 						// minWidth: 400
+						functionReady: function(){ 
+							$('.tooltip__close').click(function(){
+								$('.product-add-favorites').tooltipster('hide');
+							});
+						}
 					});
 
 					// window.addEventListener('scroll', function(e) {
@@ -1183,21 +1192,29 @@
 
 					// ------------tooltip----------------------					
 					$('.product-like').on("click", function (e) { //раскрытие меню при клике
-						console.log('product-like');
 						const productSizeTooltip = document.querySelector('.product-add-favorites');
 						productSizeTooltip.click();//открываю tooltip о добавлении в избранное
 						$('.product-like').toggleClass('active-like');//добавляю акт класс сердечку
 						$('.btn.basket-open').innerHTML = 'В КОРЗИНЕ';//меняю иконку и надпись на кнопке 'в корзину'
 					});
 
-					const tooltipCloses = document.querySelectorAll('.tooltip__close');
+					const tooltipCloses = document.querySelector('.tooltip__close');
+					console.log('tooltipCloses = ', tooltipCloses);
 
-					tooltipCloses.forEach((item) => {
-						// console.log('forEach');
-						item.addEventListener('click', (e) => {
-							console.log('addEventListener click');
-						});
+					tooltipCloses.addEventListener('click', (e) => {
+						e.preventDefault();
+						console.log('addEventListener click');
 					});
+
+					// tooltipCloses.forEach((item) => {
+
+					// 	console.log('forEach');
+					// 	console.log('forEach item = ', item);
+
+					// 	item.addEventListener('click', (e) => {
+					// 		console.log('addEventListener click');
+					// 	});
+					// });
 
 					$(window).keypress(function () {
 						// $('.tooltip__close').tooltipster('close');
@@ -1588,6 +1605,7 @@
 						$(this).closest(".mobile-filter-item").toggleClass("open");
 					});
 					$(".mobile-filter input:checkbox").on("change", function () {
+						// console.log('input:checkbox');
 						var $holder = $(this).closest(".mobile-filter-item");
 						$holder.find("input:checked").length ? $holder.addClass("selected") : $holder.removeClass("selected");
 
@@ -1598,13 +1616,16 @@
 						}
 					});
 					$(".mobile-filter .form-item--range").on("change input", function (e, u) {
+						console.log('change input');
+
 						var $holder = $(this).closest(".mobile-filter-item"),
 							$range = $(this);
 						($range[0].valueLow + "," + $range[0].valueHigh != $range.data("value")) ? $holder.addClass("selected") : $holder.removeClass("selected");
 					});
 					$(".mobile-filter .mobile-filter-heading-reset").on("click", function (e) {
+						e.preventDefault();
 						$(".mobile-filter-item").removeClass("selected");
-						//$(".mobile-filter-holder .mobile-close", $sel.page).trigger("click");
+						$(".mobile-filter-holder .mobile-close", $sel.page).trigger("click");
 					});
 					$(".mobile-filter button:submit").on("click", function (e) {
 						e.preventDefault();

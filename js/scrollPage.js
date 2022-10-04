@@ -60,6 +60,7 @@ $(".clean-basket-js").on("click", function (e) {
 });
 
 const checkListLinks = document.querySelectorAll('.check-list a');
+console.log('checkListLinks = ', checkListLinks);
 
 checkListLinks.forEach((item) => {
   item.addEventListener('click', (e) => {
@@ -94,6 +95,9 @@ if (body.classList.contains('size-open')) {
   // console.log('contains(size-open)');
   new SimpleBar(simplebar1, { autoHide: false });
 }
+
+// const sizeOpenList = document.querySelectorAll('.size-open');
+// console.log('sizeOpenList = ', sizeOpenList);
 
 $('.sms-not-coming').on("click", function (e) {
   // console.log('sms-not-coming');

@@ -59,6 +59,12 @@
 					self.$catalogItemSliderPrevWatched = $(".slider-prev-watched .catalog-items--slider", $sel.page);
 
 					self.$sizeOpenBtn = $(".size-open", $sel.page);
+					self.$sizeOpenLink = document.querySelector('.size-open-link');
+					console.log('!!! sizeOpenLink = ', self.$sizeOpenLink);
+
+					// self.$sizeOpenList = document.querySelectorAll('.size-open');
+					// console.log('111 sizeOpenList = ', self.$sizeOpenList);
+
 					self.$sizeMenu = $("#catalog-size", $sel.page);
 
 					self.$basketOpenBtn = $(".basket-open", $sel.page);
@@ -143,6 +149,25 @@
 						e.stopPropagation();
 						self.openedBasketMenu ? self.closeBasketMenu() : self.openBasketMenu();
 					});
+
+					/////--------------------
+					// self.$sizeOpenList.forEach((item) => {
+					// 	item.addEventListener('click', (e) => {
+					// 		e.preventDefault();
+					// 		e.stopPropagation();
+					// 		self.openedSizeMenu ? self.closeSizeMenu() : self.openSizeMenu();
+					// 	})
+					// });
+
+					// self.$sizeOpenLink.addEventListener('click', (e) => { //раскрытие меню при клике
+					// 	console.log('sizeOpenLink');
+
+					// 	e.preventDefault();
+					// 	e.stopPropagation();
+					// 	self.openedSizeMenu ? self.closeSizeMenu() : self.openSizeMenu();
+					
+					// 	// $sel.body.addClass("show-filter"); //открываем фильтры
+					// });
 
 					self.$sizeOpenBtn.on("click", function (e) { //раскрытие меню при клике
 						console.log('sizeOpenBtn');

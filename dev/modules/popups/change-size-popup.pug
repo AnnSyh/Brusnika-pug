@@ -8,7 +8,8 @@ mixin listLinks(classname,...items)
 #change-size-popup.page-popup.mfp-hide 
   .page-popup-heading
     .page-popup-heading-title.center.h1 Выберите размер
-  .check-list
+  .check-dimensions-list.check-list(style='justify-content: center;')
     +listLinks('size-list size-list_vertical', 'XS', 'S', 'M','L','XL') 
   .page-popup-footer
-    button.btn.btn--black.btn--medium.btn--fullwidth.basket-open(type='submit') ВЫБРАТЬ
+    //- button.btn.btn--black.btn--medium.btn--fullwidth.basket-open(type='submit') ВЫБРАТЬ
+    a.btn.btn--black.btn--medium.btn--fullwidth.basket-open(href='#') Выберите размеры

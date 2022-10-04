@@ -296,7 +296,7 @@ body {
 }
 
 header .header-logo img {
-  z-index: 10000;
+  z-index: 1000;
 }
 
 footer .header-logo img {

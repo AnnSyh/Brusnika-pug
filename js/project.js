@@ -1591,7 +1591,7 @@
 						}
 					});
 					$(".mobile-filter .form-item--range").on("change input", function (e, u) {
-						console.log('change input 1111');
+						// console.log('change input 1111');
 
 						var $holder = $(this).closest(".mobile-filter-item"),
 							$range = $(this);

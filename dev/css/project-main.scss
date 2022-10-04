@@ -1,6 +1,6 @@
 @import url(../fonts/fonts.css);
 @import '../scss/variables';
-
+  
 @import '../scss/blocks/header-menu';
 @import '../scss/blocks/catalog-menu';
 @import'../scss/blocks/basket-menu';
@@ -12,11 +12,11 @@
 
 @import '../scss/blocks/mobile-slider';
 
-
+ 
 // переиспользуемые компоненты
 @import '../scss/blocks/btns';
 @import '../scss/blocks/form';
-@import '../scss/blocks/page-popup';
+@import '../scss/blocks/page-popup'; 
 // /переиспользуемые компоненты 
 
 @import '../scss/blocks/footer';

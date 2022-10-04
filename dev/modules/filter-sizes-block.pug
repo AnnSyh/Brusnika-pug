@@ -4,8 +4,8 @@
     //- a.link.link--black_border.size-open-link(href='#') Как подобрать размер
     //- a.btn.btn--black.btn--medium.btn--fullwidth(href='#size-popup' data-popup='{"type":"inline"}')
     //-   | ДОБАВИТЬ В КОРЗИНУ 
-    each size in sizes
-      .filter-row.filter-row__size
+    .wrapper-form-checkbox
+      each size in sizes
         label.form-checkbox
           input(class='form-item form-item--checkbox' type='checkbox')
           span.form-checkbox-title= size.name

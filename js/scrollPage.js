@@ -79,7 +79,17 @@ checkListLinks.forEach((item) => {
     const countLinks = sizePopupLinks.querySelectorAll('.active').length;
 
     if (countLinks === 3) {
-      const changeButton = document.querySelector('.basket-open');
+      const changeButton = sizePopupLinks.querySelector('.basket-open');
+      changeButton.innerHTML = 'ДОБАВИТЬ В КОРЗИНУ'
+      changeButton.href = 'basket.html'
+    }
+
+// ----------------------------------
+    const changeSizePopup = document.querySelector('#change-size-popup');
+    const sizePopupCountLinks = changeSizePopup.querySelectorAll('.active').length;
+
+    if (sizePopupCountLinks === 1) {
+      const changeButton = changeSizePopup.querySelector('.basket-open');
       changeButton.innerHTML = 'ДОБАВИТЬ В КОРЗИНУ'
       changeButton.href = 'basket.html'
     }

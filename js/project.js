@@ -982,7 +982,9 @@
 						var $holder = $(this).closest(".filter-content-item"),
 							$heading = self.$headings.filter("[data-filter='#" + $holder.attr("id") + "']"),
 							$range = $(this);
-						//console.log($range[0].valueLow + "," + $range[0].valueHigh, $range.data("value"));
+
+						console.log('form-item--range = ', $range[0].valueLow + "," + $range[0].valueHigh, $range.data("value"));
+
 						if ($range[0].valueLow + "," + $range[0].valueHigh != $range.data("value")) {
 							$heading.addClass("selected");
 						} else {
@@ -1198,27 +1200,7 @@
 						$('.btn.basket-open').innerHTML = 'В КОРЗИНЕ';//меняю иконку и надпись на кнопке 'в корзину'
 					});
 
-					const tooltipCloses = document.querySelector('.tooltip__close');
-					console.log('tooltipCloses = ', tooltipCloses);
-
-					tooltipCloses.addEventListener('click', (e) => {
-						e.preventDefault();
-						console.log('addEventListener click');
-					});
-
-					// tooltipCloses.forEach((item) => {
-
-					// 	console.log('forEach');
-					// 	console.log('forEach item = ', item);
-
-					// 	item.addEventListener('click', (e) => {
-					// 		console.log('addEventListener click');
-					// 	});
-					// });
-
 					$(window).keypress(function () {
-						// $('.tooltip__close').tooltipster('close');
-
 						$('.product-add-favorites').tooltipster('close');
 						$('.product-like').toggleClass('active-like');//добавляю акт класс сердечку
 					});
@@ -1581,24 +1563,17 @@
 
 				filter: function () {
 					$(".mobile-filter-open", $sel.body).on("click", function (e) {
-						console.log('!!! mobile-filter-open click !!!!');
-
+						// console.log('!!! mobile-filter-open click !!!!');
 						e.preventDefault();
 						$sel.body.addClass("show-filter");
-
-
-						const simplebar1 = document.querySelector('.basket-mobile-menu__body.simplebar');
-						console.log('simplebar1 = ', simplebar1);
-						// new SimpleBar(simplebar1, { autoHide: false });
-
 						// $sel.body.toggleClass("show-filter");
-						// bodyScrollLock.disableBodyScroll($(".mobile-filter-scroll-holder", $sel.body)[0]);
-						// bodyScrollLock.disableBodyScroll($(".mobile-filter-scroll-inner", $sel.body)[0]);
+						bodyScrollLock.disableBodyScroll($(".mobile-filter-scroll-holder", $sel.body)[0]);
+						bodyScrollLock.disableBodyScroll($(".mobile-filter-scroll-inner", $sel.body)[0]);
 					});
 					$(".mobile-filter-close", $sel.body).on("click", function () {
 						$sel.body.removeClass("show-filter");
-						// bodyScrollLock.enableBodyScroll($(".mobile-filter-scroll-holder", $sel.body)[0]);
-						// bodyScrollLock.enableBodyScroll($(".mobile-filter-scroll-inner", $sel.body)[0]);
+						bodyScrollLock.enableBodyScroll($(".mobile-filter-scroll-holder", $sel.body)[0]);
+						bodyScrollLock.enableBodyScroll($(".mobile-filter-scroll-inner", $sel.body)[0]);
 					});
 
 					$(".mobile-filter-item-heading", $sel.body).on("click", function () {
@@ -1623,7 +1598,10 @@
 						($range[0].valueLow + "," + $range[0].valueHigh != $range.data("value")) ? $holder.addClass("selected") : $holder.removeClass("selected");
 					});
 					$(".mobile-filter .mobile-filter-heading-reset").on("click", function (e) {
-						e.preventDefault();
+						console.log('filter-reset');
+						// e.preventDefault();
+						// e.stopPropagation();
+
 						$(".mobile-filter-item").removeClass("selected");
 						$(".mobile-filter-holder .mobile-close", $sel.page).trigger("click");
 					});

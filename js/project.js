@@ -1792,6 +1792,10 @@
 							myMap.balloon.open([55.757131068980215, 37.61711450000001], 'Содержимое балуна');
 							// myMap.balloon.open(shopCoords, 'Содержимое балуна');
 
+							var placemark = new ymaps.Placemark([55.650625, 37.62708], {
+								name: 'Считаем'
+							});
+							myMap.geoObjects.add(placemark);
 
 						};
 
@@ -1800,7 +1804,7 @@
 					// ------------shops.html---------------------	
 					function handleClick(e) {
 						// код обработки клика
-						const dataShop = item.getAttribute('data-shop');
+						const dataShop = e.target.getAttribute('data-shop');
 						// e.preventDefault();
 						// если есть id балуна то находим его координаты
 						if (dataShop) {
@@ -1809,11 +1813,15 @@
 							console.log(' shopCoords = ', shopCoords);
 							// console.log(' myMap = ', myMap);
 						}
+
+						return shops[dataShop].coords
 					}
 
 					const shopLinks = document.querySelectorAll('.show-on--map');
 					shopLinks.forEach((item) => {
 						item.addEventListener('click', handleClick);
+
+						console.log('shopLinks shopCoords = ', shopCoords);
 					});
 
 

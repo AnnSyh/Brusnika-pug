@@ -1757,14 +1757,16 @@
 						var myMap = new ymaps.Map('map', {
 							center: [55.757131068980215, 37.61711450000001],
 							zoom: 11,
+						}, {
+							searchControlProvider: 'yandex#search'
 						});
 
-						for (let i = 0; i < lengthShops; i++) {
+						for (let i = 1; i < lengthShops; i++) {
 							// console.log('shops [' + i + '] = ', shops[i].coords);
 
 							placemarks[i] = new ymaps.Placemark(shops[i].coords,
 								{
-									// balloonContentLayout: `<div class="balloonContent" width="100%">`,
+									balloonContentLayout: `<div class="balloonContent" width="100%">`,
 									balloonContentHeader: `<img src="../dummy/shops/${shops[i].img}" width="100%">`,
 									balloonContentBody: ` <div class="item-shop-title">${shops[i].name}</div>` +
 										`<div class="item-shop-address">${shops[i].address}</div>` +
@@ -1788,41 +1790,52 @@
 							// Добавим метку на карту.
 							myMap.geoObjects.add(placemarks[i]);
 
+							console.log('placemarks[i]= ',placemarks[i]);
+							console.log('placemarks[i].coord = ',placemarks[i].geometry._coordinates);
+							console.log('placemarks[i].balloonContentLayout = ',placemarks[i].geometry._coordinates);
+
 							// // открыть балун
-							myMap.balloon.open([55.757131068980215, 37.61711450000001], 'Содержимое балуна');
-							// myMap.balloon.open(shopCoords, 'Содержимое балуна');
+							// myMap.balloon.open([55.757131068980215, 37.61711450000001], 'Содержимое балуна');
+							myMap.balloon.open(placemarks[i].geometry._coordinates, '1Содержимое балуна');
 
-							var placemark = new ymaps.Placemark([55.650625, 37.62708], {
-								name: 'Считаем'
-							});
-							myMap.geoObjects.add(placemark);
+							// var placemark = new ymaps.Placemark([55.650625, 37.62708]);
+							// myMap.geoObjects.add(placemark);
 
+							
 						};
 
-					};
-
-					// ------------shops.html---------------------	
-					function handleClick(e) {
-						// код обработки клика
-						const dataShop = e.target.getAttribute('data-shop');
-						// e.preventDefault();
-						// если есть id балуна то находим его координаты
-						if (dataShop) {
-							const shopCoords = shops[dataShop].coords
-
-							console.log(' shopCoords = ', shopCoords);
-							// console.log(' myMap = ', myMap);
+						// ------------shops.html---------------------	
+						function handleClick(e) {
+							const dataShop = e.target.getAttribute('data-shop');
+							e.preventDefault();
+							console.log(' shopCoords = ', shops[dataShop].coords);
+							// myMap.setCenter([shops[dataShop].coords] , 11);
+							myMap.balloon.open([shops[dataShop].coords], '3333333');
+							// return shops[dataShop].coords
 						}
 
-						return shops[dataShop].coords
-					}
+						const shopLinks = document.querySelectorAll('.show-on--map');
+						shopLinks.forEach((item) => {
 
-					const shopLinks = document.querySelectorAll('.show-on--map');
-					shopLinks.forEach((item) => {
-						item.addEventListener('click', handleClick);
+							console.log(' item = ', item);
 
-						console.log('shopLinks shopCoords = ', shopCoords);
-					});
+							item.addEventListener('click',  (e) => {
+								const dataShop = e.target.getAttribute('data-shop');
+								e.preventDefault();
+
+								console.log(' dataShop = ', dataShop);
+								console.log(' shopCoords = ', shops[dataShop - 1].coords);
+
+								// myMap.setCenter([shops[dataShop].coords] , 11);
+								myMap.balloon.open([shops[dataShop - 1].coords], '3333333');
+
+								// return shops[dataShop].coords
+
+							});
+						});
+
+
+					};
 
 
 				}

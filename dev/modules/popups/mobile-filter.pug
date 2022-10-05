@@ -2,41 +2,43 @@
   form
     .basket-inner.page-inner--w2
       .mobile-filter-close
-      .basket-menu-sections(style='padding:0;')
+      .basket-menu-sections.p-0
 
         .mobile-filter-scroll-holder
           .mobile-filter-scroll-inner
             .mobile-filter
-              .mobile-filter-heading.p-0(style1='padding:0;')
+              .mobile-filter-heading.p-0
                 .mobile-filter-heading-title Фильтры(3)
                 .basket__title-link-clean-basket.mobile-filter-heading-reset
-                  | Очистить
-                  | фильтр
+                  | Очистить фильтр
 
-              .mobile-filter-items(style='height: calc(100vh - 200px); overflow-y: auto; overflow-x: hidden;')
+              .mobile-filter-items(style='height: calc(100vh - 185px); overflow-y: auto; overflow-x: hidden;')
                 .mobile-filter-item(style='margin:0;')
                   .mobile-filter-item-heading
                     .mobile-filter-item-heading-title Сортировать (Цена по убыванию)
                     .mobile-filter-item-heading-toggler
                   include ../filter-priсes-block
 
-                .mobile-filter-item.m-0(style1='margin:0;')
+                .mobile-filter-item.m-0
                   .mobile-filter-item-heading
                     .mobile-filter-item-heading-title Цвет(2)
                     .mobile-filter-item-heading-toggler
                   include ../filter-colors-block  
-                .mobile-filter-item.m-0(style1='margin:0;')
+
+                .mobile-filter-item.m-0
                   .mobile-filter-item-heading
                     .mobile-filter-item-heading-title Материалы
                     .mobile-filter-item-heading-toggler
                   include ../filter-materials-block 
                   .mobile-filter-item-content
-                .mobile-filter-item.m-0(style1='margin:0;')
+
+                .mobile-filter-item.m-0
                   .mobile-filter-item-heading
                     .mobile-filter-item-heading-title Размер
                     .mobile-filter-item-heading-toggler
                   include ../filter-sizes-block
-                .mobile-filter-item.open.m-0(style1='margin:0;')
+
+                .mobile-filter-item.open.m-0
                   .mobile-filter-item-heading
                     .mobile-filter-item-heading-title Цена
                     .mobile-filter-item-heading-toggler
@@ -47,9 +49,11 @@
                         .filter-price-field-item
                           label.filter-price-field-item-title от
                           input.form-item.form-item--text.filter-price-field.filter-price-field--from(type='text' value='1000')
+                          .ml-10px РУБ.
                         .filter-price-field-item
                           label.filter-price-field-item-title до
                           input.form-item.form-item--text.filter-price-field.filter-price-field--to(type='text' value='1000000')
+                          .ml-10px РУБ.
                       input.form-item.form-item--range(type='range' data-value='1000,1000000' value='1000, 1000000' min='1000' max='1000000' step='1' multiple)
 
               .mobile-filter-btns

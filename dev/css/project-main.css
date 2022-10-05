@@ -2074,7 +2074,7 @@ a.basket-menu__link_lowercase {
 }
 
 .mobile-filter-item .filter-price .filter-price-fields .filter-price-field-item {
-  width: 100px;
+  width: 150px;
   height: 40px;
 }
 
@@ -2290,7 +2290,6 @@ a.basket-menu__link_lowercase {
   flex-direction: column;
   align-items: center;
   margin-top: auto;
-  padding: 5px 45px;
 }
 
 .mobile-filter-btns .btn {
@@ -2444,6 +2443,14 @@ a.basket-menu__link_lowercase {
   .wrapper-form-checkbox {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.mobile-filter-holder .basket-inner {
+  padding: 40px;
+}
+.mobile-filter-holder .mobile-filter-close {
+  right: 14px;
+  top: 24px;
 }
 
 .mobile-slider {
@@ -4852,6 +4859,10 @@ ul.footer-top__list {
 
 .ml-30px {
   margin-left: 30px;
+}
+
+.ml-10px {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 480px) {

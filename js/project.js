@@ -1794,25 +1794,25 @@
 						};
 
 
+						
 						// ------------shops.html---------------------	
 						const shopLinks = document.querySelectorAll('.show-on--map');
 						shopLinks.forEach((item) => {
 							item.addEventListener('click', (e) => {
 								const dataShop = item.getAttribute('data-shop');
-								e.preventDefault();
+								// e.preventDefault();
 								// если есть id балуна то находим его координаты
 								if (dataShop) {
 									const shopCoords = shops[dataShop].coords
-
+	
 									console.log(' shopCoords = ', shopCoords);
 									console.log(' myMap = ', myMap);
-
+	
 								}
-
+	
 							});
 						});
-
-
+						
 					};
 
 

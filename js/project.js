@@ -1580,8 +1580,10 @@
 					$(".mobile-filter-item-heading", $sel.body).on("click", function () {
 						$(this).closest(".mobile-filter-item").toggleClass("open");
 					});
+
 					$(".mobile-filter input:checkbox").on("change", function () {
 						// console.log('input:checkbox');
+
 						var $holder = $(this).closest(".mobile-filter-item");
 						$holder.find("input:checked").length ? $holder.addClass("selected") : $holder.removeClass("selected");
 
@@ -1591,8 +1593,22 @@
 							$(".mobile-filter-open", $sel.body).removeClass("selected");
 						}
 					});
+
+					$(".mobile-filter input:radio").on("change", function () {
+						// console.log('input:radio');
+
+						var $holder = $(this).closest(".mobile-filter-item");
+						$holder.find("input:checked").length ? $holder.addClass("selected") : $holder.removeClass("selected");
+
+						if ($(".mobile-filter-item.selected").length) {
+							$(".mobile-filter-open", $sel.body).addClass("selected");
+						} else {
+							$(".mobile-filter-open", $sel.body).removeClass("selected");
+						}
+					});
+
 					$(".mobile-filter .form-item--range").on("change input", function (e, u) {
-						// console.log('change input 1111');
+						// console.log('form-item--range change input');
 
 						var $holder = $(this).closest(".mobile-filter-item"),
 							$range = $(this);

@@ -2446,11 +2446,21 @@ a.basket-menu__link_lowercase {
 }
 
 .mobile-filter-holder .basket-inner {
-  padding: 40px;
+  padding: 40px 0;
 }
 .mobile-filter-holder .mobile-filter-close {
   right: 14px;
   top: 24px;
+}
+.mobile-filter-holder .mobile-filter-heading,
+.mobile-filter-holder .mobile-filter-btns {
+  padding: 0 40px;
+}
+.mobile-filter-holder .mobile-filter-items {
+  height: calc(100vh - 185px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 40px;
 }
 
 .mobile-slider {

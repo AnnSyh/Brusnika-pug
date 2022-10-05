@@ -653,13 +653,26 @@
 }
 
 .mobile-filter-holder {
+  // border: 1px solid red;
 
   .basket-inner {
-    padding: 40px;
+    padding: 40px 0;
   }
 
-  .mobile-filter-close { 
+  .mobile-filter-close {
     right: 14px;
     top: 24px;
+  }
+
+  .mobile-filter-heading,
+  .mobile-filter-btns {
+    padding: 0 40px;
+  }
+
+  .mobile-filter-items {
+    height: calc(100vh - 185px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 40px;
   }
 }

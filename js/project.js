@@ -165,7 +165,7 @@
 					// 	e.preventDefault();
 					// 	e.stopPropagation();
 					// 	self.openedSizeMenu ? self.closeSizeMenu() : self.openSizeMenu();
-					
+
 					// 	// $sel.body.addClass("show-filter"); //открываем фильтры
 					// });
 
@@ -215,13 +215,14 @@
 						} else {
 							console.log('$sel.window.on  else');
 						}
-						// доделать закрытие мерю при клике вне его области для Фильтров стр brand.html
-						// if (!$(e.target).closest("#self.$filterMenu").length) {
-						// 	if (self.openedSizeMenu) {
-						// 		self.closeSizeMenu();
-						// 	}
-						// }
 
+						// console.log('!!!!!! = ', e.target.parentNode.classList.contains('show-filter'));
+						// закрытие мерю при клике вне его области для Фильтров стр brand.html
+						if (e.target.parentNode.classList.contains('show-filter')) {
+							$sel.body.removeClass("show-filter");
+							bodyScrollLock.enableBodyScroll($(".mobile-filter-scroll-holder", $sel.body)[0]);
+							bodyScrollLock.enableBodyScroll($(".mobile-filter-scroll-inner", $sel.body)[0]);
+						}
 
 					});
 
@@ -995,7 +996,7 @@
 
 				price: function () {
 					var self = this;
-					
+
 
 					$(".filter-price", $sel.filter).each(function () {
 
@@ -1137,8 +1138,8 @@
 						arrow: false,
 						interactive: true,
 						// minWidth: 400
-						functionReady: function(){ 
-							$('.tooltip__close').click(function(){
+						functionReady: function () {
+							$('.tooltip__close').click(function () {
 								$('.product-add-favorites').tooltipster('hide');
 							});
 						}
@@ -1596,8 +1597,8 @@
 						var $holder = $(this).closest(".mobile-filter-item"),
 							$range = $(this);
 
-							$('.filter-price-field--from')[0].value =  $range[0].valueLow;
-							$('.filter-price-field--to')[0].value =  $range[0].valueHigh;
+						$('.filter-price-field--from')[0].value = $range[0].valueLow;
+						$('.filter-price-field--to')[0].value = $range[0].valueHigh;
 
 						($range[0].valueLow + "," + $range[0].valueHigh != $range.data("value")) ? $holder.addClass("selected") : $holder.removeClass("selected");
 					});

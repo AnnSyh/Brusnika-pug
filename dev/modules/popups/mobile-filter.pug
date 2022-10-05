@@ -1,4 +1,4 @@
-.mobile-filter-holder
+#mobile-filter-menu.mobile-filter-holder
   form
     .basket-inner.page-inner--w2
       .mobile-filter-close
@@ -13,7 +13,7 @@
                   | Очистить фильтр
 
               .mobile-filter-items(style='height: calc(100vh - 185px); overflow-y: auto; overflow-x: hidden;')
-                .mobile-filter-item(style='margin:0;')
+                .mobile-filter-item.m-0
                   .mobile-filter-item-heading
                     .mobile-filter-item-heading-title Сортировать (Цена по убыванию)
                     .mobile-filter-item-heading-toggler
@@ -57,5 +57,6 @@
                       input.form-item.form-item--range(type='range' data-value='1000,1000000' value='1000, 1000000' min='1000' max='1000000' step='1' multiple)
 
               .mobile-filter-btns
-                button.btn.btn--black.btn--medium
+                //- button.btn.btn--black.btn--medium
+                a.btn.btn--black.btn--medium(href='brand.html')
                   | ПОКАЗАТЬ РЕЗУЛЬТАТЫ (688)

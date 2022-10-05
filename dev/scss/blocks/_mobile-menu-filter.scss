@@ -655,6 +655,26 @@
 .mobile-filter-holder {
   // border: 1px solid red;
 
+  @media screen and (max-width:480px) {
+    font-size: 12px;
+
+    .mobile-filter-items,
+    .mobile-filter-btns,
+    .mobile-filter-heading { 
+      padding: 0 15px !important;
+    }
+
+    .filter-price-field-item-title {
+      display: none;
+    }
+    .filter-price-field-item { 
+      width: 110px !important;
+    }
+    .filter-price-field {
+      padding: 5px !important;
+    }
+  }
+
   .basket-inner {
     padding: 40px 0;
   }

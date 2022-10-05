@@ -2445,6 +2445,25 @@ a.basket-menu__link_lowercase {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .mobile-filter-holder {
+    font-size: 12px;
+  }
+  .mobile-filter-holder .mobile-filter-items,
+.mobile-filter-holder .mobile-filter-btns,
+.mobile-filter-holder .mobile-filter-heading {
+    padding: 0 15px !important;
+  }
+  .mobile-filter-holder .filter-price-field-item-title {
+    display: none;
+  }
+  .mobile-filter-holder .filter-price-field-item {
+    width: 110px !important;
+  }
+  .mobile-filter-holder .filter-price-field {
+    padding: 5px !important;
+  }
+}
 .mobile-filter-holder .basket-inner {
   padding: 40px 0;
 }

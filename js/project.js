@@ -1746,12 +1746,13 @@
 					]
 
 					const lengthShops = Object.keys(shops).length;
-					// console.log('lengthShops = ', lengthShops);
 					const placemarks = [];
 					const shopCoords = [];
 
+
 					// начинаем строить точки на карте
-					ymaps.ready(init)
+					ymaps.ready(init);
+
 					function init() {
 						var myMap = new ymaps.Map('map', {
 							center: [55.757131068980215, 37.61711450000001],
@@ -1790,30 +1791,30 @@
 							// // открыть балун
 							myMap.balloon.open([55.757131068980215, 37.61711450000001], 'Содержимое балуна');
 							// myMap.balloon.open(shopCoords, 'Содержимое балуна');
-						
+
+
 						};
 
-
-						
-						// ------------shops.html---------------------	
-						const shopLinks = document.querySelectorAll('.show-on--map');
-						shopLinks.forEach((item) => {
-							item.addEventListener('click', (e) => {
-								const dataShop = item.getAttribute('data-shop');
-								// e.preventDefault();
-								// если есть id балуна то находим его координаты
-								if (dataShop) {
-									const shopCoords = shops[dataShop].coords
-	
-									console.log(' shopCoords = ', shopCoords);
-									console.log(' myMap = ', myMap);
-	
-								}
-	
-							});
-						});
-						
 					};
+
+					// ------------shops.html---------------------	
+					function handleClick(e) {
+						// код обработки клика
+						const dataShop = item.getAttribute('data-shop');
+						// e.preventDefault();
+						// если есть id балуна то находим его координаты
+						if (dataShop) {
+							const shopCoords = shops[dataShop].coords
+
+							console.log(' shopCoords = ', shopCoords);
+							// console.log(' myMap = ', myMap);
+						}
+					}
+
+					const shopLinks = document.querySelectorAll('.show-on--map');
+					shopLinks.forEach((item) => {
+						item.addEventListener('click', handleClick);
+					});
 
 
 				}

@@ -1801,6 +1801,9 @@
 							// имитирую клик по соот точке
 							placemarks[id].events.fire('click');
 
+							// установить центр карты по метке
+							myMap.setCenter(placemarks[id].geometry.getCoordinates());
+
 						}
 
 					};

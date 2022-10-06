@@ -6075,6 +6075,10 @@ ul.footer-top__list {
   padding: 0 10px;
 }
 
+.plr-15px {
+  padding: 0 15px;
+}
+
 .hidden-x {
   overflow-x: hidden;
 }
@@ -6152,6 +6156,11 @@ ul.footer-top__list {
 
 .bold {
   font-weight: bold;
+}
+
+.left-12px {
+  position: relative;
+  left: -12px;
 }
 
 .tooltip_templates {

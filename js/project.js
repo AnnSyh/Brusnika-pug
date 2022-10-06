@@ -1760,7 +1760,7 @@
 						});
 
 						// размещаем точки на карте
-						for (let i = 1; i < lengthShops; i++) {
+						for (let i = 0; i < lengthShops; i++) {
 							// console.log('shops [' + i + '] = ', shops[i].coords);
 
 							placemarks[i] = new ymaps.Placemark(shops[i].coords,
@@ -1797,35 +1797,37 @@
 
 							item.addEventListener('click', (e) => {
 								const dataShop = e.target.getAttribute('data-shop');
-								// e.preventDefault();
-
-								myMap.geoObjects.events.add('click', function () {
-									alert('О, событие!');
-								});
 
 								console.log(' dataShop = ', dataShop);
-								console.log(' shopCoords = ', shops[dataShop - 1].coords);
+								console.log(' shopCoords = ', shops[dataShop].coords);
 
 								// myMap.setCenter([shops[dataShop].coords] , 11);
-								myMap.balloon.open([shops[dataShop - 1].coords], '3333333');
+								myMap.balloon.open([shops[dataShop].coords], '3333333');
 
 								// return shops[dataShop].coords
-
 							});
 						});
-
 
 						// В JS коде тебе необходимо написать условие:
 						// – Если в адресной строке присутствует параметр id, 
 						// то выполнить код по открытию метки
 
 						if ( window.location.href.indexOf('?id') >= 0 ){
+
+							const link = window.location.href;
+							console.log('link = ', link);
+
+							// const id = link.pathname.split("=")[1];
+							// console.log('id = ', id);
+
+
 							console.log('!!!!! placemarks = ', placemarks);
-							console.log('!!!!! placemarks[2] = ', placemarks[2]);
+							console.log('!!!!! placemarks[7] = ', placemarks[1]);
 	
-							myMap.geoObjects.events.fire('click', function () {
-								alert('О, событие!');
-							});
+							// имитирую клик по точке
+							placemarks[0].events.fire('click');
+
+							
 
 							
 							// myMap.geoObjects.events.fire('click', {
@@ -1836,9 +1838,6 @@
 						}
 
 					};
-
-
-
 
 
 				}

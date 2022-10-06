@@ -1759,6 +1759,7 @@
 							zoom: 11,
 						});
 
+						// размещаем точки на карте
 						for (let i = 1; i < lengthShops; i++) {
 							// console.log('shops [' + i + '] = ', shops[i].coords);
 
@@ -1787,19 +1788,20 @@
 							);
 							// Добавим метку на карту.
 							myMap.geoObjects.add(placemarks[i]);
-
 						};
+						
 
-
-						// console.log('function init() placemarks = ', placemarks);
-
-
+						// клик по ссылке 'Показать на карте'
 						const shopLinks = document.querySelectorAll('.show-on--map');
 						shopLinks.forEach((item) => {
 
 							item.addEventListener('click', (e) => {
 								const dataShop = e.target.getAttribute('data-shop');
 								// e.preventDefault();
+
+								myMap.geoObjects.events.add('click', function () {
+									alert('О, событие!');
+								});
 
 								console.log(' dataShop = ', dataShop);
 								console.log(' shopCoords = ', shops[dataShop - 1].coords);
@@ -1813,29 +1815,28 @@
 						});
 
 
+						// В JS коде тебе необходимо написать условие:
+						// – Если в адресной строке присутствует параметр id, 
+						// то выполнить код по открытию метки
+
+						if ( window.location.href.indexOf('?id') >= 0 ){
+							console.log('!!!!! placemarks = ', placemarks);
+							console.log('!!!!! placemarks[2] = ', placemarks[2]);
+	
+							myMap.geoObjects.events.fire('click', function () {
+								alert('О, событие!');
+							});
+
+							
+							// myMap.geoObjects.events.fire('click', {
+							// 	coordPosition: placemark.geometry.getCoordinates(),
+							// 	target: placemark
+							// });
+	
+						}
+
 					};
 
-					// В JS коде тебе необходимо написать условие:
-					// – Если в адресной строке присутствует параметр id, 
-					// то выполнить код по открытию метки
-
-					const currentUrl = window.location;
-					console.log('currentUrl = ', window.location.href.indexOf('?id'))
-
-					if ( window.location.href.indexOf('?id') >= 0 ){
-						console.log('!!!!! placemarks = ', placemarks);
-
-						console.log('!!!!! placemarks = ', placemarks[0]);
-						
-						placemarks[1].events.fire('click', {
-
-							coordPosition: placemarks[1].geometry.getCoordinates(),
-						
-							target: placemarks[1]
-						
-						});
-
-					}
 
 
 

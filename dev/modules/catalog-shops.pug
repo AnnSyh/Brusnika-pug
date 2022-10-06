@@ -9,6 +9,6 @@
             .item-shop-time= item.time1        
             .item-shop-phone 
               a(href=`tel:${item.phone}`)= item.phone 
-            a.link.link--black_border.show-on--map(href="shop-map.html" data-shop=item.id) Показать на карте       
+            a.link.link--black_border.show-on--map(href=`shop-map.html?id=${item.id}` data-shop=item.id) Показать на карте       
 
 

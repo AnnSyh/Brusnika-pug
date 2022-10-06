@@ -1757,8 +1757,6 @@
 						var myMap = new ymaps.Map('map', {
 							center: [55.757131068980215, 37.61711450000001],
 							zoom: 11,
-						}, {
-							searchControlProvider: 'yandex#search'
 						});
 
 						for (let i = 1; i < lengthShops; i++) {
@@ -1790,38 +1788,18 @@
 							// Добавим метку на карту.
 							myMap.geoObjects.add(placemarks[i]);
 
-							console.log('placemarks[i]= ',placemarks[i]);
-							console.log('placemarks[i].coord = ',placemarks[i].geometry._coordinates);
-							console.log('placemarks[i].balloonContentLayout = ',placemarks[i].geometry._coordinates);
-
-							// // открыть балун
-							// myMap.balloon.open([55.757131068980215, 37.61711450000001], 'Содержимое балуна');
-							myMap.balloon.open(placemarks[i].geometry._coordinates, '1Содержимое балуна');
-
-							// var placemark = new ymaps.Placemark([55.650625, 37.62708]);
-							// myMap.geoObjects.add(placemark);
-
-							
 						};
 
-						// ------------shops.html---------------------	
-						function handleClick(e) {
-							const dataShop = e.target.getAttribute('data-shop');
-							e.preventDefault();
-							console.log(' shopCoords = ', shops[dataShop].coords);
-							// myMap.setCenter([shops[dataShop].coords] , 11);
-							myMap.balloon.open([shops[dataShop].coords], '3333333');
-							// return shops[dataShop].coords
-						}
+
+						// console.log('function init() placemarks = ', placemarks);
+
 
 						const shopLinks = document.querySelectorAll('.show-on--map');
 						shopLinks.forEach((item) => {
 
-							console.log(' item = ', item);
-
-							item.addEventListener('click',  (e) => {
+							item.addEventListener('click', (e) => {
 								const dataShop = e.target.getAttribute('data-shop');
-								e.preventDefault();
+								// e.preventDefault();
 
 								console.log(' dataShop = ', dataShop);
 								console.log(' shopCoords = ', shops[dataShop - 1].coords);
@@ -1836,6 +1814,30 @@
 
 
 					};
+
+					// В JS коде тебе необходимо написать условие:
+					// – Если в адресной строке присутствует параметр id, 
+					// то выполнить код по открытию метки
+
+					const currentUrl = window.location;
+					console.log('currentUrl = ', window.location.href.indexOf('?id'))
+
+					if ( window.location.href.indexOf('?id') >= 0 ){
+						console.log('!!!!! placemarks = ', placemarks);
+
+						console.log('!!!!! placemarks = ', placemarks[0]);
+						
+						placemarks[1].events.fire('click', {
+
+							coordPosition: placemarks[1].geometry.getCoordinates(),
+						
+							target: placemarks[1]
+						
+						});
+
+					}
+
+
 
 
 				}

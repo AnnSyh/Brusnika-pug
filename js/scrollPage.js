@@ -315,5 +315,3 @@ btnClose.forEach((item) => {
   });
 
 });
-
-

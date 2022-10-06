@@ -1,11 +1,11 @@
 
 
 footer.page-footer(itemscope='' itemtype='http://schema.org/WPFooter')
-  .page-inner.page-inner--w2
 
-    if (pageName === 'brand-large')
-        .big-grid
-          .big-grid__item-double-center(style="text-align: left;")
-            include footer-inner 
-    else
+  if (pageName === 'brand-large')
+    .big-grid
+      .big-grid__item-double-center.text-left
         include footer-inner 
+  else
+    .page-inner.page-inner--w2
+      include footer-inner 

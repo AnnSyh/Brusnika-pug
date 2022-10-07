@@ -86,6 +86,8 @@
 
 .filters-row__list {
     max-width:  490px; 
+    position: relative;
+    z-index: 1;
 }
 
 .filters-list {

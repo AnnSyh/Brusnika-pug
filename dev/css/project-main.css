@@ -1665,6 +1665,9 @@ a.basket-menu__link_lowercase {
     padding-right: 2.5px;
     padding-left: 2.5px;
   }
+  #catalog-items .slider-prev-watched .row {
+    padding-left: 15px;
+  }
 }
 .page-note {
   padding: 10px 0;
@@ -1787,6 +1790,11 @@ a.basket-menu__link_lowercase {
   width: 100%;
   justify-content: space-between;
   gap: 10px;
+}
+@media screen and (max-width: 480px) {
+  .filters-list {
+    margin-left: 15px;
+  }
 }
 
 .filters-list-small {
@@ -2421,9 +2429,6 @@ a.basket-menu__link_lowercase {
 }
 
 @media screen and (max-width: 960px) {
-  .page-inner--mobile_empty {
-    padding: 0 15px !important;
-  }
   .jcf-number {
     height: 50px;
     line-height: 50px;

@@ -211,9 +211,9 @@ linksMore.forEach((item) => {
   if (item) {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
-      // evt.target.nextElementSibling.classList.toggle('d-none');
+      evt.target.nextElementSibling.classList.toggle('d-none');
       // console.log('evt.target.nextElementSibling = ',evt.target.nextElementSibling);
-      evt.target.nextElementSibling.classList.toggle('v-hidden');
+      // evt.target.nextElementSibling.classList.toggle('v-hidden');
     });
   }
 });

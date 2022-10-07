@@ -5765,7 +5765,7 @@ ul.footer-top__list {
 }
 
 .big-grid__item-double-center .catalog-item.w2 .catalog-item-photo-holder {
-  padding-top: calc(85% - 170px);
+  padding-top: 74%;
 }
 .big-grid__item-double-center .catalog-item.w2 .slider-size {
   bottom: 85px;
@@ -5861,6 +5861,21 @@ ul.footer-top__list {
   }
 }
 
+.img-only-desktop,
+.img-only-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .img-only-mobile {
+    display: block;
+  }
+}
+@media screen and (min-width: 481px) {
+  .img-only-desktop {
+    display: block;
+  }
+}
 .banner-item-text {
   max-width: 760px;
   text-align: center;

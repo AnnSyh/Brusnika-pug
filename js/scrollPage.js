@@ -211,9 +211,12 @@ linksMore.forEach((item) => {
   if (item) {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
+      // меняю текст ссылки
+      evt.target.textContent == 'Подробнее' ? evt.target.textContent = 'Скрыть' : evt.target.textContent = 'Подробнее';
+     // прячу текст
       evt.target.nextElementSibling.classList.toggle('d-none');
-      // console.log('evt.target.nextElementSibling = ',evt.target.nextElementSibling);
-      // evt.target.nextElementSibling.classList.toggle('v-hidden');
+
+
     });
   }
 });

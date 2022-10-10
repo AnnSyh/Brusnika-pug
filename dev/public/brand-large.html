@@ -2322,9 +2322,7 @@
                   <input class="form-item form-item--text" id="auth_sms" type="tel" name="auth_sms" required="" placeholder="+7-___-___-___" data-validation="{&quot;message&quot;: &quot;Укажите номер телефона&quot;, &quot;mask&quot;: &quot;+7 999-999-999&quot;}">
                 </div>
               </div>
-              <div class="form-row">
-                <button class="btn btn--black btn--medium w100 max-w100" type="submit">ВЫСЛАТЬ КОД</button>
-              </div>
+              <div class="form-row"><a class="btn btn--black btn--medium w100 max-w100" href="#sms-cod-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ВЫСЛАТЬ КОД</a></div>
             </div>
             <div class="tab-content-item tab active form-tab-content-item" id="form_email">
               <div class="form-row">
@@ -2337,9 +2335,7 @@
                   <input class="form-item form-item--text" id="auth_email" type="email" name="auth_email" required="" data-validation="{&quot;message&quot;: &quot;Укажите корректный e-mail&quot;}">
                 </div>
               </div>
-              <div class="form-row">
-                <button class="btn btn--black btn--medium w100 max-w100" type="submit">ОТПРАВИТЬ</button>
-              </div>
+              <div class="form-row"><a class="btn btn--black btn--medium w100 max-w100" href="#change-password-text-popup" data-popup="{&quot;type&quot;:&quot;inline&quot;}">ОТПРАВИТЬ</a></div>
             </div>
           </div>
         </div>
@@ -2643,6 +2639,12 @@
             </ul>
       </div>
       <div class="page-popup-footer"><a class="btn btn--black btn--medium btn--fullwidth basket-open" href="#">Выберите размеры</a></div>
+    </div>
+    <div class="page-popup mfp-hide" id="change-password-text-popup">
+      <div class="page-popup-heading">
+        <div class="page-popup-title uppercase"> Сменить свой пароль</div>
+      </div>
+      <p>Ссылка для восстановления пароля отправлена на ваш e-mail. Проверьте почту.</p>
     </div>
     <div class="page-popup page-popup--checked mfp-hide" id="checkout-popup">
       <div class="page-popup-heading">

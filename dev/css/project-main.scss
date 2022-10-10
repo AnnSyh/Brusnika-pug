@@ -63,6 +63,41 @@
 //   }  
 // }
 
+.arrow-top { 
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.arrow-top__visible {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}
+
+.arrow-top::after{
+  content: ' ';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url(../dummy/svg/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center 13px;
+}
+
+.arrow-top__visible {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}
+
 
 .section {
   margin-top: 46px;

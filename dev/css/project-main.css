@@ -5032,6 +5032,10 @@ ul.footer-top__list {
 }
 .search-form--basket .search-form__input {
   padding-left: 15px !important;
+  padding-right: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .accordion--basket-page:has(.opened) {

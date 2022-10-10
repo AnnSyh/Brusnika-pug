@@ -11,8 +11,12 @@
     content: none;
   }
 
-  .search-form__input {
+  .search-form__input { 
     padding-left: 15px !important;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
   }
 }
 

@@ -1,42 +1,52 @@
 
-#auth-form.page-popup.page-popup--auth-form.mfp-hide
-  .page-popup-inner
-    .page-popup-title Войти
-    .page-popup-title--small Введите свою почту и пароль, чтобы войти.
-    form.form
-      .tabs.form-tabs
-        .tabs-heading.form-tabs-heading
-          .form-tabs-heading-items
-            .tab-heading-item.active.form-tab-heading-item(data-tab='#auth-form_email' data-tabs='.auth-tab') Войдите по E-mail
-            .tab-heading-item.form-tab-heading-item(data-tab='#auth-form_phone' data-tabs='.auth-tab') Войдите через смс
-        .tabs-content.form-tabs-content
-          #auth-form_phone.tab-content-item.auth-tab.show.form-tab-content-item
-            .form-row
-              label.form-label(for='auth_sms') Контактный телефон
-              .form-item-holder
-                input#auth_sms.form-item.form-item--text(type='email' name='auth_sms' required='' data-validation='')
-            .form-row
-              button.btn.btn--black.btn--medium.w100.max-w100(type='submit') ВЫСЛАТЬ КОД
-            .form-row
-              .form-group-inner
-                a.link.link--black_border(href='#')
-                  span Я забыл пароль  
-                a.link.link--black_border(href='#')
-                  span Регистрация
-          #auth-form_email.tab-content-item.auth-tab.active.form-tab-content-item
-            .form-row
-              label.form-label(for='auth_email') Ваш E-mail
-              .form-item-holder
-                input#auth_email.form-item.form-item--text(type='email' name='auth_email' required='' data-validation='')
-            .form-row
-              label.form-label(for='auth_pass') Пароль
-              .form-item-holder
-                input#auth_pass.form-item.form-item--password(type='password' name='auth_pass' required='' data-validation='')
-            .form-row
-              button.btn.btn--black.btn--medium.w100.max-w100(type='submit') Войти
-            .form-row
-              .form-group-inner
-                a.link.link--black_border(href='#')
-                  span Я забыл пароль  
-                a.link.link--black_border(href='#')
-                  span Регистрация
+#auth-form.page-popup.mfp-hide
+      .page-popup-title ВХОД
+      form.form
+        .tabs.form-tabs
+          .tabs-heading.form-tabs-heading
+            .form-tabs-heading-items
+              .tab-heading-item.active.form-tab-heading-item.sign-with(data-tab='#auth-form_email' data-tabs='.auth-tab') 
+                | Войдите по E-mail
+              .tab-heading-item.form-tab-heading-item.sign-with(data-tab='#auth-form_phone' data-tabs='.auth-tab') 
+                | Войдите через смс
+          .tabs-content.form-tabs-content(style='min-height: 250px')
+
+            #auth-form_phone.tab-content-item.auth-tab.show.form-tab-content-item
+              .form-row                
+                .page-popup-title--small Введите свой номер телефона, чтобы войти. 
+                  |На указанный телефон придёт смс для авторизации.
+              .form-row
+                label.form-label(for='auth_sms') Контактный телефон
+                .form-item-holder
+                  input#auth_sms.form-item.form-item--text(type='tel' name='auth_sms' required='' placeholder='+7-___-___-___' data-validation='{"message": "Укажите номер телефона", "mask": "+7 999-999-999"}')
+              .form-row
+                a.btn.btn--black.btn--medium.w100.max-w100(href='#sms-cod-popup' data-popup='{"type":"inline"}') ВЫСЛАТЬ КОД
+              .form-row
+                .form-group-inner.forgot-password
+                  a.link.link--black_border(href='#change-password-popup' data-popup='{"type":"inline"}')
+                    span Я забыл пароль  
+                  a.link.link--black_border(href='registration.html')
+                    span Регистрация
+
+            #auth-form_email.tab-content-item.auth-tab.active.form-tab-content-item
+              .form-row
+                .page-popup-title--small Введите свою почту и пароль, чтобы войти.
+              .form-row
+                label.form-label(for='auth_email') Ваш E-mail
+                .form-item-holder
+                  input#auth_email.form-item.form-item--text(type='email' name='auth_email' required='' data-validation='{"message": "Укажите корректный e-mail"}')
+
+              .form-row
+                label.form-label(for='reg_pass1') Пароль
+                input#reg_pass1.form-item.form-item--password(type='password' name='reg_pass1' required='' data-validation='{"minlength": "6", "message": {"required": "", "minlength": "Минимальная длина пароля – 6 символов"}}')
+                span.password-show
+
+              .form-row
+                button.btn.btn--black.btn--medium.w100.max-w100(type='submit') Войти
+
+              .form-row
+                .form-group-inner.forgot-password
+                  a.link.link--black_border(href='#change-password-popup' data-popup='{"type":"inline"}')
+                    span Я забыл пароль  
+                  a.link.link--black_border(href='registration.html')
+                    span Регистрация      

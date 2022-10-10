@@ -6,14 +6,14 @@ const arrowTop = document.querySelector(".arrow-top");
 
 $('.card-nav').hide(); // убрать меню при загрузке стр
 
-arrowTop.addEventListener("click",  function () {
+arrowTop.addEventListener("click", function () {
   window.location.href = '#top';
 });
 
 window.addEventListener('scroll', function () {
 
-// стрелка вверх
-  if (window.scrollY > 200){
+  // стрелка вверх
+  if (window.scrollY > 200) {
     arrowTop.classList.add('arrow-top__visible');
   } else {
     arrowTop.classList.remove('arrow-top__visible');
@@ -98,7 +98,7 @@ checkListLinks.forEach((item) => {
       changeButton.href = 'basket.html'
     }
 
-// ----------------------------------
+    // ----------------------------------
     const changeSizePopup = document.querySelector('#change-size-popup');
     const sizePopupCountLinks = changeSizePopup.querySelectorAll('.active').length;
 
@@ -220,14 +220,31 @@ favoritesList.forEach((item) => {
 // });
 // ---кнопка 'Подробнее'------------------------------
 const linksMore = document.querySelectorAll('.link-more-js');
+const linksMoreText = document.querySelectorAll('.link-more-text-js');
+
+linksMoreText.forEach((item) => {
+  if (item) {
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
+
+      // меняю текст ссылки
+      evt.target.textContent == 'Подробнее' ? evt.target.textContent = 'Скрыть' : evt.target.textContent = 'Подробнее';
+      // прячу текст
+      evt.target.nextElementSibling.classList.toggle('d-none');
+
+
+    });
+  }
+});
 
 linksMore.forEach((item) => {
   if (item) {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
+
       // меняю текст ссылки
-      evt.target.textContent == 'Подробнее' ? evt.target.textContent = 'Скрыть' : evt.target.textContent = 'Подробнее';
-     // прячу текст
+      // evt.target.textContent == 'Подробнее' ? evt.target.textContent = 'Скрыть' : evt.target.textContent = 'Подробнее';
+      // прячу текст
       evt.target.nextElementSibling.classList.toggle('d-none');
 
 
@@ -299,17 +316,26 @@ paymentList.forEach((item) => {
 
   item.addEventListener('click', (e) => {
     paymentList.forEach((item) => {
+      const paymentList = document.querySelectorAll('.payment-list input[type="radio"]');
+      const textId = item.getAttribute('id');
       const contentCurrent = item.parentNode.parentNode.parentNode; // выбираем .filter-row__inner
-      if (item.checked) {
-        contentCurrent.classList.add('opend');
-      } else {
-        contentCurrent.classList.remove('opend');
+      if (item.checked && textId == 'payment-receipt') {
+        document.querySelector('.payment-receipt').classList.remove('d-none');
+        document.querySelector('.payment-card').classList.add('d-none');
       }
+      if (item.checked && textId == 'payment-card') {
+        document.querySelector('.payment-card').classList.remove('d-none');
+        document.querySelector('.payment-receipt').classList.add('d-none');
+      }
+
     });
 
   });
 
 });
+
+
+
 
 // закрыть все попапы
 
@@ -319,15 +345,15 @@ const btnClose = document.querySelectorAll('.close-popup');
 btnClose.forEach((item) => {
 
   item.addEventListener('click', (e) => {
-      // console.log('close all btns');
-      closeAllPopups.forEach((popup) => {
-      
-        if (!popup.classList.contains('mfp-hide')) {
-          popup.classList.add('mfp-hide');
-          document.querySelector('mfp-bg').classList.remove('mfp-hide');
-        } 
-      
-      });
+    // console.log('close all btns');
+    closeAllPopups.forEach((popup) => {
+
+      if (!popup.classList.contains('mfp-hide')) {
+        popup.classList.add('mfp-hide');
+        document.querySelector('mfp-bg').classList.remove('mfp-hide');
+      }
+
+    });
 
   });
 

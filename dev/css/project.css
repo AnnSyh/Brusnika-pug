@@ -864,9 +864,13 @@ hr {
   border-top: 1px solid #1D1D1D;
 }
 
-.page-text small,
-.small {
+.page-text .small {
   font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .page-text .small {
+    font-size: 12px;
+  }
 }
 
 .page-text .usmall {
@@ -1234,9 +1238,9 @@ span.form-item--error {
   position: relative;
   box-sizing: border-box;
   display: inline-block;
-  width: 16px;
-  min-width: 16px;
-  height: 16px;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
   border: 1px solid #a7a7a7;
   background-color: #fff;
   border-radius: 50%;
@@ -1245,12 +1249,12 @@ span.form-item--error {
 
 .jcf-radio span {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 9px;
+  top: 9px;
   transform: translate(-50%, -50%);
   display: block;
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #1D1D1D;
   opacity: 0;
@@ -1269,7 +1273,7 @@ span.form-item--error {
 }
 
 .jcf-radio.jcf-checked {
-  border: 2px solid #1D1D1D;
+  border: 1px solid #1D1D1D;
 }
 
 .jcf-radio.jcf-checked span {

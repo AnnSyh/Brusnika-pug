@@ -1,13 +1,5 @@
 @import '../variables';
 
-// .mobile-filter {
-//     border: 1px solid red;
-
-//   }
-
-
-
-
 .filter-price-fields {
   width: 100px;
   height: 40px;
@@ -346,7 +338,6 @@
   // height: 100vh;
   display: flex;
   flex-direction: column;
-  // border: 1px solid green;
 }
 
 .mobile-filter-footer {
@@ -357,14 +348,9 @@
   display: flex;
   flex-direction: column;
 
-  // .mobile-filter-item:last-child {
-  //   border: 1px solid red;
-  // }
-
   .filter-row {
     border: 1px solid transparent;
   }
-
 
 }
 
@@ -455,8 +441,6 @@
   position: relative;
   padding: 5px 0x;
   border-bottom: 1px solid $color-gray-two;
-
-  // border: 1px solid red;
 
   &--size {
     @media screen and (max-width:480px) {
@@ -653,7 +637,6 @@
 }
 
 .mobile-filter-holder {
-  // border: 1px solid red;
 
   @media screen and (max-width:480px) {
     font-size: 12px;

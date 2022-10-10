@@ -70,11 +70,11 @@
     align-items: center;
     display: flex;
 
-    &:first-child {
-        margin-left: 0;
+    &:first-child { 
+        margin-left: 0px;
     }
 
-    &:last-child {
+    &:last-child { 
         margin-right: 0;
     }
 }
@@ -261,9 +261,6 @@
 
 
 @media screen and (min-width: 991px) {
-    // .header-menu__item {
-    //     border: 1px solid red;
-    // }
 
     .header-login-item:before,
     .header-menu__item_favorites a:before {
@@ -295,4 +292,8 @@
     .only-desktop_header-menu {
         display: none;
     }
+}
+
+.header-menu--light  .header-menu__item_basket {
+    margin-left: 15px;
 }

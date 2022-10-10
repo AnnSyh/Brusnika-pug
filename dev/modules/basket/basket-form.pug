@@ -1,43 +1,21 @@
 div.basket-page-form
-    .basket-form__title 1.Ваш город
     .form-row
+      .basket-form__title 1.Ваш город
 
       .search-form.search-form--basket
         input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Ростов-на-Дону')
-        button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
-      label.form-item-label(for='city') Ваш город
+        button.search-form__clear.search-form__clear--small.input__clear_visibility_visible.btn.btn--medium(type='button')
+      label.form-item-label(for='city') Выберите свой город в списке
 
     .form-row
       .basket-form__title 2. Доставка
-        //- .basket-form__title 2. Доставка
-
-      //- .accordion1.accordion--basket-page
-      //-   .accordion-item
-      //-     .accordion-item-heading
-      //-       | Из магазина  
-      //-       br
-      //-       | Бесплатно
-      //-     .accordion-item-content1.show(style="display: block; opacity: 1;")
-      //-       ul.basket__pickup
-      //-         each item in pickupItems
-      //-           li
-      //-             label.form-radio
-      //-               input.form-item.form-item--radio(type='radio' name='product')
-      //-               .form-radio__item
-      //-                 .basket__pickup-metro= item.metro
-      //-                 .basket__pickup-address= item.address
-      //-                 .basket__pickup-data= item.data
-      //-                 .basket__pickup-payment= item.payment
-          //- a.link.link--gray_border.small.ml-30px(href='#show-on-map-popup' data-popup='{"type":"inline"}') Показать на карте
-          //- include ../map
-
 
       .filter-row.filter-row-click
           .filter-row__inner.filter-row__inner--first
             label.form-radio
               .filter-row__radio-coll
                 input.form-item.form-item--radio.hidden-radio(type='radio' name='pickup')
-                div 
+                div.bold
                   | Из магазина  
                   br
                   | Бесплатно
@@ -65,14 +43,14 @@ div.basket-page-form
             .filter-row__content 
                 div.mb-30px
                   | Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.
-                div.bold.mb-10px  Куда доставить заказ?
+                div.bold.mb-10px Куда доставить заказ?
                 div.mb-30px
                   .search-form.search-form--basket
                     input.search-form__input.form-item.form-item--text(type='text' name='city' placeholder='' data-validation='{"message": "Обязательное поле"}' required='' value='Москва, ул. Ленина, 44, кв. 23')
-                    button.search-form__clear.input__clear_visibility_visible.btn.btn--medium(type='button')
+                    button.search-form__clear.search-form__clear--small.input__clear_visibility_visible.btn.btn--medium(type='button')
 
                 a.link-more.link-more-js(href="#")  Добавить комментарий к заказу
-                .v-hidden
+                .d-none
                   div.mt-30px 
                     textarea.form-item--textarea.w-100(name="" cols="30" rows="10") 
 
@@ -128,28 +106,30 @@ div.basket-page-form
           .form-group-inner
             .form-group-item.form-group-item--w32
               label.form-label(for='ord_name') Фамилия/Имя/Отчество
-              input#ord_name.form-item.form-item--text.form-item--middle(type='text' name='ord_name' required=''  data-validation='{"message": "Обязательное поле"}' placeholder='Фамилия/Имя/Отчество' value1='Фамилия/Имя/Отчество')
+              input#ord_name.form-item.form-item--text.form-item--middle(type='text' name='ord_name' required=''  data-validation='{"message": "Обязательное поле"}' placeholder='введите свое имя' value1='введите свое имя')
             .form-group-item.form-group-item--w32
               label.form-label(for='ord_phone') Телефон
               input#ord_phone.form-item.form-item--text.form-item--middle(type='text' name='ord_phone' required='' data-validation='{"pattern": "phoneRU", "mask": "+7 (999) 999-99-99"}'  placeholder='+7-___-___-___'  )
             .form-group-item.form-group-item--w32
               label.form-label(for='ord_email') Почта
-              input#ord_email.form-item.form-item--text.form-item--middle(type='email' name='ord_email' required='' data-validation='{"message": "Укажите корректный e-mail"}', placeholder='petrov@gmail.com' value1='petrov@gmail.com')
+              input#ord_email.form-item.form-item--text.form-item--middle(type='email' name='ord_email' required='' data-validation='{"message": "Укажите корректный e-mail"}', placeholder='info@company.ru' value1='info@company.ru')
 
-    .form-row
+    .form-row(style='margin-bottom: 10px;')
       .basket-form__title 3. Оплата
-    .form-row.payment-list
+      .payment-list
         div
           label.form-radio.filter-row-click
             input.form-item.form-item--radio(type='radio' id="payment-card" name='ord_payment' value='card')
             span Банковской картой на сайте
-          .v-hidden
-              | *Скидка 2% при фактической оплате заказа на сайте.
         div
           label.form-radio.filter-row-click
             input.form-item.form-item--radio(type='radio' id='payment-receipt' name='ord_payment' value='receipt')
             span Оплата при получении
-          .v-hidden
-              | Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)
+
+    .div(style='min-height: 40px;')
+      div.d-none.payment-card
+        | *Скидка 2% при фактической оплате заказа на сайте.
+      div.d-none.payment-receipt
+        | Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)
     
     //- button.btn.btn--large.btn--black.btn--fullwidth(type='submit') ОФОРМИТЬ ЗАКАЗ

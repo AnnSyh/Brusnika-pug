@@ -45,9 +45,13 @@
   border-bottom-color: #000;
 }
 
-.form-row {
+.form-row { 
   margin-bottom: 30px;
   width: 100%;
+
+  @media screen and (max-width:480px) {
+    margin-bottom: 50px;
+  }
 }
 
 .form-row:last-child {

@@ -43,7 +43,7 @@
       </html>
       <header class="page-header page-header-fixed1">
         <div class="page-inner page-inner--w1 desktop">
-          <div class="header-menu">
+          <div class="header-menu header-menu--light">
             <div class="header-menu__left">
               <ul class="header-menu__list">
                 <li class="header-menu__item header-menu__item_catalog"><a class="header-menu__item-catalog catalog-open" href="#"></a></li>
@@ -500,11 +500,11 @@
       </header>
       <main class="page-content">
         <div class="page-inner page-inner--w2">
-          <div class="basket__page-header">
+          <div class="basket__page-header basket__page-header--basket">
             <div class="row align-items-end justify-content-between">
               <div class="col-md-6">
                 <div class="d-md-none mb-3"><a class="link link--black" href="#">Назад к покупкам</a></div>
-                <div class="basket-form__title">Оформление заказа</div>
+                <div class="basket-form__title basket-form__title--first uppercase">Оформление заказа</div>
                 <div class="basket-form__text">   Обработка заказов ежедневно
                   <nobr>09:00 — 21:00</nobr>
                 </div>
@@ -515,7 +515,7 @@
           <form class="form basket__body" novalidate="novalidate">
             <div class="basket__body-left">
               <div class="order-content">
-                <div class="order__title">Товары в заказе</div>
+                <div class="order__title">Товары в заказе (2)</div>
                 <div class="order-table order-table_basket">
                   <div class="order-table__row">
                     <div class="order-table__item">
@@ -566,13 +566,13 @@
                 </div>
               </div>
               <div class="basket-page-form">
-                <div class="basket-form__title">1.Ваш город</div>
                 <div class="form-row">
+                  <div class="basket-form__title">1.Ваш город</div>
                   <div class="search-form search-form--basket">
                     <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Ростов-на-Дону">
-                    <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                    <button class="search-form__clear search-form__clear--small input__clear_visibility_visible btn btn--medium" type="button"></button>
                   </div>
-                  <label class="form-item-label" for="city">Ваш город</label>
+                  <label class="form-item-label" for="city">Выберите свой город в списке</label>
                 </div>
                 <div class="form-row">
                   <div class="basket-form__title">2. Доставка</div>
@@ -581,8 +581,7 @@
                       <label class="form-radio">
                         <div class="filter-row__radio-coll">
                           <input class="form-item form-item--radio hidden-radio" type="radio" name="pickup">
-                          <div>
-                             Из магазина  <br>Бесплатно</div>
+                          <div class="bold">Из магазина  <br>Бесплатно</div>
                         </div>
                       </label>
                       <div class="filter-row__content" style="display: block;">
@@ -624,14 +623,14 @@
                       </label>
                       <div class="filter-row__content"> 
                         <div class="mb-30px">Примерка 15 минут. Если после примерки не подошла вещь, вы можете вернуть её курьеру. Возврат денежных средств будет осуществлен в течений 1-7 рабочих дней.</div>
-                        <div class="bold mb-10px"> Куда доставить заказ?</div>
+                        <div class="bold mb-10px">Куда доставить заказ?</div>
                         <div class="mb-30px">
                           <div class="search-form search-form--basket">
                             <input class="search-form__input form-item form-item--text" type="text" name="city" placeholder="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" required="" value="Москва, ул. Ленина, 44, кв. 23">
-                            <button class="search-form__clear input__clear_visibility_visible btn btn--medium" type="button"></button>
+                            <button class="search-form__clear search-form__clear--small input__clear_visibility_visible btn btn--medium" type="button"></button>
                           </div>
                         </div><a class="link-more link-more-js" href="#"> Добавить комментарий к заказу</a>
-                        <div class="v-hidden">
+                        <div class="d-none">
                           <div class="mt-30px"> 
                             <textarea class="form-item--textarea w-100" name="" cols="30" rows="10"> </textarea>
                           </div>
@@ -679,7 +678,7 @@
                       <div class="form-group-inner">
                         <div class="form-group-item form-group-item--w32">
                           <label class="form-label" for="ord_name">Фамилия/Имя/Отчество</label>
-                          <input class="form-item form-item--text form-item--middle" id="ord_name" type="text" name="ord_name" required="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" placeholder="Фамилия/Имя/Отчество" value1="Фамилия/Имя/Отчество">
+                          <input class="form-item form-item--text form-item--middle" id="ord_name" type="text" name="ord_name" required="" data-validation="{&quot;message&quot;: &quot;Обязательное поле&quot;}" placeholder="введите свое имя" value1="введите свое имя">
                         </div>
                         <div class="form-group-item form-group-item--w32">
                           <label class="form-label" for="ord_phone">Телефон</label>
@@ -687,28 +686,30 @@
                         </div>
                         <div class="form-group-item form-group-item--w32">
                           <label class="form-label" for="ord_email">Почта</label>
-                          <input class="form-item form-item--text form-item--middle" id="ord_email" type="email" name="ord_email" required="" data-validation="{&quot;message&quot;: &quot;Укажите корректный e-mail&quot;}" placeholder="petrov@gmail.com" value1="petrov@gmail.com">
+                          <input class="form-item form-item--text form-item--middle" id="ord_email" type="email" name="ord_email" required="" data-validation="{&quot;message&quot;: &quot;Укажите корректный e-mail&quot;}" placeholder="info@company.ru" value1="info@company.ru">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row" style="margin-bottom: 10px;">
                   <div class="basket-form__title">3. Оплата</div>
+                  <div class="payment-list">
+                    <div>
+                      <label class="form-radio filter-row-click">
+                        <input class="form-item form-item--radio" type="radio" id="payment-card" name="ord_payment" value="card"><span>Банковской картой на сайте</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="form-radio filter-row-click">
+                        <input class="form-item form-item--radio" type="radio" id="payment-receipt" name="ord_payment" value="receipt"><span>Оплата при получении</span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-row payment-list">
-                  <div>
-                    <label class="form-radio filter-row-click">
-                      <input class="form-item form-item--radio" type="radio" id="payment-card" name="ord_payment" value="card"><span>Банковской картой на сайте</span>
-                    </label>
-                    <div class="v-hidden">*Скидка 2% при фактической оплате заказа на сайте.</div>
-                  </div>
-                  <div>
-                    <label class="form-radio filter-row-click">
-                      <input class="form-item form-item--radio" type="radio" id="payment-receipt" name="ord_payment" value="receipt"><span>Оплата при получении</span>
-                    </label>
-                    <div class="v-hidden">Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)</div>
-                  </div>
+                <div class="div" style="min-height: 40px;">
+                  <div class="d-none payment-card">*Скидка 2% при фактической оплате заказа на сайте.</div>
+                  <div class="d-none payment-receipt">Оплата производится в момент получения заказа наличными или банковской картой (при предварительном согласовании)</div>
                 </div>
               </div>
             </div>
@@ -745,7 +746,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn btn--large btn--black btn--fullwidth" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+                <button class="btn btn--medium btn--black btn--fullwidth" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
                 <div class="form-policy">
                   <div class="page-text">
                     <div class="small">Нажимая кнопку «Оформить заказ», вы соглашаетесь с <a href="#">условиями оферты </a>и <a href="#">политикой конфиденциальности     </a></div>

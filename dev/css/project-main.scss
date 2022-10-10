@@ -247,6 +247,9 @@
 .mb-10px {
   margin-bottom: 10px;
 }
+.mb-15px {
+  margin-bottom: 15px;
+}
 
 .bold {
   font-weight: bold;
@@ -428,6 +431,10 @@ body,
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  @media screen and (max-width:480px) {
+    font-size: 12px;
+  }
 }
 
 
@@ -552,7 +559,6 @@ body,
 
 // расстояния от шапки до контента и от контента до футера
 .page-content {
-  // border: 1px solid red;
   margin-top: 15px;
   margin-bottom: 200px;
 

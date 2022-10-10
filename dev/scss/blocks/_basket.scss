@@ -3,6 +3,14 @@
 .basket {
     &__page-header {
         margin-bottom: 70px;  
+
+        &--basket {
+            margin-bottom: 50px;  
+
+            @media screen and (max-width: 480px) { 
+                margin-bottom: 30px;  
+            }
+        }
     }
 
     &__header {
@@ -21,15 +29,20 @@
             gap: 10px;
         }
 
+        @media screen and (max-width: 480px) { 
+            font-size: 12px;
+            margin-bottom: 0px;
+        }
+
         .order-aside {
             padding: 40px;
             background: #F7F5F5;
             border-radius: 0;
             min-width: 526px;
 
-            @media screen and (max-width: 530px) {
+            @media screen and (max-width: 530px) { 
                 min-width: auto;
-                padding: 15px;
+                padding: 40px 15px 0 15px;
             }
         }
     }
@@ -49,6 +62,14 @@
 
     @media screen and (max-width:768px) {
        flex-direction: column; 
+    }
+
+    @media screen and (max-width:480px) {
+        gap: 10px;
+    }
+
+    .opend .v-hidden {
+        visibility: visible;
     }
 }
 
@@ -87,6 +108,10 @@
     overflow-y: auto;
     width: 100%;
 
+    &--first .filter-row__radio-coll > span{
+        display: none;
+    }
+
     label.form-radio {
         display: flex;
         align-items: baseline;
@@ -123,6 +148,14 @@
         font-size: 18px;
         line-height: 25px;
         margin-bottom: 30px;
+
+        &--first {
+            margin-bottom: 15px;
+
+            @media screen and (max-width:480px) { 
+                margin-bottom: 10px;
+            }
+        }
 
         @media screen and (max-width:480px) { 
             font-size: 14px;

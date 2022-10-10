@@ -1,7 +1,8 @@
 @import '../variables';
 
 .basket-page-form {
-  max-width: 718px
+  max-width: 718px;
+
 }
 
 .search-form--basket {
@@ -98,6 +99,10 @@
 .filter-row__content {
   margin-top: 20px;
   margin-left: 20px;
+
+  @media screen and (max-width:480px) {
+    margin-left:0px;
+  }
 }
 
 .filter-row__inner .filter-row__content {

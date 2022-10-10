@@ -131,13 +131,20 @@
 
 .search-form__clear {
     min-width: 10px;
-    background: url(../../svg/close.svg) no-repeat center center;
+    background: url('../../svg/close.svg') no-repeat center center;
     background-repeat: no-repeat;
     background-position: 50%;
     position: relative;
     right: 200px;
     position: absolute;
     opacity: 0;
+
+    &--small {
+        // height: 9px;
+        // top: 16px;
+        background: url('../../svg/close-small.svg') no-repeat center center;
+
+    }
 }
 .input__clear_visibility_visible {
     visibility: visible;

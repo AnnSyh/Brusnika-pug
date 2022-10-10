@@ -638,9 +638,6 @@ body .mobile-nav-menu-item-holder.open:before {
     font-size: 16px;
     line-height: 30px;
   }
-  .form-row {
-    margin-bottom: 20px;
-  }
   .jcf-number {
     top: 0;
     height: 25px;
@@ -921,7 +918,7 @@ body .mobile-nav-menu-item-holder.open:before {
 }
 @media screen and (max-width: 960px) {
   .order-content {
-    margin: -20px 0 50px 0;
+    margin: 0px 0 50px 0;
     padding: 0;
     font-size: 16px;
   }

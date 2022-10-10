@@ -4,6 +4,19 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 20px;
+
+        @media screen and (max-width:480px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
 }
 
 .order-table .order-photo-holder {
@@ -200,12 +213,14 @@
 
 
 
-.order-table__item > .order-table__price {
+.order-table__item > .order-table__price { 
     width: 110px;
-    height: 50px;
-    line-height: 50px;
     white-space: nowrap;
-    margin-left: 30px;
+
+    margin: 0;
+    height: 55px;
+    line-height: 55px;
+    margin-left: 20px;
 
     @media screen and (max-width: 670px) {
         display: none;
@@ -231,16 +246,7 @@
     top: 0px;
 }
 
-.order {
 
-    &__title {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 20px;
-    }
-
-}
 
 .order-content {
     margin-bottom: 50px;
@@ -267,6 +273,11 @@
         font-size: 18px;
         line-height: 25px;
         margin-bottom: 10px;
+
+        @media screen and (max-width:480px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__text {
@@ -295,6 +306,11 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 25px;
+
+        @media screen and (max-width:480px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
 }
@@ -309,6 +325,8 @@
 
         @media screen and (max-width:480px) {
             flex-direction: column;
+            gap: 5px;
+            margin-bottom: 30px;
         }
     }
 

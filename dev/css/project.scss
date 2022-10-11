@@ -3159,3 +3159,17 @@ span.form-item--error {
 }
 
 /*** //Tooltips ***/
+
+/*** magnific-popup ***/
+@media screen and (max-width:480px) {
+
+  .mfp-container { 
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .page-popup {
+    height: calc(100vh - 40px);
+    margin-top: 40px;
+  }
+
+}

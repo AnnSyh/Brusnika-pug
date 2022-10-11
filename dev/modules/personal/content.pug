@@ -23,11 +23,11 @@ form.form
       .form-item-note Нужен для уточнения деталей заказа
     .form-row
       label.form-item-label(for='reg_pass1') Новый пароль
-      input#reg_pass1.form-item.form-item--password(type='password' name='reg_pass1' required='' data-validation='{"minlength": "6", "message": {"required": "", "minlength": "Минимальная длина пароля – 6 символов"}}')
+      input#reg_pass1.form-item.form-item--password(type='password' name='reg_pass1' required='' data-validation='{"minlength": "6", "message": {"required": "", "minlength": "Длина пароля не мнее 6 символов – 6 символов"}}')
       span.password-show  
     .form-row
       label.form-item-label(for='reg_pass2') Новый пароль еще раз
-      input#reg_pass2.form-item.form-item--password(type='password' name='reg_pass2' required='' data-validation='{"minlength": "6", "equalTo": "#reg_pass1", "message": {"equalTo": "Пароли не совпадают", "required": "", "minlength": "Минимальная длина пароля – 6 символов"}}')
+      input#reg_pass2.form-item.form-item--password(type='password' name='reg_pass2' required='' data-validation='{"minlength": "6", "equalTo": "#reg_pass1", "message": {"equalTo": "Пароли не совпадают", "required": "", "minlength": "Длина пароля не мнее 6 символов – 6 символов"}}')
       span.password-show
 
     .form-row

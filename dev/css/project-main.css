@@ -2664,10 +2664,7 @@ ul.disc {
 }
 @media screen and (max-width: 480px) {
   #auth-form {
-    padding: 20px 15px;
-  }
-  #auth-form .form-row {
-    margin-bottom: 10px;
+    padding: 5px 15px;
   }
 }
 #auth-form .tabs-heading .tab-heading-item {
@@ -2684,6 +2681,7 @@ ul.disc {
   #auth-form .page-popup-title {
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 10px;
   }
 }
 #auth-form .page-popup-title--small {

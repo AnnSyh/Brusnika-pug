@@ -55,6 +55,7 @@
 					// self.$filterMenu = $(".filter-menu", $sel.page);
 
 					self.$simplebar = $(".simplebar", $sel.page);
+					self.$cardNav = $(".card-nav", $sel.page);
 
 					self.$catalogItemSlider = $(".catalog-items--slider", $sel.page);
 					self.$catalogItemSliderPrevWatched = $(".slider-prev-watched .catalog-items--slider", $sel.page);
@@ -138,10 +139,12 @@
 					});
 
 					self.$basketOpenBtn.on("click", function (e) { //раскрытие меню при клике
-						console.log('$basketOpenBtn');
+						console.log('$basketOpenBtn cardNav = ', self.$cardNav);
 						e.preventDefault();
 						e.stopPropagation();
+						self.$cardNav.hide(); 
 						self.openedBasketMenu ? self.closeBasketMenu() : self.openBasketMenu();
+
 					});
 
 					self.$popupBasketOpenBtn.on("click", function (e) {

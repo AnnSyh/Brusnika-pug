@@ -4,8 +4,10 @@ const menuSections = $('#catalog-search-menu .menu-sections');
 const arrowTop = document.querySelector(".arrow-top");
 
 
-$('.card-nav').hide(); // убрать меню при загрузке стр
+cardNav.hide(); // убрать меню при загрузке стр
 
+
+// клик по стрелочке вверх
 arrowTop.addEventListener("click", function () {
   window.location.href = '#top';
 });
@@ -19,38 +21,25 @@ window.addEventListener('scroll', function () {
     arrowTop.classList.remove('arrow-top__visible');
   }
 
-  // скрытие/появление page-note
-  // if (window.scrollY < 100) {
-  //   console.log('window.scrollY < 100');
-
-  //   // to-top
-
-
-  // } else {
-  //   console.log('window.scrollY >= 100');
-  // }
 
 
   // найти расстояние до заголовка 'Завершите свой образ'
   // скрол должен появлятся с порокруткой до этого заголовка
   const scrollPlace = document.querySelector('.scroll-place');
-  // console.log('scrollPlace = ', scrollPlace)
-  // scrollPlace.scrollIntoView() прокрутка до начала блока scrollPlace
+  
+  const footer =  document.querySelector('.page-footer');
+  const footerCoords = footer.getBoundingClientRect();
 
-  // ---------------------------
-  // console.log('scrollPlace.offset().top ! = ', scrollPlace.offset().top)
-  // console.log('scrollPlace.position().top ! = ', scrollPlace.position().top)
-  // const offsetFromScreenTop = $(".scroll-place").offset().top + $(window).scrollTop();
-  // console.log('offsetFromScreenTop = ', offsetFromScreenTop)
-  // ---------------------------
+  const condition =  700 < $(window).scrollTop()  &&  $(window).scrollTop() < (footer.offsetTop - footer.offsetHeight);
+  // console.log('condition = ', condition);
 
-  if ($(window).scrollTop() > 700) {
+  if (condition)  {
     cardNav.show();
-    // console.log('scrollTop() > 400');
+    // console.log('scrollTop() от 700 до ' + (footer.offsetTop - footer.offsetHeight));
   }
   else {
     cardNav.hide();
-    // console.log('scrollTop() <= 400');
+    // console.log('scrollTop() <= 700 или => ' + (footer.offsetTop - footer.offsetHeight));
   }
 
   const mainNav = $('.page-header');
@@ -107,11 +96,12 @@ checkListLinks.forEach((item) => {
 
     const sizePopupLinks = document.querySelector('#size-popup');
     const countLinks = sizePopupLinks.querySelectorAll('.active').length;
+    const counstbody = document.querySelectorAll('body');
 
     if (countLinks === 3) {
       const changeButton = sizePopupLinks.querySelector('.basket-open');
       changeButton.innerHTML = 'ДОБАВИТЬ В КОРЗИНУ'
-      changeButton.href = 'basket.html'
+      changeButton.href = '#'
     }
 
     // ----------------------------------

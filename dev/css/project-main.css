@@ -6612,7 +6612,6 @@ body,
 }
 @media screen and (max-width: 480px) {
   .page-content--card {
-    border: 1px solid red;
     font-size: 12px;
     margin-top: 5px;
   }

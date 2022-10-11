@@ -313,11 +313,12 @@ body {
   z-index: 100;
 }
 
-header .header-logo img { 
+header .header-logo img {
   // z-index: 100000;
   z-index: 1000;
 }
-footer .header-logo img { 
+
+footer .header-logo img {
   z-index: 10;
 }
 
@@ -930,7 +931,7 @@ hr {
   object-fit: scaledown;
 }
 
-.breadcrumbs { 
+.breadcrumbs {
   margin-bottom: 0;
   color: #666;
   font-size: 14px;
@@ -963,7 +964,7 @@ hr {
   border-top: 1px solid $color-black;
 }
 
-.page-text .small { 
+.page-text .small {
   font-size: 14px;
 
   @media screen and (max-width:480px) {
@@ -2613,6 +2614,8 @@ span.form-item--error {
 .page-note {
   position: relative;
   padding: 10px 0;
+  //плавное прокручивание 
+  transition: transform .8s ease-in-out;
 }
 
 .page-note .page-note-inner {
@@ -3001,8 +3004,7 @@ span.form-item--error {
   }
 
   .accordion-item-content--footer,
-  .accordion-item-content 
-  {
+  .accordion-item-content {
     display: none;
     padding: 10px 0 20px 0;
     opacity: 0;

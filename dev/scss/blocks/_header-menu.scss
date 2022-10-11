@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: center;
 
+    
+
     .page-inner--w1 {
         width: 100%;
     }
@@ -23,8 +25,13 @@
     margin: 67px auto 0 auto;
 }
 
+.to-top {
+   
+    transform: translate3d(0, -40px, 0);
+}
 
-.page-header-fixed {
+
+.page-header-fixed { 
     position: fixed;
     top: 0px;
     width: 100%;
@@ -34,8 +41,6 @@
     .catalog-search-menu { 
         width: 0;
     }
-
-
 }
 
 .header-logo {

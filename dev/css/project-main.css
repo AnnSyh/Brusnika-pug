@@ -19,6 +19,10 @@
   margin: 67px auto 0 auto;
 }
 
+.to-top {
+  transform: translate3d(0, -40px, 0);
+}
+
 .page-header-fixed {
   position: fixed;
   top: 0px;

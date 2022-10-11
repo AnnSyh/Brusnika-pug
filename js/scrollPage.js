@@ -19,6 +19,17 @@ window.addEventListener('scroll', function () {
     arrowTop.classList.remove('arrow-top__visible');
   }
 
+  // скрытие/появление page-note
+  // if (window.scrollY < 100) {
+  //   console.log('window.scrollY < 100');
+
+  //   // to-top
+
+
+  // } else {
+  //   console.log('window.scrollY >= 100');
+  // }
+
 
   // найти расстояние до заголовка 'Завершите свой образ'
   // скрол должен появлятся с порокруткой до этого заголовка
@@ -43,15 +54,20 @@ window.addEventListener('scroll', function () {
   }
 
   const mainNav = $('.page-header');
+  const page = $('.page .page-note');
 
   if ($(window).scrollTop() > 0) {
 
     mainNav.addClass('page-header-fixed');
     menuSections.addClass('menu-sections-top');
+    //плавное исчезание блока 'page-note'
+    page.addClass('to-top');
 
   } else {
     mainNav.removeClass('page-header-fixed');
     menuSections.removeClass('menu-sections-top');
+    //плавное исчезание блока 'page-note'
+    page.removeClass('to-top');
 
   }
 

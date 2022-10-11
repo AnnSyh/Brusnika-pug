@@ -2010,6 +2010,7 @@ span.form-item--error {
 .page-note {
   position: relative;
   padding: 10px 0;
+  transition: transform 0.8s ease-in-out;
 }
 
 .page-note .page-note-inner {

@@ -31,6 +31,14 @@
 
 // -----------навигация-------------
 .product-photos-nav {
+
+    .slick-slide.slick-active.current img{
+        border: 1px solid #A4A1A1;
+    }
+    .slick-slide.slick-active img{
+        cursor: pointer;
+    }
+
     @media screen and (max-width: 1230px) {
         display: none;
     }

@@ -1,6 +1,6 @@
 @import url(../fonts/fonts.css);
 @import '../scss/variables';
-  
+
 @import '../scss/blocks/header-menu';
 @import '../scss/blocks/catalog-menu';
 @import'../scss/blocks/basket-menu';
@@ -11,12 +11,12 @@
 @import '../scss/blocks/mobile-menu-filter';
 
 @import '../scss/blocks/mobile-slider';
- 
-  
+
+
 // переиспользуемые компоненты
 @import '../scss/blocks/btns';
 @import '../scss/blocks/form';
-@import '../scss/blocks/page-popup'; 
+@import '../scss/blocks/page-popup';
 // /переиспользуемые компоненты 
 
 @import '../scss/blocks/footer';
@@ -68,7 +68,7 @@
   scroll-behavior: smooth;
 }
 
-.arrow-top { 
+.arrow-top {
   width: 50px;
   height: 50px;
   background-color: #fff;
@@ -87,7 +87,7 @@
   transform: translateY(0%);
 }
 
-.arrow-top::after{
+.arrow-top::after {
   content: ' ';
   width: 50px;
   height: 50px;
@@ -164,7 +164,7 @@
 .p0 {
   padding: 0;
 }
- 
+
 .plr0 {
   padding: 0 10px;
 }
@@ -175,7 +175,7 @@
 
 .hidden-x {
   overflow-x: hidden;
-} 
+}
 
 .align-items-end {
   align-items: flex-end;
@@ -247,17 +247,19 @@
 .mb-10px {
   margin-bottom: 10px;
 }
+
 .mb-15px {
   margin-bottom: 15px;
 }
 
 .bold {
   font-weight: bold;
-} 
+}
 
 .left-12px {
-  position: relative; left: -12px;
-} 
+  position: relative;
+  left: -12px;
+}
 
 .tooltip_templates {
   display: none;
@@ -565,6 +567,33 @@ body,
   @media screen and (max-width:768px) {
     margin-bottom: 70px;
   }
+
+  @media screen and (max-width:480px) {
+
+    &--card { border: 1px solid red;
+      font-size: 12px;
+      margin-top: 5px;
+
+      .breadcrumbs,
+      .product-to-basket .product-size {
+        margin-bottom: 10px;
+      }
+
+      .product-info__title,
+      .product-to-basket .jcf-select,
+      .product-razdel,
+      .product-properties,
+      .accordion ul {
+        font-size: 12px;
+      }
+
+      .card-nav__col2 {
+        padding: 0px;
+      }
+      
+    }
+
+  }
 }
 
 //убрать стрелочки для мозилы
@@ -628,6 +657,6 @@ input[type="number"]:focus {
   opacity: 0;
 }
 
-.tooltip__close { 
+.tooltip__close {
   cursor: pointer;
 }

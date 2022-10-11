@@ -114,6 +114,10 @@ ul.disc {
 
   &__under-form-text {
     margin-bottom: 50px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 
 }

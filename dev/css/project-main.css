@@ -368,7 +368,7 @@ a.catalog-menu__link_lowercase {
 
 .accordion_catalog-menu .accordion-item .accordion-item-heading {
   padding: 0;
-  padding-right: 30px;
+  padding-right: 15px;
 }
 
 .accordion_catalog-menu .accordion-item .accordion-item-heading .catalog-menu__link {
@@ -1502,7 +1502,7 @@ a.basket-menu__link_lowercase {
   line-height: 20px;
 }
 .catalog-item .catalog-item-price {
-  margin-top: 0;
+  margin-top: 5px;
   line-height: 12px;
   height: 20px;
 }
@@ -2709,6 +2709,11 @@ ul.disc {
 }
 .reg-form__under-form-text {
   margin-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  .reg-form__under-form-text {
+    font-size: 12px;
+  }
 }
 
 .jcf-number {
@@ -4458,6 +4463,7 @@ ul.footer-top__list {
   justify-content: space-between;
   align-items: center;
   box-shadow: 2px 0px 14px rgba(96, 96, 96, 0.2);
+  margin-bottom: 10px;
 }
 
 .card-nav .product-list {
@@ -4609,6 +4615,12 @@ ul.footer-top__list {
     display: none !important;
   }
 }
+.product-photos-nav .slick-slide.slick-active.current img {
+  border: 1px solid #A4A1A1;
+}
+.product-photos-nav .slick-slide.slick-active img {
+  cursor: pointer;
+}
 @media screen and (max-width: 1230px) {
   .product-photos-nav {
     display: none;
@@ -4680,6 +4692,11 @@ ul.footer-top__list {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 480px) {
+  .complite-look__info {
+    max-width: 100%;
+  }
+}
 .complite-look__text {
   color: #828282;
   font-weight: 200;
@@ -4701,6 +4718,16 @@ ul.footer-top__list {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
+}
+@media screen and (max-width: 480px) {
+  .complite-look__info {
+    margin: 30px auto 0 auto;
+  }
+  .complite-look__by-all {
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .gallery__item {
@@ -6581,6 +6608,27 @@ body,
 @media screen and (max-width: 768px) {
   .page-content {
     margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-content--card {
+    border: 1px solid red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .page-content--card .breadcrumbs,
+.page-content--card .product-to-basket .product-size {
+    margin-bottom: 10px;
+  }
+  .page-content--card .product-info__title,
+.page-content--card .product-to-basket .jcf-select,
+.page-content--card .product-razdel,
+.page-content--card .product-properties,
+.page-content--card .accordion ul {
+    font-size: 12px;
+  }
+  .page-content--card .card-nav__col2 {
+    padding: 0px;
   }
 }
 

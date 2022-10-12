@@ -496,10 +496,10 @@ body .mobile-nav-menu-item-holder.open:before {
   margin: 0 30px 20px 0;
 }
 
-/* .size-open, */
-// .search-open {
-//   overflow: hidden;
-// }
+/* .size-open, */ 
+.search-open .page {
+  overflow: hidden;
+}
 .search-open .header-toolbar .header-toolbar-item--search img {
   display: none;
 }

@@ -1770,8 +1770,7 @@
 
 							placemarks[i] = new ymaps.Placemark(shops[i].coords,
 								{
-									// balloonContent: '$[[options.contentLayout observeSize minWidth=235 maxWidth=235 maxHeight=350]]',
-									balloonContentHeader: `<img src="../dummy/shops/${shops[i].img}" width="100%"  style="border: 1px solid red;">`,
+									balloonContentHeader: `<img src="../dummy/shops/${shops[i].img}" width="100%" >`,
 									balloonContentBody: ` <div class="item-shop-title">${shops[i].name}</div>` +
 										`<div class="item-shop-address">${shops[i].address}</div>` +
 										`<div class="item-shop-time">${shops[i].time}</div>`,
@@ -1791,6 +1790,10 @@
 									iconImageOffset: [-5, -38]
 								},
 							);
+
+							// устанавливаю мах ширину балуна
+							placemarks[i].options.set('balloonMaxWidth', 300);
+
 							// Добавим i-ю метку на карту.
 							myMap.geoObjects.add(placemarks[i]);
 

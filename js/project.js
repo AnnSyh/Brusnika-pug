@@ -1760,6 +1760,8 @@
 						var myMap = new ymaps.Map('map', {
 							center: [55.757131068980215, 37.61711450000001],
 							zoom: 11,
+						}, {
+							searchControlProvider: 'yandex#search'
 						});
 
 						// размещаем точки на карте
@@ -1781,7 +1783,19 @@
 									// Необходимо указать данный тип макета.
 									iconLayout: 'default#image',
 									// Своё изображение иконки метки.
-									iconImageHref: '../dummy/shops/placemark.png',
+									iconImageHref: '../dummy/shops/placemark.svg',
+									// Размеры метки.
+									iconImageSize: [30, 30],
+									// Смещение левого верхнего угла иконки относительно
+									// её "ножки" (точки привязки).
+									iconImageOffset: [-5, -38]
+								},
+								{
+									// Опции.
+									// Необходимо указать данный тип макета.
+									iconLayout: 'active#image',
+									// Своё изображение иконки метки.
+									iconImageHref: '../dummy/shops/placemark-active.svg',
 									// Размеры метки.
 									iconImageSize: [30, 30],
 									// Смещение левого верхнего угла иконки относительно
@@ -1791,6 +1805,18 @@
 							);
 							// Добавим i-ю метку на карту.
 							myMap.geoObjects.add(placemarks[i]);
+
+
+							//Добавим изменение метки при наведении
+							placemarks[i].events.add('mouseenter', function (e) {
+								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
+								e.get('target').options.set('preset', 'active#image');
+							})
+							.add('mouseleave', function (e) {
+								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
+								e.get('target').options.unset('preset');
+							});
+
 						};
 						
 						// – Если в адресной строке присутствует параметр id, 

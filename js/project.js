@@ -1815,6 +1815,10 @@
 							.add('mouseleave', function (e) {
 								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
 								e.get('target').options.unset('preset');
+							})
+							.add('click', function (e) {
+								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
+								e.get('target').options.unset('preset');
 							});
 
 						};

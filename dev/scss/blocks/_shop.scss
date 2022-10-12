@@ -1,12 +1,13 @@
 @import '../variables';
 
 
-#map {
+#map { 
     width: auto;
     height: 1000px;
 
-    @media screen and (max-width:768px) {
-        height: 440px;
+    @media screen and (max-width:768px) { border: 1px solid green;
+        // height: 440px;
+        height: 100vh;
     }
 }
 

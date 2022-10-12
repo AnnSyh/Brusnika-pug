@@ -44,6 +44,8 @@ window.addEventListener('scroll', function () {
 
   const mainNav = $('.page-header');
   const page = $('.page .page-note');
+  // const page = $('.page .page-note');
+  // const mainMenu = $('.menu-wrapper');
 
   if ($(window).scrollTop() > 0) {
 
@@ -53,6 +55,7 @@ window.addEventListener('scroll', function () {
     page.addClass('to-top');
 
   } else {
+
     mainNav.removeClass('page-header-fixed');
     menuSections.removeClass('menu-sections-top');
     //плавное исчезание блока 'page-note'

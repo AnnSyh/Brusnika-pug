@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: center;
 
+    transition: transform 0.8s ease-in-out;
+
     
 
     .page-inner--w1 {
@@ -26,8 +28,10 @@
 }
 
 .to-top {
-   
     transform: translate3d(0, -40px, 0);
+}
+.to-bottom {
+    transform: translate3d(0, 40px, 0);
 }
 
 
@@ -37,6 +41,8 @@
     width: 100%;
     background: #fff;
     z-index: 1000;
+
+    
 
     .catalog-search-menu { 
         width: 0;

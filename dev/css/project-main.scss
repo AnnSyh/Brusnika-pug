@@ -61,11 +61,17 @@
 //   .slider-you-also-like .title-block { 
 //     margin-left: 5px;
 //   }  
-// }  
+// } 
+
+
 
 .scroll-container { 
   overflow-y: scroll;
   scroll-behavior: smooth;
+
+  // &.overflow {
+  //   overflow: hidden;
+  // }
 }
 
 .arrow-top {

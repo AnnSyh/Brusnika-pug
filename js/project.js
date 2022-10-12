@@ -313,6 +313,10 @@
 					$sel.body.removeClass('show-filter');
 
 					$sel.body.addClass("search-open");
+
+					// console.log('self.html = ', $sel.html );
+					$sel.html.addClass("overflow");
+
 					self.openedSearchMenu = true;
 				},
 				closeSearchMenu: function () {
@@ -320,6 +324,9 @@
 
 					self.$searchMenu.hide();
 					$sel.body.removeClass("search-open");
+					// $sel.body.parentNode.classList.removeClass("overflow-x");
+					console.log('self.html = ', $sel.html );
+					$sel.html.removeClass("overflow");
 					self.openedSearchMenu = false;
 				},
 

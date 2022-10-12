@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.8s ease-in-out;
 }
 .page-header .page-inner--w1 {
   width: 100%;
@@ -21,6 +22,10 @@
 
 .to-top {
   transform: translate3d(0, -40px, 0);
+}
+
+.to-bottom {
+  transform: translate3d(0, 40px, 0);
 }
 
 .page-header-fixed {

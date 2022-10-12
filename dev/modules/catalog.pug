@@ -32,7 +32,7 @@ block variables
                       .catalog-item-title-title= item.name
                       .catalog-item-price= item.price + ' РУБ'
 
-                    .catalog-item-color +3 цвета
+                    .catalog-item-color.d-none.d-sm-block +3 цвета
                     +color(dataTableColorItem3, activeLink1, 3)
 
                   a.catalog-item-link(href='card.html')
@@ -48,7 +48,8 @@ block variables
                 //-     a.catalog-item-link(href='#')
                 //-     button.catalog-item-like(type='button')  
 
-        include catalog/search-static-dress-for-new-season
+        .col-12
+          include static-dress-for-new-season
 
         //-  span.tooltip.product-add-favorites(data-tooltip-content='#tooltip_content')
 
@@ -83,7 +84,6 @@ block variables
                     
                   a.catalog-item-link(href='card.html')
                   button.catalog-item-like(type='button')             
-   
 
     .page-toolbar
         .load-more-holder

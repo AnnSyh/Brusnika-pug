@@ -5462,8 +5462,7 @@ ul.footer-top__list {
 }
 @media screen and (max-width: 768px) {
   #map {
-    border: 1px solid green;
-    height: 100vh;
+    height: 440px;
   }
 }
 

@@ -64,14 +64,15 @@
         @media screen and (max-width:480px) {
             font-size: 12px;
             line-height: 20px;
+            padding: 0;
         }
     }
 
     // шрифты для всплывашки на карте
-    &-title,
-    &-address,
-    &-time,
-    &-phone{
+    &-title--onmap,
+    &-address--onmap,
+    &-time--onmap,
+    &-phone--onmap {
         font-family: 'SFProDisplay', 'Arial', sans-serif;
         padding: 0 15px
     }
@@ -102,14 +103,14 @@
     margin-top: 46px;
     margin-bottom: 46px;
 
-    @media screen and(max-width:480px) {
+    @media screen and(max-width:480px) { 
         font-size: 14px;
         text-align: left;
         margin: 0;
         line-height: 20px;
         position: relative;
         width: 100px;
-        top: 25px;
+        top: 20px;
     }
 }
 
@@ -144,6 +145,7 @@
     .filters-block-shops {  
         display: flex;
         flex-direction: column-reverse;
+        margin-left: 10px;
     }
 
 

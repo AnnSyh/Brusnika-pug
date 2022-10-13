@@ -142,7 +142,7 @@
 						console.log('$basketOpenBtn cardNav = ', self.$cardNav);
 						e.preventDefault();
 						e.stopPropagation();
-						self.$cardNav.hide(); 
+						self.$cardNav.hide();
 						self.openedBasketMenu ? self.closeBasketMenu() : self.openBasketMenu();
 
 					});
@@ -325,7 +325,7 @@
 					self.$searchMenu.hide();
 					$sel.body.removeClass("search-open");
 					// $sel.body.parentNode.classList.removeClass("overflow-x");
-					console.log('self.html = ', $sel.html );
+					console.log('self.html = ', $sel.html);
 					$sel.html.removeClass("overflow");
 					self.openedSearchMenu = false;
 				},
@@ -1757,13 +1757,13 @@
 
 					const lengthShops = Object.keys(shops).length;
 					const placemarks = [];
-					const shopCoords = [];
-
 
 					// начинаем строить точки на карте
 					ymaps.ready(init);
 
 					function init() {
+						const mobileWidth = 480;
+						
 						var myMap = new ymaps.Map('map', {
 							center: [55.757131068980215, 37.61711450000001],
 							zoom: 11,
@@ -1775,13 +1775,15 @@
 						for (let i = 0; i < lengthShops; i++) {
 							// console.log('shops [' + i + '] = ', shops[i].coords);
 
+							
+
 							placemarks[i] = new ymaps.Placemark(shops[i].coords,
 								{
 									balloonContentHeader: `<img src="../dummy/shops/${shops[i].img}" width="100%" >`,
-									balloonContentBody: ` <div class="item-shop-title">${shops[i].name}</div>` +
-										`<div class="item-shop-address">${shops[i].address}</div>` +
-										`<div class="item-shop-time">${shops[i].time}</div>`,
-									balloonContentFooter: ` <div class="item-shop-phone"> <a href="tel:${shops[i].phone}">${shops[i].phone}</a></div>`,
+									balloonContentBody: ` <div class="item-shop-title item-shop-title--onmap">${shops[i].name}</div>` +
+										`<div class="item-shop-address item-shop-address--onmap">${shops[i].address}</div>` +
+										`<div class="item-shop-time item-shop-time--onmap">${shops[i].time}</div>`,
+									balloonContentFooter: ` <div class="item-shop-phone item-shop-phone--onmap"> <a href="tel:${shops[i].phone}">${shops[i].phone}</a></div>`,
 									hintContent: `${shops[i].name}`
 								},
 								{
@@ -1794,43 +1796,85 @@
 									iconImageSize: [30, 30],
 									// Смещение левого верхнего угла иконки относительно
 									// её "ножки" (точки привязки).
-									iconImageOffset: [-5, -38]
+									iconImageOffset: [-12, 0],
+									// не скрываем метку на карте при открытии балуна
+									hideIconOnBalloonOpen: false
 								},
 							);
 
 							// устанавливаю мах ширину балуна
 							placemarks[i].options.set('balloonMaxWidth', 300);
 
+							// устанавливаю мин высоту балуна для мобилки
+							const windowWidth = window.innerWidth;
+							if (windowWidth <= mobileWidth) {
+								placemarks[i].options.set('balloonMinHeight', 300);
+							}
+
 							// Добавим i-ю метку на карту.
 							myMap.geoObjects.add(placemarks[i]);
 
 
-							//Добавим изменение метки при наведении
-							placemarks[i].events.add('mouseenter', function (e) {
-								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
-								e.get('target').options.set('preset', 'active#image');
-							})
-							.add('mouseleave', function (e) {
-								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
-								e.get('target').options.unset('preset');
-							})
-							// .add('click', function (e) {
-							// 	e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
-							// 	e.get('target').options.unset('preset');
-							// });
+
+
+							//Добавим изменение метки при наведении и при клике
+							placemarks[i].events
+								.add('mouseenter', function (e) {
+									e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
+									e.get('target').options.set('preset', 'active#image');
+								})
+								.add('mouseleave', function (e) {
+									e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
+									e.get('target').options.unset('preset');
+								})
+
+
+							if (windowWidth <= mobileWidth) {
+
+								placemarks[i].events
+									.add('click', function (e) {
+										// вызов попапа
+										$.magnificPopup.open({
+											items: {
+												src: '#popup-' + i,
+												type: "inline"
+											},
+											mainClass: "mfp-fade",
+											removalDelay: 300
+										});
+									});
+
+							}
 
 						};
-						
+
 						// – Если в адресной строке присутствует параметр id, 
 						// то выполнить код по открытию метки
 
-						if ( window.location.href.indexOf('?id') >= 0 ){
-
+						if (window.location.href.indexOf('?id') >= 0) {
 							const pathname = window.location.href;
 							const id = pathname.split("=")[1];
-	
-							// имитирую клик по соот точке
-							placemarks[id].events.fire('click');
+							const windowWidth = window.innerWidth;
+
+							if (windowWidth > mobileWidth) {
+								// имитирую клик по соот точке
+								placemarks[id].events.fire('click');
+
+							} else {
+								// вызов попапа без имитации клика по точке 
+								$.magnificPopup.open({
+									items: {
+										src: '#popup-' + id,
+										type: "inline"
+									},
+									mainClass: "mfp-fade",
+									removalDelay: 300
+								});
+
+							}
+
+
+
 
 							// установить центр карты по метке
 							myMap.setCenter(placemarks[id].geometry.getCoordinates());

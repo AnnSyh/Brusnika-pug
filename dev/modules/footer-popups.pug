@@ -1,3 +1,17 @@
+-
+mixin mapPopup(data)
+  each item in data
+    .page-popup.page-popup-w565.mfp-hide(id = `popup-${item.id}`)
+      .page-popup-heading
+        .page-popup-heading-title.center.h1= item.name
+        img.w100(src = `../dummy/shops/${item.img}`)
+      .item-shop-title.item-shop-title--onmap= item.name 
+      .item-shop-address.item-shop-address--onmap= item.address 
+      .item-shop-time.item-shop-time--onmap= item.time 
+      .item-shop-phone.item-shop-phone--onmap= item.phone  
+
+
+
 include ./popups/auth-form
 include ./popups/login
 include ./popups/restore-popup
@@ -15,6 +29,8 @@ include ./popups/sms-cod-popup
 include ./popups/catalog-size-popup
 include ./popups/change-size-popup
 include ./popups/change-password-text
+//- попапы для карты shop-map.html
++mapPopup(catalogShops)
 
 //- include ./popups/show-on-map-popup  
 include ./popups/checkout-popup 

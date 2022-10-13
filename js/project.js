@@ -1763,7 +1763,7 @@
 
 					function init() {
 						const mobileWidth = 480;
-						
+
 						var myMap = new ymaps.Map('map', {
 							center: [55.757131068980215, 37.61711450000001],
 							zoom: 11,
@@ -1775,7 +1775,6 @@
 						for (let i = 0; i < lengthShops; i++) {
 							// console.log('shops [' + i + '] = ', shops[i].coords);
 
-							
 
 							placemarks[i] = new ymaps.Placemark(shops[i].coords,
 								{
@@ -1811,12 +1810,6 @@
 								placemarks[i].options.set('balloonMinHeight', 300);
 							}
 
-							// Добавим i-ю метку на карту.
-							myMap.geoObjects.add(placemarks[i]);
-
-
-
-
 							//Добавим изменение метки при наведении и при клике
 							placemarks[i].events
 								.add('mouseenter', function (e) {
@@ -1827,10 +1820,15 @@
 									e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
 									e.get('target').options.unset('preset');
 								})
+								.add('click', function (e) {
+									e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
+									e.get('target').options.set('preset', 'active#image');
+								})
 
 
 							if (windowWidth <= mobileWidth) {
 
+								//добавляем на метку событие всплытия попапа
 								placemarks[i].events
 									.add('click', function (e) {
 										// вызов попапа
@@ -1842,9 +1840,17 @@
 											mainClass: "mfp-fade",
 											removalDelay: 300
 										});
+										//удаляем всплытие балуна по клику
+										e.preventDefault();
+										e.stopPropagation();
 									});
 
+
 							}
+
+
+							// Добавим i-ю метку на карту.
+							myMap.geoObjects.add(placemarks[i]);
 
 						};
 

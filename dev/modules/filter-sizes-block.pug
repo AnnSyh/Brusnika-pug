@@ -5,13 +5,22 @@
     //- a.btn.btn--black.btn--medium.btn--fullwidth(href='#size-popup' data-popup='{"type":"inline"}')
     //-   | ДОБАВИТЬ В КОРЗИНУ 
     .wrapper-form-checkbox
-      each size in sizes
         label.form-checkbox
           input(class='form-item form-item--checkbox' type='checkbox')
-          span.form-checkbox-title= size.name
+          span.form-checkbox-title One size
         label.form-checkbox
-            input(class='form-item form-item--checkbox' type='checkbox')
-            span.form-checkbox-title= size.growth1
+            span.form-checkbox-title Рост H1
         label.form-checkbox
+            span.form-checkbox-title Рост H1    
+
+        each size in sizes
+
+          label.form-checkbox
             input(class='form-item form-item--checkbox' type='checkbox')
-            span.form-checkbox-title= size.growth2         
+            span.form-checkbox-title= size.name
+          label.form-checkbox
+              input(class='form-item form-item--checkbox' type='checkbox')
+              span.form-checkbox-title= size.growth1
+          label.form-checkbox
+              input(class='form-item form-item--checkbox' type='checkbox')
+              span.form-checkbox-title= size.growth2         

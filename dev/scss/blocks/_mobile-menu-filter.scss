@@ -451,10 +451,10 @@
       }
 
       .jcf-checkbox {
-        min-width: 14px;
-        min-height: 14px;
-        width: 14px;
-        height: 14px;
+        min-width: 19px;
+        min-height: 19px;
+        width: 19px;
+        height: 19px;
       }
     }
 
@@ -492,18 +492,25 @@
 
 .mobile-filter-item-content {
   display: flex;
+
+  .form-item--text { 
+    height: 40px;
+  }
+
 }
 
 
 /* ------filter ----jcf---------------- */
 
-.jcf-checkbox.jcf-checked {
+.jcf-checkbox.jcf-checked { 
   background-color: $color-black;
   border-color: $color-black;
 
 
   input {
     z-index: -1;
+    min-width: 19px;
+    min-height: 19px;
   }
 }
 
@@ -629,7 +636,7 @@
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 30px;
 
   @media screen and (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);

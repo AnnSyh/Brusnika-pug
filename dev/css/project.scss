@@ -1577,8 +1577,7 @@ span.form-item--error {
   filter: none;
 }
 
-.form-checkbox {
-  display: -webkit-box;
+.form-checkbox { 
   display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1597,11 +1596,17 @@ span.form-item--error {
   -o-transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -ms-transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: 0.3s opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  align-items: center;
+  border-radius: 2px;
 }
 
 .form-checkbox .jcf-checkbox {
   top: -1px;
-  min-width: 16px;
+  min-width: 19px;
+  min-height: 19px;
+  border-radius: 2px;
+  border: 1px solid $color-border-input;
 }
 
 .form-checkbox:hover {

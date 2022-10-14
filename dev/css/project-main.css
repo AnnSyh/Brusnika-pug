@@ -6084,6 +6084,9 @@ ul.footer-top__list {
     width: 100%;
   }
 }
+.history .order-items:last-child .order-row {
+  border-bottom: transparent;
+}
 .history .order-item-sub-title {
   display: flex;
   gap: 15px;

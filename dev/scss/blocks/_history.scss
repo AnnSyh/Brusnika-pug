@@ -15,6 +15,7 @@
         margin-bottom: 30px;
         border-bottom: 1px solid #E1E1E1;
 
+
         &__images,
         &__btns {
             display: flex;
@@ -53,6 +54,10 @@
             flex-direction: column;
             width: 100%; 
         }
+    }
+
+    .order-items:last-child .order-row { 
+        border-bottom: transparent;
     }
 
 

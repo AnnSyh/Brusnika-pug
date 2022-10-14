@@ -3946,6 +3946,11 @@ ul.footer-top__list {
   max-width: 127px;
   margin-right: 20px;
 }
+@media screen and (max-width: 480px) {
+  .order-table__img {
+    margin-right: 0;
+  }
+}
 
 .order-table__info {
   width: 100%;
@@ -6108,6 +6113,16 @@ ul.footer-top__list {
 @media screen and (max-width: 768px) {
   .history .tabs-heading {
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .history .tabs-heading {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E1E1E1;
+  }
+  .history .tabs-heading .tab-heading-item {
+    padding: 7px 5px 7px 0 !important;
   }
 }
 .history .tab-heading-item {

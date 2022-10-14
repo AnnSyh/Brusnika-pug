@@ -813,6 +813,10 @@ body .mobile-nav-menu-item-holder.open:before {
   .order-table:not(.basket) > .row {
     position: relative;
     padding: 30px 0;
+
+    @media screen and (max-width:480px) {
+      padding: 15px 0;
+    }
   }
   .order-table:not(.basket) > .row:before {
     content: "";

@@ -1194,9 +1194,9 @@
 
 					$(window).keypress(function () {
 						$('.product-add-favorites').tooltipster('close');
-						$('.product-like').toggleClass('active-like');//добавляю акт класс сердечку
+						// $('.product-like').toggleClass('active-like');//добавляю акт класс сердечку
 					});
-
+						
 
 					$(".form-item--calendar", $container).each(function () {
 						var $calendar = $(this);

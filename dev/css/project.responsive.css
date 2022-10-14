@@ -827,6 +827,11 @@ body .mobile-nav-menu-item-holder.open:before {
     padding: 30px 0;
   }
 }
+@media screen and (max-width: 960px) and (max-width: 480px) {
+  .order-table:not(.basket) > .row {
+    padding: 15px 0;
+  }
+}
 @media screen and (max-width: 960px) {
   .order-table:not(.basket) > .row:before {
     content: "";

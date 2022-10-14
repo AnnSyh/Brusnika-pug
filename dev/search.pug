@@ -16,9 +16,13 @@ block content
     //-   include modules/filter
 
     .page-inner.page-inner--w2 
+      //- span.tooltip.product-add-favorites(data-tooltip-content='#tooltip_content')
       //- include modules/catalog/search-static-dress-for-new-season
       include modules/catalog
     .page-inner--w1.page-inner
       .page-inner.page-inner--w2
         .catalog
           include modules/slider-prev-watched 
+
+block footer-popups 
+  include modules/popups/change-color-popup           

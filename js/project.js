@@ -1773,8 +1773,6 @@
 
 						// размещаем точки на карте
 						for (let i = 0; i < lengthShops; i++) {
-							// console.log('shops [' + i + '] = ', shops[i].coords);
-
 
 							placemarks[i] = new ymaps.Placemark(shops[i].coords,
 								{
@@ -1810,24 +1808,12 @@
 								placemarks[i].options.set('balloonMinHeight', 300);
 							}
 
-							//Добавим изменение метки при наведении и при клике
-							placemarks[i].events
-								.add('mouseenter', function (e) {
-									e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
-									e.get('target').options.set('preset', 'active#image');
-								})
-								.add('mouseleave', function (e) {
-									e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
-									e.get('target').options.unset('preset');
-								})
-								.add('click', function (e) {
-									e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
-									e.get('target').options.set('preset', 'active#image');
-								})
-
+							//Добавим изменение метки при наведении 
+							toggleHoverActivePlaceMark(placemarks[i]);
+							//Добавим изменение метки при клике 
+							toggleClickActivePlaceMark(placemarks[i]);
 
 							if (windowWidth <= mobileWidth) {
-
 								//добавляем на метку событие всплытия попапа
 								placemarks[i].events
 									.add('click', function (e) {
@@ -1844,15 +1830,56 @@
 										e.preventDefault();
 										e.stopPropagation();
 									});
-
-
 							}
-
 
 							// Добавим i-ю метку на карту.
 							myMap.geoObjects.add(placemarks[i]);
 
 						};
+
+
+						const myCollection = myMap.geoObjects;
+
+						// добавляем событие при клике на точку карты
+						myMap.geoObjects.events.add('click', function (e) {
+							console.log('событие при клике на точку карты');
+							// Получение ссылки на дочерний объект, на котором произошло событие.
+							var object = e.get('target');
+							//Добавим изменение метки при наведении и при клике
+							
+							object.options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
+							// object.options.set('preset', 'active#image');
+
+							// коллекция точек на карте ?
+							// if (myCollection.activeIndex !== undefined){
+							// 	console.log('!!!!!!');
+							// }
+						
+						});
+
+						//функция смены акт картинки у метки при наведении
+						function toggleHoverActivePlaceMark(placemark) {
+							console.log('смена метки при наведении');
+							placemark.events
+							.add('mouseenter', function (e) {
+								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
+								e.get('target').options.set('preset', 'active#image');
+							})
+							.add('mouseleave', function (e) {
+								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark.svg'
+								e.get('target').options.unset('preset');
+							})
+
+						}
+						//функция смены акт картинки у метки при клике
+						function toggleClickActivePlaceMark(placemark) {
+							console.log('смена метки при клике');
+							placemark.events
+							.add('click', function (e) {
+								e.get('target').options._options.iconImageHref = '../dummy/shops/placemark-active.svg'
+								e.get('target').options.set('preset', 'active#image');
+							})
+						}
 
 						// – Если в адресной строке присутствует параметр id, 
 						// то выполнить код по открытию метки
@@ -1878,9 +1905,6 @@
 								});
 
 							}
-
-
-
 
 							// установить центр карты по метке
 							myMap.setCenter(placemarks[id].geometry.getCoordinates());
